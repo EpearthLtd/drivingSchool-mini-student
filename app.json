@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF9326",
+    "navigationBarTitleText": "阿甘学车",
+    "navigationBarTextStyle":"white"
+  }
+}
