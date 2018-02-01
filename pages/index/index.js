@@ -9,6 +9,9 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  clickMotto: function(){
+    this.setData({ description: "小程序开发中，尽请期待" })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

@@ -8,6 +8,9 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto" bindtap='clickMotto'>{{motto}}</text>
+  </view>
+  <view>
+    <text>{{description}}</text>
   </view>
 </view>
