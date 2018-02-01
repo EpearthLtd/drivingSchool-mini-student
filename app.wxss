@@ -8,3 +8,9 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+button {
+  border-bottom-color: #FF9326;
+  border-color: #FF9326;
+  border: 2px;
+}
