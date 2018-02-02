@@ -19,6 +19,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  bindVideo: function() {
+    wx.navigateTo({
+      url: '../video/video',
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

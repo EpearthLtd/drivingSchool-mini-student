@@ -9,6 +9,7 @@
   </view>
   <view class="button-contact">
     <button type="primary" open-type="contact">客服</button>
+    <button bindtap="bindVideo">视频</button>
   </view>
   <view class="usermotto">
     <text class="user-motto" bindtap='clickMotto'>{{motto}}</text>
