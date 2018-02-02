@@ -7,7 +7,8 @@ Page({
     motto: '你好 世界',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    description: "点击上面，看看变化",
   },
   clickMotto: function(){
     this.setData({ description: "小程序开发中，尽请期待" })
