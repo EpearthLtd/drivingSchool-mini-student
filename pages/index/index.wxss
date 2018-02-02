@@ -17,9 +17,9 @@
 }
 
 .usermotto {
-  margin-top: 80px;
+  margin-top: 160rpx;
 }
 
 .button-contact {
-  margin-top: 80px;
+  margin-top: 200rpx;
 }
