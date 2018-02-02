@@ -9,5 +9,23 @@
     "navigationBarBackgroundColor": "#FF9326",
     "navigationBarTitleText": "阿甘学车",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#FF9326",
+    "backgroundColor":"white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "训练"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "报名"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我"
+      }
+    ]
   }
 }
