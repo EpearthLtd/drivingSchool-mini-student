@@ -1,11 +1,9 @@
-<!-- pages/nopage/nopage.wxml
+<!-- 
   版权所有©成都曦璞科技有限公司
 
-  文件名：
-  文件功能描述：
-  author：
-  时间：
-  创建标识：
+  文件名：pages/nopage/nopage.wxml
+  文件功能描述：提示用户当前功能尚在开发中
+  author：郑维一
 -->
 <view class='container'>
   <block wx:for="{{iconType}}">
