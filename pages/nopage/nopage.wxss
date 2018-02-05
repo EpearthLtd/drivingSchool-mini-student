@@ -1,0 +1,4 @@
+/* pages/nopage/nopage.wxss */
+.information {
+  margin-top: 200rpx;
+}

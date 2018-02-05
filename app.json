@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/nopage/nopage"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,7 +14,7 @@
   "tabBar": {
     "color": "#999999",
     "selectedColor": "#FF9326",
-    "backgroundColor":"white",
+    "backgroundColor": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -22,7 +23,7 @@
         "selectedIconPath": "images/wheel-a.png"
       },
       {
-        "pagePath": "pages/video/video",
+        "pagePath": "pages/nopage/nopage",
         "text": "报名",
         "iconPath": "images/form-d.png",
         "selectedIconPath": "images/form-a.png"
