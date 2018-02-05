@@ -2,8 +2,9 @@
   版权所有©成都曦璞科技有限公司
 
   文件名：pages/nopage/nopage.wxml
-  文件功能描述：提示用户当前功能尚在开发中
-  author：郑维一
+  文件功能描述：提示用户当前功能页尚在开发中
+  作者：郑维一
+  网站：www.epearth.com
 -->
 <view class='container'>
   <block wx:for="{{iconType}}">
