@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/poster/poster",
     "pages/index/index",
     "pages/logs/logs",
     "pages/video/video",
-    "pages/nopage/nopage",
-    "pages/poster/poster"
+    "pages/nopage/nopage"
   ],
   "window": {
     "backgroundTextStyle": "light",
