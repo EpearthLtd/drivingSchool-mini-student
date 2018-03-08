@@ -18,7 +18,19 @@
 
 <button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
 
+<view class='view-bg'>
+  <image class='image-title'>C1</image>
+  <text class='text-price'>2?00元</text>
+  <text class='text-title'>手动档</text>
+  <rich-text class='text-content'>尊享学车优惠　　体检考试接送\n全程售后服务　　　</rich-text>
+</view>
 
+<view class='view-bg'>
+  <image class='image-title'>C2</image>
+  <text class='text-price'>2?00元</text>
+  <text class='text-title'>自动档</text>
+  <rich-text class='text-content'>尊享学车优惠　　体检考试接送\n全程售后服务　　　</rich-text>
+</view>
 
 <view class='container'>
   <text class='bottom-text'>-- 这里是底线 --</text>

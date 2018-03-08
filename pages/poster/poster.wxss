@@ -2,7 +2,7 @@
   版权所有(C)2018 成都曦璞科技有限公司
 
   文件名file：  pages/poster/poster.wxss
-  描述description：海报页面的样式
+  描述description：海报页面样式
   作者author：郑维一
   公司网站site：www.epearth.com
 */
@@ -11,8 +11,9 @@
   padding: 10rpx;
   align-items: center;
 }
+
 .carousels {
-  height: 400rpx;
+  height: 300rpx;
   width: 100%;
 }
 
@@ -21,13 +22,49 @@
   width: 100%;
 }
 
+.view-bg{
+  margin: 1rpx 0;
+  padding: 30rpx 20rpx;
+  height: 150rpx;
+  background-color: white;
+  clear: both;
+}
+
+.image-title {
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+}
+
+.text-price {
+  color: #FFF;
+  background-color: #FF9326;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  margin-left: 180rpx;
+}
+
+.text-title {
+  float: left;
+}
+
+.text-content {
+  margin-top: 15rpx;
+  float: left;
+  font-size: 32rpx;
+  width: 440rpx;
+  color: #CCC;
+}
+
 .button-primary {
-  margin: 20rpx 40rpx;
+  margin: 25rpx 40rpx;
 }
 
 .bottom-text {
   width: 100%;
-  color: #CCC;
+  margin-top: 20rpx;
+  clear: left;
+  color: #DDD;
   line-height: 20rpx;
   text-align: center;
 }
