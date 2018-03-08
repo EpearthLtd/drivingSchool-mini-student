@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    carousels:[
+      { url: 'http://www.epearth.net/img/profile.png' },
+      { url: 'http://www.epearth.net/img/profile.png' }
+    ]
   },
 
   /**

@@ -2,8 +2,20 @@
   版权所有(C)2018 成都曦璞科技有限公司
 
   文件名file：  pages/poster/poster.wxml
-  描述description：提示用户当前功能页尚在开发中
+  描述description：海报页,进行学车宣传
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
-<text>pages/poster/poster.wxml</text>
+
+<swiper class='carousels' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
+  <block wx:for="{{carousels}}" wx:for-index="index">
+    <swiper-item>
+      <image src='{{item.url}}' class='slide-image' mode='aspectFill'/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view>
+<button type='primary' open-type='contact' session-from="小程序立即咨询">立  即  咨  询</button>
+<text class='bottom-text'>-- 这里是底线 --</text>
+</view>

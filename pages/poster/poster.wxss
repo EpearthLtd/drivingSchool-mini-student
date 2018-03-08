@@ -1,1 +1,31 @@
-/* pages/poster/poster.wxss */
+/* 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：  pages/poster/poster.wxss
+  描述description：海报页面的样式
+  作者author：郑维一
+  公司网站site：www.epearth.com
+*/
+
+.container {
+  padding: 10rpx;
+}
+.carousels {
+  height: 400rpx;
+  width: 100%;
+}
+
+.carousels image {
+  height: 100%;
+  width: 100%;
+}
+
+.button-primary {
+  background-color: #FF9326;
+  border-color: FF9326;
+}
+
+.bottom-text {
+  color: #CCC;
+  align-content: center;
+}
