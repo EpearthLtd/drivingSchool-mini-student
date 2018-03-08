@@ -15,7 +15,12 @@
   </block>
 </swiper>
 
-<view>
-<button type='primary' open-type='contact' session-from="小程序立即咨询">立  即  咨  询</button>
-<text class='bottom-text'>-- 这里是底线 --</text>
+
+<button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
+
+
+
+<view class='container'>
+  <text class='bottom-text'>-- 这里是底线 --</text>
 </view>
+
