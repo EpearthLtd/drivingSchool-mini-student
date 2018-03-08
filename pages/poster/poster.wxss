@@ -22,7 +22,7 @@
   width: 100%;
 }
 
-.view-bg{
+.view-price-bg{
   margin: 1rpx 0;
   padding: 30rpx 20rpx;
   height: 150rpx;
@@ -62,7 +62,7 @@
 
 .bottom-text {
   width: 100%;
-  margin-top: 20rpx;
+  margin-top: 40rpx;
   clear: left;
   color: #DDD;
   line-height: 20rpx;
