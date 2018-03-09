@@ -22,6 +22,20 @@
   width: 100%;
 }
 
+.view-button-bg {
+  margin: 25rpx 0;
+  padding: 30rpx 15rpx;
+  background-color: white;
+  align-items: center;
+}
+
+.view-button {
+  width: 180rpx;
+  align-items: center;
+  text-align: center;
+  float: left;
+}
+
 .view-price-bg{
   margin: 1rpx 0;
   padding: 30rpx 20rpx;
@@ -51,9 +65,14 @@
 .text-content {
   margin-top: 15rpx;
   float: left;
-  font-size: 32rpx;
-  width: 440rpx;
+  font-size: small;
+  width: 460rpx;
   color: #CCC;
+}
+
+text-button {
+  text-align: center;
+  font-size: xX-small;
 }
 
 .button-primary {
