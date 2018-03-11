@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/video/video",
-    "pages/nopage/nopage"
+    "pages/nopage/nopage",
+    "pages/promise/promise"
   ],
   "window": {
     "backgroundTextStyle": "light",

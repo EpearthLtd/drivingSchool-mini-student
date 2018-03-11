@@ -1,0 +1,4 @@
+<!--pages/promise/promise.wxml-->
+<scroll-view class='content' scroll-y enable-back-to-top >
+<image mode='aspectFit' src='../images/promise.jpg'></image>
+</scroll-view>

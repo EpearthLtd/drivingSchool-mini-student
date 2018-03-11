@@ -34,7 +34,7 @@
 
 <view class='view-button-bg'>
   <view>
-    <view class='view-button'>
+    <view class='view-button' bindtap='clickPromise'>
       <text class='text-button'>服务承诺</text>
     </view>
     <view class='view-button'>
@@ -43,7 +43,7 @@
     <view class='view-button'>
       <rich-text class='text-button'>报名须知</rich-text>
     </view>
-    <view class='view-button'>
+    <view class='view-button' bindtap="toast">
       <rich-text class='text-button'>常见问题</rich-text>
     </view>
   </view>
