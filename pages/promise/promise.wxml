@@ -6,6 +6,5 @@
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
-<scroll-view class='content' scroll-y enable-back-to-top >
-<image mode='aspectFit' src='{{img}}'></image>
-</scroll-view>
+
+<image mode='aspectFill' src='{{img}}' class='img'></image>
