@@ -8,7 +8,7 @@
 -->
 
 <swiper class='carousels' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
-  <block wx:for="{{carousels}}" wx:for-index="index">
+  <block wx:for="{{carousels}}" wx:for-index="index" wx:key="key">
     <swiper-item>
       <image src='{{item.url}}' class='slide-image' mode='aspectFill'/>
     </swiper-item>

@@ -27,6 +27,7 @@
   padding: 30rpx 15rpx;
   background-color: white;
   align-items: center;
+  overflow: hidden;
 }
 
 .view-button {
@@ -39,9 +40,8 @@
 .view-price-bg{
   margin: 1rpx 0;
   padding: 30rpx 20rpx;
-  height: 150rpx;
   background-color: white;
-  clear: both;
+  overflow: hidden;
 }
 
 .image-title {
