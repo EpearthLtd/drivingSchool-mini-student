@@ -82,8 +82,13 @@ text-button {
 .bottom-text {
   width: 100%;
   margin-top: 40rpx;
-  clear: left;
   color: #DDD;
-  line-height: 20rpx;
+  text-align: center;
+}
+
+.bottom-text-small {
+  width: 80%;
+  color: #DDD;
+  font-size: 24rpx;
   text-align: center;
 }

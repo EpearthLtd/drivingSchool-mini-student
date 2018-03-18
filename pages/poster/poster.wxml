@@ -51,5 +51,6 @@
 
 <view class='container'>
   <text class='bottom-text'>-- 我是底线 --</text>
+  <text class='bottom-text-small'>人生的列车总会驶向远方,不管远方在哪里,邂逅阿甘学车,诗与远方,阿甘与你,一路同行</text>
 </view>
 
