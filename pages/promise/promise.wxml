@@ -7,5 +7,5 @@
   公司网站site：www.epearth.com
 -->
 <scroll-view class='content' scroll-y enable-back-to-top >
-<image mode='aspectFit' src='../images/promise.jpg'></image>
+<image mode='aspectFit' src='{{img}}'></image>
 </scroll-view>

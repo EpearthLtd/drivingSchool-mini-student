@@ -6,8 +6,13 @@ Page({
    */
   data: {
     carousels:[
-      { url: 'http://www.epearth.net/img/profile.png' },
-      { url: 'http://www.epearth.net/img/profile.png' }
+      { url: 'http://www.epearth.com/testimg/logo.png' },
+      { url: 'http://www.epearth.com/testimg/agan.png' },
+      { url: 'http://www.epearth.com/testimg/logo.png' }
+    ],
+    className:[
+      { string: '手动挡'},
+      { string: '自动挡'}
     ]
   },
 
