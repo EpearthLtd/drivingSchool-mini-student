@@ -1,4 +1,11 @@
-<!--pages/promise/promise.wxml-->
+<!-- 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：  pages/promise/promise.wxml
+  描述description：服务承诺内容详情页
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
 <scroll-view class='content' scroll-y enable-back-to-top >
 <image mode='aspectFit' src='../images/promise.jpg'></image>
 </scroll-view>
