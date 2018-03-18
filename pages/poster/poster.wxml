@@ -22,14 +22,19 @@
   <image class='image-title'>C1</image>
   <text class='text-price'>2?00元</text>
   <text class='text-title'>手动档</text>
+  <view class='view-text-content'>
   <rich-text class='text-content'>人生的列车总会驶向远方,不管远方在哪里,邂逅阿甘学车,诗与远方,阿甘与你,一路同行</rich-text>
+  </view>
 </view>
 
 <view class='view-price-bg'>
   <image class='image-title'>C2</image>
   <text class='text-price'>2?00元</text>
   <text class='text-title'>自动档</text>
-  <rich-text class='text-content'>尊享学车优惠　　体检考试接送\n全程售后服务　　　</rich-text>
+  <view class='view-text-content'>
+    <rich-text class='text-content'>尊享学车优惠　　体检考试接送</rich-text>
+    <rich-text class='text-content'>全程售后服务</rich-text>
+  </view>
 </view>
 
 <view class='view-button-bg'>
@@ -37,14 +42,14 @@
     <view class='view-button' bindtap='clickPromise'>
       <text class='text-button'>服务承诺</text>
     </view>
-    <view class='view-button'>
-      <rich-text class='text-button'>学车流程</rich-text>
+    <view class='view-button' bindtap='clickPromise'>
+      <text class='text-button'>学车流程</text>
     </view>
-    <view class='view-button'>
-      <rich-text class='text-button'>报名须知</rich-text>
+    <view class='view-button' bindtap='clickPromise'>
+      <text class='text-button'>报名须知</text>
     </view>
-    <view class='view-button' bindtap="toast">
-      <rich-text class='text-button'>常见问题</rich-text>
+    <view class='view-button' bindtap="clickPromise">
+      <text class='text-button'>常见问题</text>
     </view>
   </view>
 </view>

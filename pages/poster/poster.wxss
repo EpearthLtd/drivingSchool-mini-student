@@ -62,11 +62,14 @@
   float: left;
 }
 
-.text-content {
+.view-text-content {
   margin-top: 15rpx;
   float: left;
-  font-size: small;
   width: 460rpx;
+}
+
+.text-content {
+  font-size: small;
   color: #CCC;
 }
 
