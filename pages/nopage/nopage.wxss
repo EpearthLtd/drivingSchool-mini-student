@@ -1,4 +1,11 @@
-/* pages/nopage/nopage.wxss */
+/* 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：pages/nopage/nopage.wxss
+  描述description：“开发中”页面样式
+  作者author：郑维一
+  公司网站site：www.epearth.com
+*/
 .information {
   margin-top: 200rpx;
 }

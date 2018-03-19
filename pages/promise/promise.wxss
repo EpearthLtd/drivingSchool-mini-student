@@ -1,4 +1,11 @@
-/* pages/promise/promise.wxss */
+/* 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：  pages/promise/promise.wxss
+  描述description：服务承诺内容详情页样式
+  作者author：郑维一
+  公司网站site：www.epearth.com
+*/
 .img {
   width: 100vw;
   height: 320vw;
