@@ -23,7 +23,11 @@
   <text class='text-price'>2?00元</text>
   <text class='text-title'>手动档</text>
   <view class='view-text-content'>
-  <rich-text class='text-content'>人生的列车总会驶向远方,不管远方在哪里,邂逅阿甘学车,诗与远方,阿甘与你,一路同行</rich-text>
+    <rich-text class='text-content'>尊享学车优惠　　体检考试接送</rich-text>
+    <rich-text class='text-content'>全程售后服务</rich-text>
+  </view>
+  <view class='view-icon-right'>
+    <text class='text-icon-right'>></text>
   </view>
 </view>
 
@@ -34,6 +38,9 @@
   <view class='view-text-content'>
     <rich-text class='text-content'>尊享学车优惠　　体检考试接送</rich-text>
     <rich-text class='text-content'>全程售后服务</rich-text>
+  </view>
+  <view class='view-icon-right'>
+    <text class='text-icon-right'>></text>
   </view>
 </view>
 

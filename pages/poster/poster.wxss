@@ -44,6 +44,15 @@
   overflow: hidden;
 }
 
+.view-icon-right {
+  height: 50%;
+  float: right;
+}
+
+.text-icon-right {
+  color: #CCC;
+}
+
 .image-title {
   width: 150rpx;
   height: 150rpx;
