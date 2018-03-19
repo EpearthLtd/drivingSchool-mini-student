@@ -1,5 +1,5 @@
 /* pages/promise/promise.wxss */
 .img {
   width: 100vw;
-  height: 159vh;
+  height: 320vw;
 }
