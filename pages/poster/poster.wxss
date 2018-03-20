@@ -91,17 +91,3 @@ text-button {
 .button-primary {
   margin: 25rpx 40rpx;
 }
-
-.bottom-text {
-  width: 100%;
-  margin-top: 40rpx;
-  color: #DDD;
-  text-align: center;
-}
-
-.bottom-text-small {
-  width: 80%;
-  color: #DDD;
-  font-size: 24rpx;
-  text-align: center;
-}

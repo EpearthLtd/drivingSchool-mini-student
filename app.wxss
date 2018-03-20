@@ -25,3 +25,17 @@ button {
   border-color: #FF9326;
   border: 2px;
 }
+
+.bottom-text {
+  width: 100%;
+  margin-top: 40rpx;
+  color: #DDD;
+  text-align: center;
+}
+
+.bottom-text-small {
+  width: 80%;
+  color: #DDD;
+  font-size: 24rpx;
+  text-align: center;
+}
