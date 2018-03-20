@@ -27,7 +27,7 @@
     <rich-text class='text-content'>全程售后服务</rich-text>
   </view>
   <view class='view-icon-right'>
-    <text class='text-icon-right'>></text>
+    <text class='text-icon-right'>〉</text>
   </view>
 </view>
 
@@ -40,7 +40,7 @@
     <rich-text class='text-content'>全程售后服务</rich-text>
   </view>
   <view class='view-icon-right'>
-    <text class='text-icon-right'>></text>
+    <text class='text-icon-right'>〉</text>
   </view>
 </view>
 
