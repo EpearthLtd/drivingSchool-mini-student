@@ -50,6 +50,7 @@
 }
 
 .text-icon-right {
+  margin-right: 10rpx;
   color: #CCC;
 }
 
