@@ -1,19 +1,18 @@
-// pages/poster/poster.js
+/* 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：pages/poster/question/question.js
+  描述description：常见问题详情页js
+  作者author：郑维一
+  公司网站site：www.epearth.com
+*/
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    carousels:[
-      { url: 'http://www.epearth.com/testimg/logo.png' },
-      { url: 'http://www.epearth.com/testimg/agan.png' },
-      { url: 'http://www.epearth.com/testimg/logo.png' }
-    ],
-    className:[
-      { string: '手动挡'},
-      { string: '自动挡'}
-    ]
+    img: 'http://www.epearth.com/testimg/promise.jpg'
   },
 
   /**
@@ -70,26 +69,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  clickPromise: function () {
-    wx.navigateTo({
-      url: '../poster/promise/promise',
-    })
-  },
-  clickProcess: function () {
-    wx.navigateTo({
-      url: '../poster/process/process',
-    })
-  },
-  clickNotice: function () {
-    wx.navigateTo({
-      url: '../poster/notice/notice',
-    })
-  },
-  clickQuestion: function () {
-    wx.navigateTo({
-      url: '../poster/question/question',
-    })
-  },
+  }
 })

@@ -49,13 +49,13 @@
     <view class='view-button' bindtap='clickPromise'>
       <text class='text-button'>服务承诺</text>
     </view>
-    <view class='view-button' bindtap='clickPromise'>
+    <view class='view-button' bindtap='clickProcess'>
       <text class='text-button'>学车流程</text>
     </view>
-    <view class='view-button' bindtap='clickPromise'>
+    <view class='view-button' bindtap='clickNotice'>
       <text class='text-button'>报名须知</text>
     </view>
-    <view class='view-button' bindtap="clickPromise">
+    <view class='view-button' bindtap="clickQuestion">
       <text class='text-button'>常见问题</text>
     </view>
   </view>

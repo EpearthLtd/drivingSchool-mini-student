@@ -6,7 +6,10 @@
     "pages/video/video",
     "pages/nopage/nopage",
     "pages/promise/promise",
-    "pages/poster/promise/promise"
+    "pages/poster/promise/promise",
+    "pages/poster/process/process",
+    "pages/poster/notice/notice",
+    "pages/poster/question/question"
   ],
   "window": {
     "backgroundTextStyle": "light",
