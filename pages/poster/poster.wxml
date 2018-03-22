@@ -18,7 +18,7 @@
 
 <button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
 
-<view class='view-price-bg'>
+<view class='view-price-bg' bindtap='clickC1'>
   <image class='image-title'>C1</image>
   <text class='text-price'>2?00元</text>
   <text class='text-title'>手动档</text>
@@ -31,7 +31,7 @@
   </view>
 </view>
 
-<view class='view-price-bg'>
+<view class='view-price-bg' bindtap='clickC2'>
   <image class='image-title'>C2</image>
   <text class='text-price'>2?00元</text>
   <text class='text-title'>自动档</text>

@@ -72,6 +72,17 @@ Page({
   
   },
 
+  clickC1: function () {
+    wx.navigateTo({
+      url: '../nopage/nopage',
+    })
+  },
+  clickC2: function () {
+    wx.navigateTo({
+      url: '../nopage/nopage',
+    })
+  },
+
   clickPromise: function () {
     wx.navigateTo({
       url: '../poster/promise/promise',
