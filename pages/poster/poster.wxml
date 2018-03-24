@@ -18,26 +18,13 @@
 
 <button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
 
-<view class='view-price-bg' bindtap='clickC1'>
-  <image class='image-title'>C1</image>
-  <text class='text-price'>2?00元</text>
-  <text class='text-title'>手动档</text>
+<view class='view-price-bg' bindtap='clickC1' wx:for="{{priceView}}" wx:key="key">
+  <image class='image-title' src='{{item.image}}'>C1</image>
+  <text class='text-price'>{{item.price}}</text>
+  <text class='text-title'>{{item.name}}</text>
   <view class='view-text-content'>
-    <rich-text class='text-content'>尊享学车优惠　　体检考试接送</rich-text>
-    <rich-text class='text-content'>全程售后服务</rich-text>
-  </view>
-  <view class='view-icon-right'>
-    <text class='text-icon-right'>〉</text>
-  </view>
-</view>
-
-<view class='view-price-bg' bindtap='clickC2'>
-  <image class='image-title'>C2</image>
-  <text class='text-price'>2?00元</text>
-  <text class='text-title'>自动档</text>
-  <view class='view-text-content'>
-    <rich-text class='text-content'>尊享学车优惠　　体检考试接送</rich-text>
-    <rich-text class='text-content'>全程售后服务</rich-text>
+    <rich-text class='text-content'>{{item.descriptionL1}}</rich-text>
+    <rich-text class='text-content'>{{item.descriptionL2}}</rich-text>
   </view>
   <view class='view-icon-right'>
     <text class='text-icon-right'>〉</text>

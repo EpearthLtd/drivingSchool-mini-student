@@ -57,6 +57,7 @@
 .image-title {
   width: 150rpx;
   height: 150rpx;
+  margin-right: 20rpx;
   float: left;
 }
 
