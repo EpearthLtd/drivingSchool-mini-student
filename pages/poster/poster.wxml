@@ -34,15 +34,19 @@
 <view class='view-button-bg'>
   <view>
     <view class='view-button' bindtap='clickPromise'>
+      <image class='image-button' src='../../images/icon-promise.png'></image>
       <text class='text-button'>服务承诺</text>
     </view>
     <view class='view-button' bindtap='clickProcess'>
+      <image class='image-button' src='../../images/icon-process.png'></image>
       <text class='text-button'>学车流程</text>
     </view>
     <view class='view-button' bindtap='clickNotice'>
+      <image class='image-button' src='../../images/icon-notice.png'></image>
       <text class='text-button'>报名须知</text>
     </view>
     <view class='view-button' bindtap="clickQuestion">
+      <image class='image-button' src='../../images/icon-question.png'></image>
       <text class='text-button'>常见问题</text>
     </view>
   </view>
