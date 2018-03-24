@@ -20,7 +20,7 @@
 
 <view class='view-price-bg' bindtap='clickC1' wx:for="{{priceView}}" wx:key="key">
   <image class='image-title' src='{{item.image}}'>C1</image>
-  <text class='text-price'>{{item.price}}</text>
+  <text class='text-price'>{{item.price}}元</text>
   <text class='text-title'>{{item.name}}</text>
   <view class='view-text-content'>
     <rich-text class='text-content'>{{item.descriptionL1}}</rich-text>
