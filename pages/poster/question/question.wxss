@@ -8,5 +8,5 @@
 */
 .img {
   width: 100vw;
-  height: 320vw;
+  height: 580vw;
 }
