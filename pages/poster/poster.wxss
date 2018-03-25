@@ -8,7 +8,9 @@
 */
 
 .container {
-  padding: 10rpx;
+  flex-direction:column;
+  display: flex;
+  padding: 0;
   align-items: center;
 }
 
@@ -92,7 +94,8 @@
 }
 
 text-button {
-  color: #999;
+  margin-top: 20rpx;
+  text-align: center;
 }
 
 .button-primary {

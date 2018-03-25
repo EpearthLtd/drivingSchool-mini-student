@@ -10,6 +10,8 @@
 page {
   background-color: #F2F2F2;
 }
+
+
 .container {
   height: 100%;
   display: flex;
@@ -20,6 +22,7 @@ page {
   box-sizing: border-box;
 } 
 
+
 button {
   border-bottom-color: #FF9326;
   border-color: #FF9326;
@@ -28,7 +31,6 @@ button {
 
 .bottom-text {
   width: 100%;
-  margin-top: 40rpx;
   color: #DDD;
   text-align: center;
 }
