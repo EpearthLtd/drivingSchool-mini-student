@@ -10,9 +10,6 @@ Page({
       { url: 'http://www.epearth.com/testimg/agan.png' },
       { url: 'http://www.epearth.com/testimg/logo.png' }
     ],
-    className:['手动挡', '自动挡'],
-    price:['2600', '2?00'],
-    inageTitle: ['images/car.png', 'images/car.png'],
     priceView:[
       { image: '../../images/car.png', name: '手动档', price: '2600', descriptionL1: '尊享学车优惠　　体检考试接送', descriptionL2: '全程售后服务'},
       { image: '../../images/car.png', name: '自动档', price: '2?00', descriptionL1: '尊享学车优惠　　体检考试接送', descriptionL2: '全程售后服务' },
@@ -75,7 +72,7 @@ Page({
   
   },
 
-  clickC1: function () {
+  clickC: function () {
     wx.navigateTo({
       url: '../nopage/nopage',
     })

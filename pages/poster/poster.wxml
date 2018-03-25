@@ -18,7 +18,7 @@
 
 <button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
 
-<view class='view-price-bg' bindtap='clickC1' wx:for="{{priceView}}" wx:key="key">
+<view class='view-price-bg' bindtap='clickC' wx:for="{{priceView}}" wx:key="key">
   <image class='image-title' src='{{item.image}}'>C1</image>
   <text class='text-price'>{{item.price}}元</text>
   <text class='text-title'>{{item.name}}</text>
