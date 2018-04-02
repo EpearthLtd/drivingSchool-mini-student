@@ -77,11 +77,6 @@ Page({
       url: '../nopage/nopage',
     })
   },
-  clickC2: function () {
-    wx.navigateTo({
-      url: '../nopage/nopage',
-    })
-  },
 
   clickPromise: function () {
     wx.navigateTo({

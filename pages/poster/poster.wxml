@@ -15,19 +15,18 @@
   </block>
 </swiper>
 
-
 <button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
 
 <view class='view-price-bg' bindtap='clickC' wx:for="{{priceView}}" wx:key="key">
-  <image class='image-title' src='{{item.image}}'>C1</image>
-  <text class='text-price'>{{item.price}}元</text>
-  <text class='text-title'>{{item.name}}</text>
-  <view class='view-text-content'>
-    <rich-text class='text-content'>{{item.descriptionL1}}</rich-text>
-    <rich-text class='text-content'>{{item.descriptionL2}}</rich-text>
+  <image class='image-title' src='{{item.image}}' bindtap='clickC'>C1</image>
+  <text class='text-price' bindtap='clickC'>{{item.price}}元</text>
+  <text class='text-title' bindtap='clickC'>{{item.name}}</text>
+  <view class='view-text-content' bindtap='clickC'>
+    <rich-text class='text-content' bindtap='clickC'>{{item.descriptionL1}}</rich-text>
+    <rich-text class='text-content' bindtap='clickC'>{{item.descriptionL2}}</rich-text>
   </view>
-  <view class='view-icon-right'>
-    <text class='text-icon-right'>〉</text>
+  <view class='view-icon-right' bindtap='clickC'>
+    <text class='text-icon-right' bindtap='clickC'>〉</text>
   </view>
 </view>
 
