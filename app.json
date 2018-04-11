@@ -21,19 +21,19 @@
     "backgroundColor": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/nopage/nopage",
         "text": "训练",
         "iconPath": "images/wheel-d.png",
         "selectedIconPath": "images/wheel-a.png"
       },
       {
-        "pagePath": "pages/nopage/nopage",
+        "pagePath": "pages/poster/poster",
         "text": "报名",
         "iconPath": "images/form-d.png",
         "selectedIconPath": "images/form-a.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/nopage/nopage",
         "text": "我",
         "iconPath": "images/people-d.png",
         "selectedIconPath": "images/people-a.png"

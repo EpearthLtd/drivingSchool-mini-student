@@ -4,7 +4,12 @@ Development environment is Windows, CRLF switch lines, git does not convert
 这是一个微信小程序项目
 This is a mini program project of WeChat
 
-编写规则学习中，尚未进入开发阶段，所有代码均为学习代码
+调试基础库：1.9.91
+
+【版本说明】
+V1  静态海报广告
+    pages/poster
+V2  约车功能（开发中）
 
 【命名规则】
 
