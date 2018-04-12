@@ -1,0 +1,43 @@
+<!-- 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：pages/me/me.wxml
+  描述description：学车微信小程序学员端-海报宣传页
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+<view class='userinfo color-primary'>
+  <view>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class='userNickName'>{{userInfo.nickName}}</text>
+      <text class='userRealName'>({{userRealName}})</text>
+      <text class='userVerify {{userVerifyClass}}'>{{userVerifyText}}</text>
+    </block>
+  </view>
+</view>
+
+<!--约车信息-->
+<view class='col-100'>
+  <view class='button-setting' wx:for='{{userBooking}}' wx:key='key'>
+    <text class='{{item.className}}'>{{item.text}}</text>
+    <text class='icon-right {{item.className}}'>〉</text>
+  </view>
+</view>
+
+<!--手机号设置-->
+<view class='col-100'>
+  <view class='button-setting' wx:for='{{userPhone}}' wx:key='key'>
+    <text class='{{item.className}}'>{{item.text}}</text>
+    <text class='icon-right {{item.className}}'>〉</text>
+  </view>
+</view>
+
+<!--手机号设置-->
+<view class='col-100'>
+  <view class='button-setting' wx:for='{{other}}' wx:key='key'>
+    <text class='{{item.className}}'>{{item.text}}</text>
+    <text class='icon-right {{item.className}}'>〉</text>
+  </view>
+</view>

@@ -13,6 +13,8 @@ V2  约车功能（开发中）
 
 【命名规则】
 
+自定义名称使用驼峰命名或使用“-”分隔单词
+
 图片命名：   {name}-{style}.{type}
     name：   图片名称
     style：  图片风格    -a：active   -d：dark

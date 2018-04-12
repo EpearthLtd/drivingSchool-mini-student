@@ -22,11 +22,22 @@ page {
   box-sizing: border-box;
 } 
 
+.col-100 {
+  width: 100vw;
+  background-color: #FFFFFF;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
 
 button {
   border-bottom-color: #FF9326;
   border-color: #FF9326;
   border: 2px;
+}
+
+.button-setting {
+  margin-bottom: 1px;
+  padding: 25rpx 20rpx 25rpx 60rpx;
 }
 
 .bottom-text {
@@ -40,4 +51,9 @@ button {
   color: #DDD;
   font-size: 24rpx;
   text-align: center;
+}
+
+.icon-right {
+  float: right;
+  color: #CCC;
 }
