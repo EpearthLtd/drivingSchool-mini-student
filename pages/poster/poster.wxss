@@ -52,14 +52,14 @@
 }
 
 .text-icon-right {
-  margin-right: 10rpx;
+  margin-right: 10rpx 10rpx 10rpx 0;
   color: #CCC;
 }
 
 .image-title {
   width: 132rpx;
   height: 132rpx;
-  margin: 0 20rpx;
+  margin: 0 30rpx 0 40rpx;
   float: left;
 }
 
@@ -75,7 +75,7 @@
   background-color: #FF9326;
   border-radius: 10rpx;
   padding: 5rpx 10rpx;
-  margin-left: 180rpx;
+  margin-left: 140rpx;
 }
 
 .text-title {

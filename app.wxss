@@ -35,9 +35,18 @@ button {
   border: 2px;
 }
 
+.button-90 {
+  width: 90%;
+}
+
+.button-80 {
+  width: 80%;
+}
+
 .button-setting {
-  margin-bottom: 1px;
+  border-bottom: #F2F2F2 1px solid;
   padding: 25rpx 20rpx 25rpx 60rpx;
+  color: #333;
 }
 
 .bottom-text {
