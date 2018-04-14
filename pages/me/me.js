@@ -23,16 +23,16 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     userBooking: [
-      { className: '', text: '训练历史' },
-      { className: '', text: '我的评价' },
-      { className: '', text: '消息' }
+      { className: "", text: "训练历史" },
+      { className: "", text: "我的评价" },
+      { className: "", text: "消息" }
     ],
     userPhone:[
-      { className:'color-worry', text:'手机 读取中' }
+      { className:"color-worry", text:"手机 读取中" }
     ],
     other: [
-      { className:'', text: '客服'},
-      { className:'', text: 'BUG反馈'}
+      { className:"", text: "客服"},
+      { className:"", text: "BUG反馈"}
     ]
   },
 
