@@ -8,7 +8,8 @@
     "pages/poster/promise/promise",
     "pages/poster/process/process",
     "pages/poster/notice/notice",
-    "pages/poster/question/question"
+    "pages/poster/question/question",
+    "pages/training/training"
   ],
   "window": {
     "backgroundTextStyle": "light",

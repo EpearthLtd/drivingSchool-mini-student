@@ -1,11 +1,12 @@
-/* 
-  版权所有(C)2018 成都曦璞科技有限公司
+/**
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ * 
+ * 文件名file：pages/nopage/nopage.wxss
+ * 描述description：学车微信小程序学员端-“开发中”提示页面样式
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+ */
 
-  文件名file：pages/nopage/nopage.wxss
-  描述description：“开发中”页面样式
-  作者author：郑维一
-  公司网站site：www.epearth.com
-*/
 .information {
   margin-top: 200rpx;
 }
