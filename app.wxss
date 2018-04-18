@@ -121,3 +121,7 @@ color-bg-white {
 .mg-bottom {
   margin-bottom: 2rpx;
 }
+
+.pa-20 {
+  padding: 20rpx;
+}

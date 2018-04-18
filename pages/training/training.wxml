@@ -11,8 +11,8 @@
   <image class='adImage' mode='aspectFit' src='{{adImage}}'></image>
 </view>
 
-<view class='col-100 includeFloat flex-out'>
-  <view class='color-bg includeFloat flex-in'>
+<view class='col-100 pa-20'>
+  <view class='color-bg-gray includeFloat'>
     <view class='button mg-bottom mg-right'>
       <icon></icon>
       <text>1</text>
