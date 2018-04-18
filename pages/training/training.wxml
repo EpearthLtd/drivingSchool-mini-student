@@ -7,4 +7,7 @@
   公司网站site：www.epearth.com
 -->
 
+<view>
+  <image class='adImage' mode='aspectFit' src='{{adImage}}'></image>
+</view>
 <text>pages/training/training.wxml</text>

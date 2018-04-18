@@ -13,7 +13,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    adImage: 'http://www.epearth.com/testimg/agan.png'
   },
 
   /**

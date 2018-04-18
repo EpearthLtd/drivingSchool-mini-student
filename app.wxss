@@ -29,6 +29,11 @@ page {
   overflow: hidden;
 }
 
+.adImage {
+  height: 300rpx;
+  width: 100%;
+}
+
 button {
   border-bottom-color: #FF9326;
   border-color: #FF9326;
