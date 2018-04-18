@@ -67,7 +67,57 @@ button {
   text-align: center;
 }
 
+.color-bg {
+  background-color: #FAFAFA;
+}
+
+.color-bg-gray {
+  background-color: #CCC;
+}
+
+color-bg-white {
+  background-color: #FFF;
+}
+
+.color-primary {
+  background-color: #FF9326;
+  color: #FFF;
+}
+
+.color-worry {
+  color: red;
+}
+
+.color-pass {
+  color: green;
+}
+
+.flex-out {
+  display:flex;
+  flex-direction:column;
+}
+
+.flex-in {
+  align-self: center;
+}
+
 .icon-right {
   float: right;
   color: #CCC;
+}
+
+.includeFloat {
+  overflow: hidden;
+}
+
+.mg-left {
+  margin-left: 2rpx;
+}
+
+.mg-right {
+  margin-right: 2rpx;
+}
+
+.mg-bottom {
+  margin-bottom: 2rpx;
 }

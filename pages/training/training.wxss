@@ -7,3 +7,9 @@
  * 公司网站site：www.epearth.com
  */
  
+ .button {
+   width: 49.5vw;
+   height: 50vw;
+   background-color: #FFF;
+   float: left;
+ }

@@ -42,20 +42,3 @@
   margin-right: 200rpx;
   float: left;
 }
-
-.color-bg-gray {
-  background-color: #CCCCCC;
-}
-
-.color-primary {
-  background-color: #FF9326;
-  color: #FFF;
-}
-
-.color-worry {
-  color: red;
-}
-
-.color-pass {
-  color: green;
-}

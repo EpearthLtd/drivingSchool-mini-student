@@ -10,4 +10,25 @@
 <view>
   <image class='adImage' mode='aspectFit' src='{{adImage}}'></image>
 </view>
+
+<view class='col-100 includeFloat flex-out'>
+  <view class='color-bg includeFloat flex-in'>
+    <view class='button mg-bottom mg-right'>
+      <icon></icon>
+      <text>1</text>
+    </view>
+    <view class='button mg-bottom'>
+      <icon></icon>
+      <text>2</text>
+    </view>
+    <view class='button mg-right'>
+      <icon></icon>
+      <text>3</text>
+    </view>
+    <view class='button'>
+      <icon></icon>
+      <text>4</text>
+    </view>
+  </view>
+</view>
 <text>pages/training/training.wxml</text>
