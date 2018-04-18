@@ -2,14 +2,14 @@
   "pages": [
     "pages/me/me",
     "pages/poster/poster",
+    "pages/training/training",
     "pages/index/index",
     "pages/logs/logs",
     "pages/nopage/nopage",
     "pages/poster/promise/promise",
     "pages/poster/process/process",
     "pages/poster/notice/notice",
-    "pages/poster/question/question",
-    "pages/training/training"
+    "pages/poster/question/question"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,7 +23,7 @@
     "backgroundColor": "white",
     "list": [
       {
-        "pagePath": "pages/nopage/nopage",
+        "pagePath": "pages/training/training",
         "text": "训练",
         "iconPath": "images/wheel-d.png",
         "selectedIconPath": "images/wheel-a.png"
