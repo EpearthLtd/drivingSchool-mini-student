@@ -8,8 +8,16 @@ App({
 
     // 登录
     wx.login({
-      success: res => {
+      success: function(res) {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          // 发起网络请求
+          wx.request({
+            url: 'http://47.75.4.25:8080/userinfo/wx/login',
+            method: 'POST',
+
+          })
+        }
       }
     })
     // 获取用户信息

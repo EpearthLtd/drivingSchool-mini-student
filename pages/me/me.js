@@ -22,10 +22,10 @@ Page({
     userVerifyClass:'color-bg-gray',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    userBooking: [
-      { className: "", text: "训练历史" },
-      { className: "", text: "我的评价" },
-      { className: "", text: "消息" }
+    "userBooking": [
+      { "className": "", "text": "训练历史" },
+      { "className": "", "text": "我的评价" },
+      { "className": "", "text": "消息" }
     ],
     userPhone:[
       { className:"color-worry", text:"手机 读取中" }
