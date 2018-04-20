@@ -32,9 +32,9 @@
   </view>
 </view>
 
-<!--手机号设置-->
+<!--联系官方-->
 <view class='col-100'>
-  <view class='button-setting' wx:for='{{other}}' wx:key='key'>
+  <view class='button-setting' wx:for='{{other}}' wx:key='key' bindtap='{{item.bindtap}}'>
     <text class='{{item.className}}'>{{item.text}}</text>
     <text class='icon-right {{item.className}}'>〉</text>
   </view>

@@ -16,27 +16,31 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //投诉电话
+    complaintPhone: '+8602867873121',
+    //用户信息
     userInfo: {},
     userRealName: '姓名 读取中',
     userVerifyText:'状态 读取中',
     userVerifyClass:'color-bg-gray',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    //功能按钮
     "userBooking": [
       { "className": "", "text": "训练历史" },
       { "className": "", "text": "我的评价" },
       { "className": "", "text": "消息" }
     ],
     connectButton: [
-      { className: "", text: "在线客服" }
+      { className: "", text: "在线客服", bindtap: "" }
     ],
     userPhone:[
-      { className: "", text: "学车协议" }
+      { className: "", text: "学车协议", bindtap: "" }
     ],
     other: [
-      { className:"", text: "反馈建议"},
-      { className:"", text: "投诉电话"},
-      { className: "", text: "关于阿甘学车" }
+      { className: "", text: "反馈建议", bindtap: "" },
+      { className: "", text: "投诉电话", bindtap: "complaint" },
+      { className: "", text: "关于阿甘学车", bindtap: "" }
     ]
   },
 
@@ -130,6 +134,15 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+
+  /**
+   * 拨打电话
+   */
+  complaint: function() {
+    wx.makePhoneCall({
+      phoneNumber: this.data.complaintPhone,
     })
   }
 })
