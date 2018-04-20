@@ -15,10 +15,10 @@ Page({
   data: {
     adImage: 'http://www.epearth.com/testimg/agan.png',
     "button": [
-      { "classWrapper": "button wrapper bd-bottom bd-right", "icon": "", "text": "1"},
-      { "classWrapper": "button wrapper bd-bottom", "icon": "", "text": "2" },
-      { "classWrapper": "button wrapper bd-right", "icon": "", "text": "3" },
-      { "classWrapper": "button wrapper", "icon": "", "text": "4" }
+      { "classWrapper": "bd-bottom bd-right", "icon": "", "text": "1"},
+      { "classWrapper": "bd-bottom", "icon": "", "text": "2" },
+      { "classWrapper": "bd-right", "icon": "", "text": "3" },
+      { "classWrapper": "", "icon": "", "text": "4" }
     ]
   },
 

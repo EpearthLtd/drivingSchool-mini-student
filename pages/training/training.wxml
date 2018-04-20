@@ -13,7 +13,7 @@
 
 <view class='col-100'>
   <view class='button-bg-gray includeFloat'>
-    <view wx:for='{{button}}' wx:key='button' class='{{item.classWrapper}}'>
+    <view wx:for='{{button}}' wx:key='button' class='button wrapper {{item.classWrapper}}'>
       <view class='centent cell'>
         <icon></icon>
         <text>{{item.text}}</text>
