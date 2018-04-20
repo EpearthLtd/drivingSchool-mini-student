@@ -29,7 +29,7 @@ page {
 .col-100 {
   width: 100vw;
   background-color: #FFFFFF;
-  margin-bottom: 20rpx;
+  margin-top: 20rpx;
   overflow: hidden;
 }
 
@@ -68,6 +68,10 @@ button {
 
 .bd-bottom {
   border-bottom: solid #CCC 2rpx;
+}
+
+.bg-white {
+  background-color: #FFF;
 }
 
 .bottom-text {

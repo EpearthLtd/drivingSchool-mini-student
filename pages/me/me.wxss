@@ -9,21 +9,23 @@
  
 .userinfo{
   width: 100vw;
+  height: 400rpx;
   padding: 20rpx 0;
   overflow: hidden;
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 10rpx 40rpx 10rpx 60rpx;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 60rpx;
   border-radius: 50%;
-  float: left;
+  float: right;
 }
 
 .userNickName {
-  height: 45rpx;
-  float: left;
+  line-height: 150rpx;
+  font-size: 50rpx;
+  margin-left: 60rpx;
 }
 
 .userRealName {

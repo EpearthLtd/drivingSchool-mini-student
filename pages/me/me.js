@@ -27,13 +27,16 @@ Page({
       { "className": "", "text": "我的评价" },
       { "className": "", "text": "消息" }
     ],
+    connectButton: [
+      { className: "", text: "在线客服" }
+    ],
     userPhone:[
-      { className:"color-worry", text:"手机 读取中" },
-      { className: "", text: "合同" }
+      { className: "", text: "学车协议" }
     ],
     other: [
-      { className:"", text: "客服"},
-      { className:"", text: "BUG反馈"}
+      { className:"", text: "反馈建议"},
+      { className:"", text: "投诉电话"},
+      { className: "", text: "关于阿甘学车" }
     ]
   },
 

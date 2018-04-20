@@ -6,21 +6,19 @@
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
-<view class='userinfo color-primary'>
-  <view>
+<view class='userinfo wrapper bg-white'>
+  <view class='cell pd-20 flex-out'>
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='button-80'> 微信登录 </button>
     <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <image class="userinfo-avatar flex-in" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class='userNickName'>{{userInfo.nickName}}</text>
-      <text class='userRealName'>({{userRealName}})</text>
-      <text class='userVerify {{userVerifyClass}}'>{{userVerifyText}}</text>
     </block>
   </view>
 </view>
 
-<!--约车信息-->
+<!--客服-->
 <view class='col-100'>
-  <view class='button-setting' wx:for='{{userBooking}}' wx:key='key'>
+  <view class='button-setting' wx:for='{{connectButton}}' wx:key='key'>
     <text class='{{item.className}}'>{{item.text}}</text>
     <text class='icon-right {{item.className}}'>〉</text>
   </view>
