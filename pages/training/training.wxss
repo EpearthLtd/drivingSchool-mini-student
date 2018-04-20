@@ -9,7 +9,7 @@
  
  .button {
    width: 47vw;
-   height: 50vw;
+   height: 48vw;
    background-color: #FFF;
    float: left;
  }

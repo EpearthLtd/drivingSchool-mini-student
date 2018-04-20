@@ -13,22 +13,29 @@
 
 <view class='col-100'>
   <view class='button-bg-gray includeFloat'>
-    <view class='button bd-bottom bd-right'>
-      <icon></icon>
-      <text>1</text>
+    <view class='button wrapper bd-bottom bd-right'>
+      <view class='centent cell'>
+        <icon></icon>
+        <text>1</text>
+      </view>
     </view>
-    <view class='button bd-bottom'>
-      <icon></icon>
-      <text>2</text>
+    <view class='button wrapper bd-bottom'>
+      <view class='centent cell'>
+        <icon></icon>
+        <text>2</text>
+      </view>
     </view>
-    <view class='button bd-right'>
-      <icon></icon>
-      <text>3</text>
+    <view class='button wrapper bd-right'>
+      <view class='centent cell'>
+        <icon></icon>
+        <text>3</text>
+      </view>
     </view>
-    <view class='button'>
-      <icon></icon>
-      <text>4</text>
+    <view class='button wrapper'>
+      <view class='centent cell'>
+        <icon></icon>
+        <text>4</text>
+      </view>
     </view>
   </view>
 </view>
-<text>pages/training/training.wxml</text>
