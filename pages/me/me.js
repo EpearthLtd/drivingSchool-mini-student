@@ -28,7 +28,8 @@ Page({
       { "className": "", "text": "消息" }
     ],
     userPhone:[
-      { className:"color-worry", text:"手机 读取中" }
+      { className:"color-worry", text:"手机 读取中" },
+      { className: "", text: "合同" }
     ],
     other: [
       { className:"", text: "客服"},
