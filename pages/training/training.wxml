@@ -11,17 +11,17 @@
   <image class='adImage' mode='aspectFit' src='{{adImage}}'></image>
 </view>
 
-<view class='col-100 pa-20'>
-  <view class='color-bg-gray includeFloat'>
-    <view class='button mg-bottom mg-right'>
+<view class='col-100'>
+  <view class='button-bg-gray includeFloat'>
+    <view class='button bd-bottom bd-right'>
       <icon></icon>
       <text>1</text>
     </view>
-    <view class='button mg-bottom'>
+    <view class='button bd-bottom'>
       <icon></icon>
       <text>2</text>
     </view>
-    <view class='button mg-right'>
+    <view class='button bd-right'>
       <icon></icon>
       <text>3</text>
     </view>

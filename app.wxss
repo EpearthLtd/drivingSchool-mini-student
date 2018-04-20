@@ -20,7 +20,12 @@ page {
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+.centent {
+  margin: 0 auto;
+  text-align: center;
+}
 
 .col-100 {
   width: 100vw;
@@ -52,6 +57,18 @@ button {
   border-bottom: #F2F2F2 1px solid;
   padding: 25rpx 20rpx 25rpx 60rpx;
   color: #333;
+}
+
+.bd-left {
+  border-left: solid #CCC 2rpx;
+}
+
+.bd-right {
+  border-right: solid #CCC 2rpx;
+}
+
+.bd-bottom {
+  border-bottom: solid #CCC 2rpx;
 }
 
 .bottom-text {
@@ -108,6 +125,10 @@ color-bg-white {
 
 .includeFloat {
   overflow: hidden;
+}
+
+.mg-20 {
+  margin: 20rpx;
 }
 
 .mg-left {

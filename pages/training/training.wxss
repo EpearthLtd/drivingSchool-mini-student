@@ -13,3 +13,7 @@
    background-color: #FFF;
    float: left;
  }
+
+ .button-bg-gray {
+   margin: 20rpx 23rpx;
+ }
