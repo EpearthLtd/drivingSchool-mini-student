@@ -13,7 +13,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    adImage: 'http://www.epearth.com/testimg/agan.png'
+    adImage: 'http://www.epearth.com/testimg/agan.png',
+    "button": [
+      { "classWrapper": "button wrapper bd-bottom bd-right", "icon": "", "text": "1"},
+      { "classWrapper": "button wrapper bd-bottom", "icon": "", "text": "2" },
+      { "classWrapper": "button wrapper bd-right", "icon": "", "text": "3" },
+      { "classWrapper": "button wrapper", "icon": "", "text": "4" }
+    ]
   },
 
   /**
