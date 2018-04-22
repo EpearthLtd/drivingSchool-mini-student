@@ -18,13 +18,15 @@
 
 <!--客服-->
 <view class='col-100'>
-  <view class='button-setting' wx:for='{{connectButton}}' wx:key='key'>
-    <text class='{{item.className}}'>{{item.text}}</text>
-    <text class='icon-right {{item.className}}'>〉</text>
+  <view class='contacButtonView' wx:for='{{connectButton}}' wx:key='key'>
+    <button open-type="contact" class='contacButton'>
+      <text class='floatL {{item.className}}'>{{item.text}}</text>
+      <text class='icon-right {{item.className}}'>〉</text>
+    </button>
   </view>
 </view>
 
-<!--手机号设置-->
+<!--基本信息-->
 <view class='col-100'>
   <view class='button-setting' wx:for='{{userPhone}}' wx:key='key'>
     <text class='{{item.className}}'>{{item.text}}</text>

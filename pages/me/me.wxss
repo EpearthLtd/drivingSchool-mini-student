@@ -44,3 +44,19 @@
   margin-right: 200rpx;
   float: left;
 }
+
+.contacButton {
+  background-color: #FFF;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+.contacButton::after {
+  border: #FFF solid;
+}
+
+.contacButtonView {
+  padding: 12rpx 20rpx 12rpx 60rpx;
+  color: #333;
+}

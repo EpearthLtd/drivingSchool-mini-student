@@ -38,12 +38,6 @@ page {
   width: 100%;
 }
 
-button {
-  border-bottom-color: #FF9326;
-  border-color: #FF9326;
-  border: 2px;
-}
-
 .button-90 {
   width: 90%;
 }
@@ -54,7 +48,7 @@ button {
 
 .button-setting {
   border-bottom: #F2F2F2 1px solid;
-  padding: 25rpx 20rpx 25rpx 60rpx;
+  padding: 30rpx 20rpx 30rpx 60rpx;
   color: #333;
 }
 
@@ -112,6 +106,13 @@ color-bg-white {
   color: green;
 }
 
+.floatL {
+  float: left;
+}
+
+.floatR {
+  float: right;
+}
 .flex-out {
   display:flex;
   flex-direction:column;
