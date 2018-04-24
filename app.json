@@ -12,10 +12,10 @@
     "pages/poster/question/question"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FF9326",
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFF",
     "navigationBarTitleText": "阿甘学车",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#999999",
