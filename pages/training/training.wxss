@@ -17,3 +17,8 @@
  .button-bg-gray {
    margin: 20rpx 23rpx;
  }
+
+ .buttonImage {
+   width: 50rpx;
+   height: 50rpx;
+ }

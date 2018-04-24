@@ -13,9 +13,9 @@
 
 <view class='col-100'>
   <view class='button-bg-gray includeFloat'>
-    <view wx:for='{{button}}' wx:key='button' class='button wrapper {{item.classWrapper}}'>
+    <view class='button wrapper {{item.classWrapper}}' wx:for='{{button}}' wx:key='button' bindtap='{{item.bindTap}}'>
       <view class='centent cell'>
-        <icon></icon>
+        <image class='buttonImage' src='{{item.Image}}'></image>
         <text>{{item.text}}</text>
       </view>
     </view>
