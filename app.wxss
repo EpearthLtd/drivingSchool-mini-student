@@ -21,7 +21,7 @@ page {
   box-sizing: border-box;
 }
 
-.centent {
+.center {
   margin: 0 auto;
   text-align: center;
 }
