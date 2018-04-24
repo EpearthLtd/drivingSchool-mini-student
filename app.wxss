@@ -30,6 +30,7 @@ page {
   width: 100vw;
   background-color: #FFFFFF;
   margin-bottom: 20rpx;
+  position: relative;
   overflow: hidden;
 }
 
