@@ -18,7 +18,7 @@
   <view class='button-bg-gray includeFloat'>
     <view class='button wrapper {{item.classWrapper}}' wx:for='{{button}}' wx:key='button' bindtap='{{item.bindTap}}'>
       <view class='center cell'>
-        <image class='buttonImage' src='{{item.Image}}'></image>
+        <image class='buttonImage center' src='{{item.image}}'></image>
         <text>{{item.text}}</text>
       </view>
     </view>

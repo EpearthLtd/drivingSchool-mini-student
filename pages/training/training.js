@@ -15,10 +15,10 @@ Page({
   data: {
     adImage: 'http://www.epearth.com/testimg/agan.png',
     "button": [
-      { "classWrapper": "bd-bottom bd-right", "image": "", "text": "时间表", "bindTap": "" },
-      { "classWrapper": "bd-bottom", "image": "", "text": "联系教练", "bindTap": "" },
-      { "classWrapper": "bd-right", "image": "", "text": "学车记录", "bindTap": "" },
-      { "classWrapper": "", "image": "", "text": "曹操专车", "bindTap": "" }
+      { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "时间表", "bindTap": "" },
+      { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "" },
+      { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "" },
+      { "classWrapper": "", "image": "../../images/caocao.png", "text": "曹操专车", "bindTap": "" }
     ]
   },
 
