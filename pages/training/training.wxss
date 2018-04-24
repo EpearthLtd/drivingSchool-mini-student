@@ -19,6 +19,7 @@
  }
 
  .buttonImage {
-   width: 50rpx;
-   height: 50rpx;
+   width: 80rpx;
+   height: 80rpx;
+   display: block;
  }
