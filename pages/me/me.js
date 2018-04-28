@@ -35,12 +35,13 @@ Page({
       { className: "", text: "在线客服", bindtap: "" }
     ],
     userPhone:[
-      { className: "", text: "学车协议", bindtap: "" }
+      { className: "", text: "手机号 读取中", bindtap: "" }
     ],
     other: [
       { className: "", text: "反馈建议", bindtap: "" },
       { className: "", text: "投诉电话", bindtap: "complaint" },
-      { className: "", text: "关于阿甘学车", bindtap: "" }
+      { className: "", text: "学车协议", bindtap: "clickCompact" },
+      { className: "", text: "关于阿甘学车", bindtap: "clickAbout" }
     ]
   },
 
@@ -143,6 +144,30 @@ Page({
   complaint: function() {
     wx.makePhoneCall({
       phoneNumber: this.data.complaintPhone,
+    })
+  },
+
+  /**
+   * 学车协议
+   */
+  clickCompact: function() {
+    wx.navigateTo({
+      url: '../supportInfo/compact/compact',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+
+  /**
+   * 关于阿甘学车
+   */
+  clickAbout: function() {
+    wx.navigateTo({
+      url: '../supportInfo/aboutAgan/aboutAgan',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
     })
   }
 })

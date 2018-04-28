@@ -26,14 +26,6 @@
   </view>
 </view>
 
-<!--基本信息-->
-<view class='col-100'>
-  <view class='button-setting' wx:for='{{userPhone}}' wx:key='key'>
-    <text class='{{item.className}}'>{{item.text}}</text>
-    <text class='icon-right {{item.className}}'>〉</text>
-  </view>
-</view>
-
 <!--联系官方-->
 <view class='col-100'>
   <view class='button-setting' wx:for='{{other}}' wx:key='key' bindtap='{{item.bindtap}}'>
