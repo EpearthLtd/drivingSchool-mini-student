@@ -60,15 +60,15 @@ button {
 }
 
 .bd-left {
-  border-left: solid #CCC 2rpx;
+  border-left: solid #F2F2F2 2rpx;
 }
 
 .bd-right {
-  border-right: solid #CCC 2rpx;
+  border-right: solid #F2F2F2 2rpx;
 }
 
 .bd-bottom {
-  border-bottom: solid #CCC 2rpx;
+  border-bottom: solid #F2F2F2 2rpx;
 }
 
 .bottom-text {
