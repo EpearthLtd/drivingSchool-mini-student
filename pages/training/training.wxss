@@ -8,7 +8,7 @@
  */
  
  .button {
-   width: 47vw;
+   width: 46.8vw;
    height: 48vw;
    background-color: #FFF;
    font-size: small;
