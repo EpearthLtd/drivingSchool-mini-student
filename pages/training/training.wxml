@@ -12,7 +12,7 @@
 </view>
 
 <view class='col-100'>
-  <view class='buttonMain wrapper' bindtap=''>
+  <view class='buttonMain wrapper' bindtap='clickNoPage'>
     <text class='center cell'>练车预约</text>
   </view>
   <view class='button-bg-gray includeFloat'>

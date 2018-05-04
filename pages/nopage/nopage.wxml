@@ -7,9 +7,9 @@
   公司网站site：www.epearth.com
 -->
 <view class='container'>
-  <block wx:for="{{iconType}}" wx:key="key">
-    <icon type='{{item}}' size="120"></icon>
-  </block>
+
+  <icon type='warn' size="120"></icon>
+
   <text class="information">功能开发中，暂未开放</text>
   <text class="information">敬请期待</text>
 </view>

@@ -76,5 +76,14 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  clickNoPage: function() {
+    wx.navigateTo({
+      url: '../nopage/nopage',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   }
 })
