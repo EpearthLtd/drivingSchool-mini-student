@@ -15,10 +15,10 @@ Page({
   data: {
     adImage: 'http://www.epearth.com/testimg/agan.png',
     "button": [
-      { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "时间表", "bindTap": "" },
-      { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "" },
-      { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "" },
-      { "classWrapper": "", "image": "../../images/caocao.png", "text": "曹操专车", "bindTap": "" }
+      { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "时间表", "bindTap": "clickTimeTable" },
+      { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "clickNoPage" },
+      { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "clickNoPage" },
+      { "classWrapper": "", "image": "../../images/caocao.png", "text": "曹操专车", "bindTap": "clickNoPage" }
     ]
   },
 
@@ -78,12 +78,18 @@ Page({
   
   },
 
+  clickTimeTable: function() {
+    wx.navigateTo({
+      url: 'timeTable/timetable',
+    })
+  },
+
+  /**
+   * 开发中
+   */
   clickNoPage: function() {
     wx.navigateTo({
       url: '../nopage/nopage',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
     })
   }
 })
