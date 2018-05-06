@@ -15,8 +15,8 @@
 }
 
 .carousels {
-  height: 300rpx;
-  width: 100%;
+  height: 48.1vw;
+  width: 100vw;
 }
 
 .carousels image {
@@ -26,6 +26,7 @@
 
 .view-button-bg {
   margin: 25rpx 0;
+  margin: 20rpx 0;
   padding: 30rpx 15rpx;
   background-color: white;
   align-items: center;
@@ -99,5 +100,5 @@ text-button {
 }
 
 .button-primary {
-  margin: 25rpx 40rpx;
+  margin: 15rpx 40rpx;
 }
