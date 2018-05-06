@@ -14,9 +14,9 @@ Page({
    */
   data: {
     carousels:[
-      { url: 'http://www.epearth.com/testimg/logo.png' },
-      { url: 'http://www.epearth.com/testimg/agan.png' },
-      { url: 'http://www.epearth.com/testimg/logo.png' }
+      { url: 'http://www.epearth.com/testimg/ad1.jpg' },
+      { url: 'http://www.epearth.com/testimg/ad2.jpg' },
+      { url: 'http://www.epearth.com/testimg/ad3.jpg' }
     ],
     priceView:[
       { image: '../../images/car.png', name: '手动档', price: '2680', descriptionL1: '尊享学车优惠　体检考试接送', descriptionL2: '全程售后服务'},
