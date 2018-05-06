@@ -25,7 +25,6 @@
 }
 
 .view-button-bg {
-  margin: 25rpx 0;
   margin: 20rpx 0;
   padding: 30rpx 15rpx;
   background-color: white;

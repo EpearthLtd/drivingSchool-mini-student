@@ -17,7 +17,7 @@ Page({
    */
   data: {
     //投诉电话
-    complaintPhone: '+8602867873121',
+    complaintPhone: '02867873121',
     //用户信息
     userInfo: {},
     userRealName: '姓名 读取中',
