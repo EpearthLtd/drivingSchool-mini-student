@@ -7,4 +7,12 @@
   公司网站site：www.epearth.com
 -->
 
+<view class="section">
+  <picker mode="date" value="{{date}}" start="2018-05-01" end="2018-12-31" bindchange="bindDateChange">
+    <view class="picker">
+      当前日期:  {{date}}
+    </view>
+  </picker>
+</view>
+
 <text>pages/training/timeTable/timetable.wxml</text>

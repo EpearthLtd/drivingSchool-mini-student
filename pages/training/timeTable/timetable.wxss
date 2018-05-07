@@ -7,3 +7,7 @@
  * 公司网站site：www.epearth.com
  */
  
+ .section {
+   background-color: #FFF;
+   padding: 25rpx 60rpx;
+ }

@@ -13,7 +13,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    date: '2018-05-01',
   },
 
   /**
@@ -70,5 +70,15 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  /**
+   * 日期选择器日期变化事件
+   */
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
 })
