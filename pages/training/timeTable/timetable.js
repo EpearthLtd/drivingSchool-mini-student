@@ -7,20 +7,28 @@
  * 公司网站site：www.epearth.com
  */
 
+// 导入js  
+var util = require('../../../utils/util.js'); 
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    date: '2018-05-01',
+    date: '2018-01-01',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 调用函数时，传入new Date()参数，返回值是日期和时间  
+    var date = util.formatDate(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据  
+    this.setData({
+      date: date
+    });  
   },
 
   /**
