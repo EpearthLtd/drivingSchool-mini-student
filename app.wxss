@@ -109,6 +109,18 @@ color-bg-white {
   color: green;
 }
 
+.block {
+  display: block;
+}
+
+.fl-left {
+  float: left;
+}
+
+.fl-right {
+  float: right;
+}
+
 .flex-out {
   display:flex;
   flex-direction:column;
@@ -116,6 +128,17 @@ color-bg-white {
 
 .flex-in {
   align-self: center;
+}
+
+.font-big {
+  font-size: large;
+}
+
+.font-medium {
+  font-size: medium;
+}
+.font-small {
+  font-size: small;
 }
 
 .icon-right {
@@ -139,12 +162,37 @@ color-bg-white {
   margin-right: 2rpx;
 }
 
+.mg-right-bigger {
+  margin-right: 300rpx;
+}
+
 .mg-bottom {
   margin-bottom: 2rpx;
 }
 
+.mg-bottom-10 {
+  margin-bottom: 10rpx;
+}
+
+.mg-bottom-20 {
+  margin-bottom: 20rpx;
+}
+
+.mg-bottom-40 {
+  margin-bottom: 40rpx;
+}
+
+.pa-10 {
+  padding: 10rpx;
+}
+
 .pa-20 {
   padding: 20rpx;
+}
+
+.view-white {
+  background-color: white;
+  overflow: hidden;
 }
 
 .wrapper {

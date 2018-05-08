@@ -15,4 +15,18 @@
   </picker>
 </view>
 
-<text>pages/training/timeTable/timetable.wxml</text>
+<view class='view-white bd-bottom mg-20 pa-20 font-medium'>
+  <view class='includeFloat bd-bottom pa-10'>
+    <view class='mg-bottom-40'>
+      <text class='font-big'>C1 科目二训练</text>
+      <text class='fl-right'>预约成功</text>
+    </view>
+    <text class='block mg-bottom-10'>时间：{{date}} 17:00-18:00</text>
+    <text class='block mg-bottom-10'>地址：或者上车地址？训练区域？</text>
+  </view>
+  <view class='includeFloat pa-10'>
+    <text class='block mg-bottom-10'>教练：教练甲</text>
+    <text class='block mg-bottom-10'>车牌：川AS048学</text>
+    <text class=''>电话：13500000000 （点击拨打）</text>
+  </view>
+</view>
