@@ -7,4 +7,5 @@
   公司网站site：www.epearth.com
 -->
 
-<text>pages/supportInfo/compact/compact.wxml</text>
+<!--指向合同的网页-->
+<web-view src="http://www.epearth.com"></web-view>
