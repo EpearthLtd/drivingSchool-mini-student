@@ -14,7 +14,7 @@ Page({
    */
   data: {
     carousels:[
-      { url: 'http://www.epearth.com/testimg/ad1.jpg' },
+      { url: 'https://aganxuehe.com/testimg/ad1.jpg' },
       { url: 'http://www.epearth.com/testimg/ad2.jpg' },
       { url: 'http://www.epearth.com/testimg/ad3.jpg' }
     ],
