@@ -37,6 +37,9 @@ Page({
     userPhone:[
       { className: "", text: "手机号 读取中", bindtap: "" }
     ],
+    miniProgram: [
+      { className: "", text: "阿甘校园购", bindtap: "clickSchoolStore" }
+    ],
     other: [
       { className: "", text: "反馈建议", bindtap: "" },
       { className: "", text: "投诉电话", bindtap: "complaint" },
@@ -135,6 +138,18 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+
+  /**
+   * 打开阿甘校园购
+   */
+  clickSchoolStore: function () {
+    wx.navigateToMiniProgram({
+      appId: 'wx6f53b2295b1349d9',
+      success(res) {
+        // 打开成功
+      }
     })
   },
 
