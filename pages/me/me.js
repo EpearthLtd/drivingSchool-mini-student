@@ -144,12 +144,29 @@ Page({
    * 打开阿甘校园购
    */
   clickSchoolStore: function () {
-    wx.navigateToMiniProgram({
-      appId: 'wx6f53b2295b1349d9',
-      success(res) {
-        // 打开成功
-      }
-    })
+    if (wx.navigateToMiniProgram) {
+      wx.navigateToMiniProgram({
+        appId: 'wx6f53b2295b1349d9',
+        success(res) {
+          // 打开成功
+          console.log('成功打开小程序“阿甘校园购')
+        }
+      })
+    } else {
+      //微信版本过低不支持wx.navigateToMiniProgram
+      console.log('微信版本过低不支持wx.navigateToMiniProgram')
+      wx.showModal({
+        title: '打开阿甘校园购失败',
+        content: '您的微信版本过低，请升级到最新版本',
+        showCancel: false,
+        success: function (res) {
+          console.log('提示阿甘校园购打开失败')
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      })
+    }
   },
 
   /**
