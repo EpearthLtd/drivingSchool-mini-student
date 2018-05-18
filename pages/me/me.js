@@ -41,7 +41,6 @@ Page({
       { className: "", text: "阿甘校园购", bindtap: "clickSchoolStore" }
     ],
     other: [
-      { className: "", text: "反馈建议", bindtap: "" },
       { className: "", text: "投诉电话", bindtap: "complaint" },
       { className: "", text: "学车协议", bindtap: "clickCompact" },
       { className: "", text: "关于阿甘学车", bindtap: "clickAbout" }
