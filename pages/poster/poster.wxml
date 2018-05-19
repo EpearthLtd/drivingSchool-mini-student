@@ -7,6 +7,7 @@
   公司网站site：www.epearth.com
 -->
 
+<!--轮播图-->
 <swiper class='carousels' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
   <block wx:for="{{carousels}}" wx:for-index="index" wx:key="key">
     <swiper-item>
@@ -15,8 +16,10 @@
   </block>
 </swiper>
 
+<!--客服按钮-->
 <button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
 
+<!--报名价格-->
 <view class='view-price-bg' bindtap='clickC' wx:for="{{priceView}}" wx:key="key">
   <image class='image-title' src='{{item.image}}' bindtap='clickC'>C1</image>
   <text class='text-price' bindtap='clickC'>{{item.price}}元</text>
@@ -30,6 +33,7 @@
   </view>
 </view>
 
+<!--底部按钮-->
 <view class='view-button-bg'>
   <view>
     <view class='view-button' bindtap='clickPromise'>
@@ -51,6 +55,7 @@
   </view>
 </view>
 
+<!--底线-->
 <view class='container'>
   <text class='bottom-text'>-- 我是底线 --</text>
   <text class='bottom-text-small'>人生的列车总会驶向远方,不管远方在哪里,邂逅阿甘学车,诗与远方,阿甘与你,一路同行</text>

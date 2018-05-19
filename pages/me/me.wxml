@@ -6,6 +6,8 @@
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
+
+<!--个人信息-->
 <view class='userinfo wrapper bg-white'>
   <view class='cell pd-20 flex-out'>
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='button-80'> 微信登录 </button>
