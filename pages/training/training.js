@@ -14,11 +14,13 @@ Page({
    */
   data: {
     adImage: 'http://www.epearth.com/testimg/agan.png',
+    message: 'massage',
+    instructorPhone: null,
     "button": [
       { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "时间表", "bindTap": "clickTimeTable" },
-      { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "clickNoPage" },
+      { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "clickContactInstructor" },
       { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "clickNoPage" },
-      { "classWrapper": "", "image": "../../images/caocao.png", "text": "曹操专车", "bindTap": "clickNoPage" }
+      { "classWrapper": "", "image": "../../images/caocao.png", "text": "曹操专车", "bindTap": "clickCaocao" }
     ]
   },
 
@@ -78,9 +80,58 @@ Page({
   
   },
 
+  /**
+   * 用户点击时间表
+   */
   clickTimeTable: function() {
+    console.log('用户点击“时间表”按钮')
     wx.navigateTo({
       url: 'timeTable/timetable',
+      success: console.log('打开“时间表”页面成功'),
+      fail: console.log('打开“时间表”页面失败'),
+    })
+  },
+
+  /**
+   * 用户点击联系教练
+   */
+  clickContactInstructor: function() {
+    console.log('用户点击“联系教练”按钮')
+    if (true) {
+      console.log('用户未预约练车，弹出提示信息'),
+      this.setData({ message: "请预约练车后再联系教练" }),
+      this.showMessage()
+    } else {
+      console.log('用户已预约练车，拨打教练电话'),
+      wx.makePhoneCall({
+        phoneNumber: this.data.instructorPhone
+    })}
+  },
+
+  /**
+   * 用户点击曹操专车
+   */
+  clickCaocao: function () {
+    console.log('用户点击“曹操专车”按钮，弹出提示'),
+    this.setData({ message: "功能暂未开放，请耐心等待" }),
+    this.showMessage()
+  },
+
+  /**
+   * 提示消息
+   */
+  showMessage: function() {
+    wx.showModal({
+      title: '提示',
+      content: this.data.message,
+      showCancel: false,
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else {
+          console.log('用户点击取消')
+        }
+      }
     })
   },
 
