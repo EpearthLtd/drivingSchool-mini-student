@@ -71,6 +71,10 @@ button {
   border-bottom: solid #F2F2F2 2rpx;
 }
 
+.block {
+  display: block;
+}
+
 .bottom-text {
   width: 100%;
   color: #DDD;
@@ -84,8 +88,27 @@ button {
   text-align: center;
 }
 
+.card {
+  margin: 20rpx;
+  padding: 40rpx;
+  background-color: white;
+  border-radius: 5rpx;
+  box-shadow: 0 0 5rpx #CCC;
+}
+
+.card-top {
+  margin: 60rpx 20rpx 20rpx 20rpx;
+  font-size: small;
+  color: #999;
+}
+
+
 .color-bg {
   background-color: #FAFAFA;
+}
+
+.color-gray {
+  color: #999;
 }
 
 .color-bg-gray {
@@ -107,10 +130,6 @@ color-bg-white {
 
 .color-pass {
   color: green;
-}
-
-.block {
-  display: block;
 }
 
 .fl-left {
@@ -180,6 +199,10 @@ color-bg-white {
 
 .mg-bottom-40 {
   margin-bottom: 40rpx;
+}
+
+.mg-top-40 {
+  margin-top: 40rpx;
 }
 
 .pa-10 {
