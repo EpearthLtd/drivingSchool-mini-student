@@ -19,7 +19,7 @@ Page({
     "button": [
       { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "时间表", "bindTap": "clickTimeTable" },
       { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "clickContactInstructor" },
-      { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "clickNoPage" },
+      { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "clickBill" },
       { "classWrapper": "", "image": "../../images/caocao.png", "text": "曹操专车", "bindTap": "clickCaocao" }
     ]
   },
@@ -106,6 +106,18 @@ Page({
       wx.makePhoneCall({
         phoneNumber: this.data.instructorPhone
     })}
+  },
+
+  /**
+   * 用户点学车记录
+   */
+  clickBill: function () {
+    console.log('用户点击“学车记录”按钮')
+    wx.navigateTo({
+      url: '../me/bill/bill',
+      success: console.log('打开“学车记录”页面成功'),
+      fail: console.log('打开“学车记录”页面失败'),
+    })
   },
 
   /**

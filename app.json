@@ -10,7 +10,8 @@
     "pages/poster/process/process",
     "pages/poster/notice/notice",
     "pages/poster/question/question",
-    "pages/training/timeTable/timetable"
+    "pages/training/timeTable/timetable",
+    "pages/me/bill/bill"
   ],
   "window": {
     "backgroundTextStyle": "black",
