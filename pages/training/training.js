@@ -14,7 +14,8 @@ Page({
    */
   data: {
     adImage: 'http://www.epearth.com/testimg/agan.png',
-    message: 'massage',
+    messageTitle: '提示',
+    message: '消息内容',
     instructorPhone: null,
     "button": [
       { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "时间表", "bindTap": "clickTimeTable" },
@@ -99,7 +100,7 @@ Page({
     console.log('用户点击“联系教练”按钮')
     if (true) {
       console.log('用户未预约练车，弹出提示信息'),
-      this.setData({ message: "请预约练车后再联系教练" }),
+        this.setData({ messageTitle: "请预约练车后再联系", message: "不然我不知道该找谁啊" }),
       this.showMessage()
     } else {
       console.log('用户已预约练车，拨打教练电话'),
@@ -125,7 +126,7 @@ Page({
    */
   clickCaocao: function () {
     console.log('用户点击“曹操专车”按钮，弹出未开放提示'),
-    this.setData({ message: "功能暂未开放，请耐心等待" }),
+      this.setData({ messageTitle: "曹操打仗去了", message: "功能开发中，请耐心等待" }),
     this.showMessage()
   },
 
@@ -134,7 +135,7 @@ Page({
    */
   showMessage: function() {
     wx.showModal({
-      title: '提示',
+      title: this.data.messageTitle,
       content: this.data.message,
       showCancel: false,
       success: function (res) {
