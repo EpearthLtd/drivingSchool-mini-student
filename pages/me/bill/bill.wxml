@@ -9,7 +9,7 @@
 
 <view class='mg-top-40'>
   <text class='card-top'>已完成训练</text>
-  <view class='card' wx:for='{{trainingBill}}' wx:key='bill'>
+  <view class='card' wx:for='{{trainingBill}}' wx:key='bill' bindtap='clickBill'>
     <view class='block mg-bottom-20'>
       <text class='{{item.className}}'>{{item.licenseType}} {{item.subject}}训练</text>
       <text class='icon-right {{item.className}}'>{{item.situation}} 〉</text>

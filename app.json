@@ -11,7 +11,8 @@
     "pages/poster/notice/notice",
     "pages/poster/question/question",
     "pages/training/timeTable/timetable",
-    "pages/me/bill/bill"
+    "pages/me/bill/bill",
+    "pages/training/details/details"
   ],
   "window": {
     "backgroundTextStyle": "black",

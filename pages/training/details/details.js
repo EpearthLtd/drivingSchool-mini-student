@@ -1,8 +1,8 @@
 /**
  * 版权所有(C)2018 成都曦璞科技有限公司
  * 
- * 文件名file：pages/me/bill/bill.js
- * 描述description：学车微信小程序学员端-学车记录页处理逻辑
+ * 文件名file：pages/training/details/details.js
+ * 描述description：学车微信小程序学员端-训练详情页处理逻辑
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
  */
@@ -13,10 +13,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    trainingBill: [
-      { className: "", licenseType: "C1", subject: "科目三", situation: "已完成", datetime: "2018年06月16日 14:03", instructor: "李师傅" },
-      { className: "", licenseType: "C1", subject: "科目二", situation: "已完成", datetime: "2018年06月14日 15:01", instructor: "张师傅" }
-    ],
+  
   },
 
   /**
@@ -73,14 +70,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  /**
-   * 用户点击训练记录
-   */
-  clickBill: function () {
-    wx.navigateTo({
-      url: '../../training/details/details',
-    })
   }
 })
