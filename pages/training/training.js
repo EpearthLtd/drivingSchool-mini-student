@@ -13,7 +13,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    adImage: 'http://www.epearth.com/testimg/agan.png',
+    adImage: 'https://aganxueche.com/images/agan.png',
     messageTitle: '提示',
     message: '消息内容',
     instructorPhone: null,
