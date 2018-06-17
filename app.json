@@ -12,7 +12,8 @@
     "pages/poster/question/question",
     "pages/training/timeTable/timetable",
     "pages/me/bill/bill",
-    "pages/training/details/details"
+    "pages/training/details/details",
+    "pages/training/reservation/reservation"
   ],
   "window": {
     "backgroundTextStyle": "black",
