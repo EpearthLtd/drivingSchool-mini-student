@@ -21,7 +21,7 @@ App({
         if (res.code) {
           // 发起网络请求
           wx.request({
-            url: 'http://47.75.4.25:8080/userinfo/wx/login',
+            url: 'https://aganxueche.com/userinfo/wx/login',
             method: 'POST',
 
           })

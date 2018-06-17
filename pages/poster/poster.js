@@ -14,9 +14,9 @@ Page({
    */
   data: {
     carousels:[
-      { url: 'https://aganxueche.com/testimg/ad1.jpg' },
-      { url: 'https://aganxueche.com/testimg/ad2.jpg' },
-      { url: 'https://aganxueche.com/testimg/ad3.jpg' }
+      { url: 'https://aganxueche.com/testimg/ad1.jpg', bindtap: 'clickAd1' },
+      { url: 'https://aganxueche.com/testimg/ad2.jpg', bindtap: 'clickAd2' },
+      { url: 'https://aganxueche.com/testimg/ad3.jpg', bindtap: '' }
     ],
     priceView:[
       { image: '../../images/car.png', name: '手动档', price: '2680', descriptionL1: '尊享学车优惠　体检考试接送', descriptionL2: '全程售后服务'},
@@ -78,6 +78,26 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 用户点击广告页1
+   */
+  clickAd1: function () {
+    console.log('用户点击广告图片1')
+    wx.navigateTo({
+      url: '../ad/ad1/ad1',
+    })
+  },
+
+  /**
+   * 用户点击广告页2
+   */
+  clickAd2: function () {
+    console.log('用户点击广告图片2')
+    wx.navigateTo({
+      url: '../ad/ad2/ad2',
+    })
   },
 
   clickC: function () {

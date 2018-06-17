@@ -9,8 +9,8 @@
 
 <!--轮播图-->
 <swiper class='carousels' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
-  <block wx:for="{{carousels}}" wx:for-index="index" wx:key="key">
-    <swiper-item>
+  <block wx:for="{{carousels}}" wx:for-index="index" wx:key="ad" >
+    <swiper-item  bindtap='{{item.bindtap}}'>
       <image src='{{item.url}}' class='slide-image' mode='aspectFill'/>
     </swiper-item>
   </block>
