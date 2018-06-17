@@ -7,4 +7,43 @@
   公司网站site：www.epearth.com
 -->
 
-<text>pages/training/reservation/reservation.wxml</text>
+<view class='section'>
+  <!--学员基本信息-->
+  <view class='mg-bottom-20 font-small color-gray'>
+    <view class='block'>
+      <text>姓名：学员姓名</text>
+      <text class='fl-right'>驾校名称</text>
+    </view>
+    <view class='block'>
+      <text>科目：科目二</text>
+      <text class='fl-right'>C1</text>
+    </view>
+  </view>
+
+  <!--预约日期-->
+  <view class="mg-bottom-20">
+    <picker mode="date" value="{{date}}" start="{{date}}" end="{{dateEnd}}" bindchange="bindDateChange">
+      <view class="picker">
+        预约日期:  {{date}}
+      </view>
+    </picker>
+  </view>
+
+  <!--选择教练-->
+  <view class="mg-bottom-10">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        选择教练：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class='mg-top-40'>
+  <text class='card-top'>请选择预约时段</text>
+  <view class='card' wx:for='{{timeTable}}' wx:key='timeTable'>
+    <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
+    <text class='block mg-bottom-20'>{{item.startTime}} - {{item.endTime}}</text>
+    <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
+  </view>
+</view>

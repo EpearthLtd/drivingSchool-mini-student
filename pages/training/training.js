@@ -82,6 +82,18 @@ Page({
   },
 
   /**
+   * 用户点击练车预约
+   */
+  clickReservation: function () {
+    console.log('用户点击“练车预约”按钮')
+    wx.navigateTo({
+      url: 'reservation/reservation',
+      success: console.log('打开“练车预约”页面成功'),
+      fail: console.log('打开“练车预约”页面失败'),
+    })
+  },
+
+  /**
    * 用户点击时间表
    */
   clickTimeTable: function() {

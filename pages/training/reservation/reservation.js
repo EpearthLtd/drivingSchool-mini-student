@@ -7,20 +7,41 @@
  * 公司网站site：www.epearth.com
  */
 
+// 导入js  
+var util = require('../../../utils/util.js'); 
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    date: '',
+    dateEnd: '',
+    array: ['教练甲', '教练乙', '教练丙', '教练丁'],
+    timeTable: [
+      { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
+      { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
+      { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray' },
+      { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
+      { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
+      { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray' },
+      { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 调用函数时，传入new Date()参数，返回值是日期和时间  
+    var date = util.formatDate(new Date());
+    var dateEnd = util.formatEndDate(new Date());
+    // 再通过setData更改Page()里面的data，动态更新页面的数据  
+    this.setData({
+      date: date,
+      dateEnd: dateEnd
+    });  
   },
 
   /**
@@ -70,5 +91,25 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  /**
+   * 教练选择
+   */
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
+  /**
+   * 日期变化事件
+   */
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
 })

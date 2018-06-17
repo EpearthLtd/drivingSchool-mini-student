@@ -12,8 +12,8 @@
 </view>
 
 <view class='col-100'>
-  <view class='buttonMain wrapper' bindtap='clickNoPage'>
-    <text class='center cell'>练车预约</text>
+  <view class='buttonMain wrapper' bindtap='clickReservation'>
+    <text class='center cell'>预约练车</text>
   </view>
   <view class='button-bg-gray includeFloat'>
     <view class='button wrapper {{item.classWrapper}}' wx:for='{{button}}' wx:key='button' bindtap='{{item.bindTap}}'>
