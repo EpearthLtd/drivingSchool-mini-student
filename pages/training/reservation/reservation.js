@@ -34,14 +34,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 调用函数时，传入new Date()参数，返回值是日期和时间  
+    // 调用函数时，传入new Date()参数，返回值是日期和时间
+    var that = this;
     var date = util.formatDate(new Date());
     var dateEnd = util.formatEndDate(new Date());
-    // 再通过setData更改Page()里面的data，动态更新页面的数据  
+    /* 设置
+    var timeTable = this.data.timeTable.lenth;
+    for(var i=0; i++; i<=timeTable) {
+      var tomeTable = "timeTable[" + i + "]";
+      var disabled = timeTable + ".disabled";
+      var situation = timeTable + ".situation";
+      var disabledValue = that.data.timeTable[i].disabled;
+      if (disabledValue == true) {
+        this.setData({
+          situation: "测试已被预约"
+        })}
+    };
+    */
+    // 再通过setData更改Page()里面的data，动态更新页面的数据
     this.setData({
       date: date,
       dateEnd: dateEnd
-    });  
+    });
+    
   },
 
   /**
