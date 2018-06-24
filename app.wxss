@@ -129,7 +129,7 @@ button {
 }
 
 .color-pass {
-  color: green;
+  color: rgb(9,187,7);
 }
 
 .fl-left {
@@ -147,6 +147,10 @@ button {
 
 .flex-in {
   align-self: center;
+}
+
+.font-larger {
+  font-size: larger
 }
 
 .font-big {
@@ -171,6 +175,10 @@ button {
 
 .mg-20 {
   margin: 20rpx;
+}
+
+.mg-20-vertical {
+  margin: 20rpx 0;
 }
 
 .mg-left {

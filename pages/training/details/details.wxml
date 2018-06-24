@@ -6,4 +6,36 @@
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
-<text>pages/training/details/details.wxml</text>
+
+<view class='card'>
+  <view>
+    <text class='block center font-medium'>驾校名称</text>
+    <text class='block center font-larger mg-20-vertical'>C1 科目二训练</text>
+    <text class='block center mg-20-vertical font-small color-gray'>训练完成</text>
+  </view>
+  <view class='bd-bottom'>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>教练</text>
+      <text class='fl-right'>教练甲</text>
+    </view>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>车牌</text>
+      <text class='fl-right'>川AS048学</text>
+    </view>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>电话</text>
+      <text class='fl-right'>13500000000</text>
+    </view>
+  </view>
+  <view>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>训练时间</text>
+      <text class='fl-right'>开始时间 - 结束时间</text>
+    </view>
+    <view class='font-small'>
+      <text class='color-gray'>训练编号</text>
+      <text class='fl-right'>01000000000000</text>
+    </view>
+  </view>
+</view>
+

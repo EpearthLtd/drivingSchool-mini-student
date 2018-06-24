@@ -15,8 +15,8 @@
       <text class='icon-right {{item.className}}'>{{item.situation}} 〉</text>
     </view>
     <view class='block color-gray'>
-      <text class='block mg-bottom-10'>{{item.datetime}}</text>
-      <text class='block'>{{item.instructor}}</text>
+      <text class='block mg-bottom-10 font-small'>{{item.datetime}}</text>
+      <text class='block font-small'>{{item.instructor}}</text>
     </view>
   </view>
 </view>
