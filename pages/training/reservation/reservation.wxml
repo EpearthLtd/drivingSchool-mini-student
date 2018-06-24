@@ -41,9 +41,18 @@
 
 <view class='mg-top-40'>
   <text class='card-top'>请选择预约时段</text>
-  <view class='card' wx:for='{{timeTable}}' wx:key='timeTable'>
-    <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
-    <text class='block mg-bottom-20'>{{item.startTime}} - {{item.endTime}}</text>
-    <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
-  </view>
+  <radio-group bindchange="">
+    <view class='card includeFloat {{item.cardClass}}' wx:for='{{timeTable}}' wx:key='timeTable'>
+      <label>
+      <view class='radio'>
+        <radio disabled='{{item.disabled}}'></radio>
+      </view>
+      <view class='time-item'>
+        <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
+        <text class='block mg-bottom-20'>{{item.startTime}} - {{item.endTime}}</text>
+        <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
+      </view>
+      </label>
+    </view>
+  </radio-group>
 </view>

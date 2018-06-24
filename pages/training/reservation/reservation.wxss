@@ -11,3 +11,13 @@
    background-color: #FFF;
    padding: 25rpx 60rpx;
  }
+
+ .radio {
+   margin-top: 30rpx;
+   float: left;
+ }
+
+ .time-item {
+   width: 550rpx;
+   float: right;
+ }

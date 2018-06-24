@@ -20,13 +20,13 @@ Page({
     dateEnd: '',
     array: ['教练甲', '教练乙', '教练丙', '教练丁'],
     timeTable: [
-      { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
-      { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
-      { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray' },
-      { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
-      { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' },
-      { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray' },
-      { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass' }
+      { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
+      { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
+      { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray', disabled: true, cardClass: '' },
+      { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
+      { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
+      { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray', disabled: true, cardClass: '' },
+      { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' }
     ]
   },
 
