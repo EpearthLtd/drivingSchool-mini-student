@@ -89,7 +89,7 @@ page {
   background-color: #CCC;
 }
 
-color-bg-white {
+.color-bg-white {
   background-color: #FFF;
 }
 
