@@ -33,8 +33,9 @@
    border: 10rpx solid #FFAA40;
    border-radius: 50%;
    overflow: auto;
-   margin: auto;
+   margin: -130rpx auto 0 auto;
    position: absolute;
-   top: 0; bottom: 0; left: 0; right: 0;
+   /*top: 0; bottom: 0;*/
+   left: 0; right: 0;
    z-index: 10;
  }

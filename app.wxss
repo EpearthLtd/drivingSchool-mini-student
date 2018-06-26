@@ -29,7 +29,6 @@ page {
 .col-100 {
   width: 100vw;
   background-color: #FFFFFF;
-  margin-top: 20rpx;
   overflow: hidden;
 }
 
@@ -204,6 +203,10 @@ page {
 
 .mg-bottom-40 {
   margin-bottom: 40rpx;
+}
+
+.mg-top-20 {
+  margin-top: 20rpx;
 }
 
 .mg-top-40 {
