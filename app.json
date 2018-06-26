@@ -10,7 +10,9 @@
     "pages/supportInfo/compact/compact",
     "pages/supportInfo/aboutAgan/aboutAgan",
     "pages/ad/ad1/ad1",
-    "pages/ad/ad2/ad2"
+    "pages/ad/ad2/ad2",
+    "pages/poster/automatic/automatic",
+    "pages/poster/manual/manual"
   ],
   "window": {
     "backgroundTextStyle": "light",
