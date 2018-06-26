@@ -16,24 +16,34 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //投诉电话
+    complaintPhone: '02867873121',
+    //用户信息
     userInfo: {},
     userRealName: '姓名 读取中',
     userVerifyText:'状态 读取中',
     userVerifyClass:'color-bg-gray',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    //功能按钮
     "userBooking": [
       { "className": "", "text": "训练历史" },
       { "className": "", "text": "我的评价" },
       { "className": "", "text": "消息" }
     ],
+    connectButton: [
+      { className: "", text: "在线客服", bindtap: "" }
+    ],
     userPhone:[
-      { className:"color-worry", text:"手机 读取中" },
-      { className: "", text: "合同" }
+      { className: "", text: "手机号 读取中", bindtap: "" }
+    ],
+    miniProgram: [
+      { className: "", text: "阿甘校园购", bindtap: "clickSchoolStore" }
     ],
     other: [
-      { className:"", text: "客服"},
-      { className:"", text: "BUG反馈"}
+      { className: "", text: "投诉电话", bindtap: "complaint" },
+      { className: "", text: "学车协议", bindtap: "clickCompact" },
+      { className: "", text: "关于阿甘学车", bindtap: "clickAbout" }
     ]
   },
 
@@ -127,6 +137,81 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+
+  /**
+   * 打开阿甘校园购
+   */
+  clickSchoolStore: function () {
+    if (wx.navigateToMiniProgram) {
+      wx.navigateToMiniProgram({
+        appId: 'wx6f53b2295b1349d9',
+        success(res) {
+          // 打开成功
+          console.log('成功打开小程序“阿甘校园购”')
+        }
+      })
+    } else {
+      //微信版本过低不支持wx.navigateToMiniProgram
+      console.log('微信版本过低不支持wx.navigateToMiniProgram')
+      wx.showModal({
+        title: '打开阿甘校园购失败',
+        content: '您的微信版本过低，请升级到最新版本',
+        showCancel: false,
+        success(res) {
+          console.log('提示阿甘校园购打开失败')
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      })
+    }
+  },
+
+  /**
+   * 拨打电话
+   */
+  complaint: function() {
+    console.log('用户拨打投诉电话')
+    wx.makePhoneCall({
+      phoneNumber: this.data.complaintPhone,
+      success(res) {
+        console.log('用户拨打电话成功')
+      },
+      fail(res) {
+        console.log('用户取消了拨打')
+      }
+    })
+  },
+
+  /**
+   * 学车协议
+   */
+  clickCompact: function() {
+    wx.navigateTo({
+      url: '../supportInfo/compact/compact',
+      success(res) {
+        console.log('用户打开了“学车协议”页面')
+      },
+      fail(res) {
+        console.log('打开“学车协议”页面失败')
+      },
+    })
+  },
+
+  /**
+   * 关于阿甘学车
+   */
+  clickAbout: function() {
+    wx.navigateTo({
+      url: '../supportInfo/aboutAgan/aboutAgan',
+      success(res) {
+        console.log('打开“关于阿甘学车”页面成功')
+      },
+      fail(res) {
+        console.log('打开“关于阿甘学车”页面失败')
+      },
     })
   }
 })

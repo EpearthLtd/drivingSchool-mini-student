@@ -29,20 +29,13 @@ page {
 .col-100 {
   width: 100vw;
   background-color: #FFFFFF;
-  margin-bottom: 20rpx;
-  position: relative;
+  margin-top: 20rpx;
   overflow: hidden;
 }
 
 .adImage {
   height: 300rpx;
   width: 100%;
-}
-
-button {
-  border-bottom-color: #FF9326;
-  border-color: #FF9326;
-  border: 2px;
 }
 
 .button-90 {
@@ -55,7 +48,7 @@ button {
 
 .button-setting {
   border-bottom: #F2F2F2 1px solid;
-  padding: 25rpx 20rpx 25rpx 60rpx;
+  padding: 30rpx 20rpx 30rpx 60rpx;
   color: #333;
 }
 
@@ -69,6 +62,10 @@ button {
 
 .bd-bottom {
   border-bottom: solid #F2F2F2 2rpx;
+}
+
+.bg-white {
+  background-color: #FFF;
 }
 
 .block {
