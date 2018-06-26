@@ -57,6 +57,11 @@
 }
 
 .contacButtonView {
+  border-bottom: #F2F2F2 1px solid;
   padding: 12rpx 20rpx 12rpx 60rpx;
+  color: #333;
+}
+
+.button-text {
   color: #333;
 }

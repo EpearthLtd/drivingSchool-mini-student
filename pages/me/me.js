@@ -27,12 +27,13 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
     "userBooking": [
-      { "className": "", "text": "训练历史" },
-      { "className": "", "text": "我的评价" },
-      { "className": "", "text": "消息" }
+      { "className": "", "text": "学车记录", bindtap: "clickBill" },
+      { "className": "", "text": "我的评价", bindtap: "" },
+      //{ "className": "", "text": "消息", bindtap: "" }
     ],
     connectButton: [
-      { className: "", text: "在线客服", bindtap: "" }
+      { className: "", text: "在线客服", openType: "contact" }, //最低版本1.1.0 未兼容处理
+      { className: "", text: "BUG反馈", openType: "feedback" } //最低版本2.1.0 未兼容处理
     ],
     userPhone:[
       { className: "", text: "手机号 读取中", bindtap: "" }
@@ -137,6 +138,18 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+
+  /**
+   * 用户点学车记录
+   */
+  clickBill: function () {
+    console.log('用户点击“学车记录”按钮')
+    wx.navigateTo({
+      url: '../me/bill/bill',
+      success: console.log('打开“学车记录”页面成功'),
+      fail: console.log('打开“学车记录”页面失败'),
     })
   },
 

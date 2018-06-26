@@ -18,19 +18,17 @@
   </view>
 </view>
 
-<!--客服-->
+<!--联系官方-->
 <view class='col-100 mg-top-20'>
-  <view class='contacButtonView' wx:for='{{connectButton}}' wx:key='key'>
-    <button open-type="contact" class='contacButton'>
-      <text class='fl-left {{item.className}}'>{{item.text}}</text>
-      <text class='icon-right {{item.className}}'>〉</text>
-    </button>
+  <view class='button-setting' wx:for='{{userBooking}}' wx:key='key' bindtap='{{item.bindtap}}'>
+    <text class='{{item.className}}'>{{item.text}}</text>
+    <text class='icon-right {{item.className}}'>〉</text>
   </view>
 </view>
 
 <!--关联小程序-->
 <view class='col-100 mg-top-20'>
-  <view class='button-setting' wx:for='{{miniProgram}}' wx:key='key' bindtap='{{item.bindtap}}'>
+  <view class='button-setting' wx:for='{{miniProgram}}' wx:key='miniProgram' bindtap='{{item.bindtap}}'>
     <text class='{{item.className}}'>{{item.text}}</text>
     <text class='icon-right {{item.className}}'>〉</text>
   </view>
@@ -38,8 +36,18 @@
 
 <!--联系官方-->
 <view class='col-100 mg-top-20'>
-  <view class='button-setting' wx:for='{{other}}' wx:key='key' bindtap='{{item.bindtap}}'>
+  <view class='button-setting' wx:for='{{other}}' wx:key='other' bindtap='{{item.bindtap}}'>
     <text class='{{item.className}}'>{{item.text}}</text>
     <text class='icon-right {{item.className}}'>〉</text>
+  </view>
+</view>
+
+<!--客服-->
+<view class='col-100 mg-top-20'>
+  <view class='contacButtonView' wx:for='{{connectButton}}' wx:key='key'>
+    <button open-type="{{item.openType}}" class='contacButton'>
+      <text class='fl-left button-text {{item.className}}'>{{item.text}}</text>
+      <text class='icon-right {{item.className}}'>〉</text>
+    </button>
   </view>
 </view>
