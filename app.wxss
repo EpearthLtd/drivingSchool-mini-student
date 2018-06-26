@@ -1,16 +1,15 @@
-/*
-  版权所有(C)2018 成都曦璞科技有限公司
-
-  文件名file：app.wxss
-  描述description：小程序全局样式
-  作者author：郑维一
-  公司网站site：www.epearth.com
-*/
+/**
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ * 
+ * 文件名file：app.wxss
+ * 描述description：学车微信小程序学员端-小程序全局样式
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+ */
 
 page {
   background-color: #F2F2F2;
 }
-
 
 .container {
   height: 100%;
@@ -20,13 +19,53 @@ page {
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
 
+.centent {
+  margin: 0 auto;
+  text-align: center;
+}
 
-button {
-  border-bottom-color: #FF9326;
-  border-color: #FF9326;
-  border: 2px;
+.col-100 {
+  width: 100vw;
+  background-color: #FFFFFF;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+
+.adImage {
+  height: 300rpx;
+  width: 100%;
+}
+
+.button-90 {
+  width: 90%;
+}
+
+.button-80 {
+  width: 80%;
+}
+
+.button-setting {
+  border-bottom: #F2F2F2 1px solid;
+  padding: 30rpx 20rpx 30rpx 60rpx;
+  color: #333;
+}
+
+.bd-left {
+  border-left: solid #CCC 2rpx;
+}
+
+.bd-right {
+  border-right: solid #CCC 2rpx;
+}
+
+.bd-bottom {
+  border-bottom: solid #CCC 2rpx;
+}
+
+.bg-white {
+  background-color: #FFF;
 }
 
 .bottom-text {
@@ -40,4 +79,83 @@ button {
   color: #DDD;
   font-size: 24rpx;
   text-align: center;
+}
+
+.color-bg {
+  background-color: #FAFAFA;
+}
+
+.color-bg-gray {
+  background-color: #CCC;
+}
+
+.color-bg-white {
+  background-color: #FFF;
+}
+
+.color-primary {
+  background-color: #FF9326;
+  color: #FFF;
+}
+
+.color-worry {
+  color: red;
+}
+
+.color-pass {
+  color: green;
+}
+
+.floatL {
+  float: left;
+}
+
+.floatR {
+  float: right;
+}
+.flex-out {
+  display:flex;
+  flex-direction:column;
+}
+
+.flex-in {
+  align-self: center;
+}
+
+.icon-right {
+  float: right;
+  color: #CCC;
+}
+
+.includeFloat {
+  overflow: hidden;
+}
+
+.mg-20 {
+  margin: 20rpx;
+}
+
+.mg-left {
+  margin-left: 2rpx;
+}
+
+.mg-right {
+  margin-right: 2rpx;
+}
+
+.mg-bottom {
+  margin-bottom: 2rpx;
+}
+
+.pa-20 {
+  padding: 20rpx;
+}
+
+.wrapper {
+  display: table;
+}
+
+.cell {
+  display: table-cell;
+  vertical-align: middle;
 }

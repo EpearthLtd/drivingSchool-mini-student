@@ -1,13 +1,18 @@
 {
   "pages": [
     "pages/poster/poster",
-    "pages/index/index",
-    "pages/logs/logs",
+    "pages/me/me",
     "pages/nopage/nopage",
     "pages/poster/promise/promise",
     "pages/poster/process/process",
     "pages/poster/notice/notice",
-    "pages/poster/question/question"
+    "pages/poster/question/question",
+    "pages/supportInfo/compact/compact",
+    "pages/supportInfo/aboutAgan/aboutAgan",
+    "pages/ad/ad1/ad1",
+    "pages/ad/ad2/ad2",
+    "pages/poster/automatic/automatic",
+    "pages/poster/manual/manual"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,22 +23,16 @@
   "tabBar": {
     "color": "#999999",
     "selectedColor": "#FF9326",
-    "backgroundColor": "white",
+    "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "训练",
-        "iconPath": "images/wheel-d.png",
-        "selectedIconPath": "images/wheel-a.png"
-      },
-      {
-        "pagePath": "pages/nopage/nopage",
+        "pagePath": "pages/poster/poster",
         "text": "报名",
         "iconPath": "images/form-d.png",
         "selectedIconPath": "images/form-a.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/me/me",
         "text": "我",
         "iconPath": "images/people-d.png",
         "selectedIconPath": "images/people-a.png"

@@ -1,35 +1,39 @@
 <!-- 
   版权所有(C)2018 成都曦璞科技有限公司
 
-  文件名file：  pages/poster/poster.wxml
-  描述description：海报宣传页
+  文件名file：pages/poster/poster.wxml
+  描述description：学车微信小程序学员端-海报宣传页
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
 
+<!--轮播图-->
 <swiper class='carousels' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
-  <block wx:for="{{carousels}}" wx:for-index="index" wx:key="key">
-    <swiper-item>
+  <block wx:for="{{carousels}}" wx:for-index="index" wx:key="ad" >
+    <swiper-item  bindtap='{{item.bindtap}}'>
       <image src='{{item.url}}' class='slide-image' mode='aspectFill'/>
     </swiper-item>
   </block>
 </swiper>
 
+<!--客服按钮-->
 <button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
 
-<view class='view-price-bg' bindtap='clickC' wx:for="{{priceView}}" wx:key="key">
-  <image class='image-title' src='{{item.image}}' bindtap='clickC'>C1</image>
-  <text class='text-price' bindtap='clickC'>{{item.price}}元</text>
-  <text class='text-title' bindtap='clickC'>{{item.name}}</text>
-  <view class='view-text-content' bindtap='clickC'>
-    <rich-text class='text-content' bindtap='clickC'>{{item.descriptionL1}}</rich-text>
-    <rich-text class='text-content' bindtap='clickC'>{{item.descriptionL2}}</rich-text>
+<!--报名价格-->
+<view class='view-price-bg' wx:for="{{priceView}}" wx:key="key" bindtap='{{item.bindtap}}'>
+  <image class='image-title' src='{{item.image}}'>C1</image>
+  <text class='text-price'>{{item.price}}元</text>
+  <text class='text-title'>{{item.name}}</text>
+  <view class='view-text-content'>
+    <rich-text class='text-content'>{{item.descriptionL1}}</rich-text>
+    <rich-text class='text-content'>{{item.descriptionL2}}</rich-text>
   </view>
-  <view class='view-icon-right' bindtap='clickC'>
-    <text class='text-icon-right' bindtap='clickC'>〉</text>
+  <view class='view-icon-right'>
+    <text class='text-icon-right'>〉</text>
   </view>
 </view>
 
+<!--底部按钮-->
 <view class='view-button-bg'>
   <view>
     <view class='view-button' bindtap='clickPromise'>
@@ -51,6 +55,7 @@
   </view>
 </view>
 
+<!--底线-->
 <view class='container'>
   <text class='bottom-text'>-- 我是底线 --</text>
   <text class='bottom-text-small'>人生的列车总会驶向远方,不管远方在哪里,邂逅阿甘学车,诗与远方,阿甘与你,一路同行</text>

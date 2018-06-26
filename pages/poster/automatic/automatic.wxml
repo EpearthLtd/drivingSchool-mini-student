@@ -1,0 +1,11 @@
+<!-- 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：pages/poster/automatic/automatic.wxml
+  描述description：学车微信小程序学员端-自动档详情页显示
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<!--指向介绍的网页-->
+<web-view src="https://www.aganxueche.com/miniprogram/automatic.html"></web-view>

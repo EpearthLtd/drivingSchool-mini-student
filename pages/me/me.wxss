@@ -1,0 +1,62 @@
+/**
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ * 
+ * 文件名file：pages/me/me.wxss
+ * 描述description：学车微信小程序学员端-个人信息页样式
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+ */
+ 
+.userinfo{
+  width: 100vw;
+  height: 400rpx;
+  padding: 20rpx 0;
+  overflow: hidden;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 60rpx;
+  border-radius: 50%;
+  float: right;
+}
+
+.userNickName {
+  line-height: 150rpx;
+  font-size: 50rpx;
+  margin-left: 60rpx;
+}
+
+.userRealName {
+  margin: 5rpx 10rpx;
+  height: 45rpx;
+  color: #F2F2F2;
+  font-size: small;
+  float: left;
+}
+
+.userVerify {
+  border-radius: 5rpx;
+  padding: 5rpx 10rpx;
+  font-size: xx-small;
+  margin-top: 10rpx;
+  margin-right: 200rpx;
+  float: left;
+}
+
+.contacButton {
+  background-color: #FFF;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+.contacButton::after {
+  border: #FFF solid;
+}
+
+.contacButtonView {
+  padding: 12rpx 20rpx 12rpx 60rpx;
+  color: #333;
+}

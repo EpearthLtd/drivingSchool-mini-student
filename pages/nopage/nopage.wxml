@@ -2,15 +2,13 @@
   版权所有(C)2018 成都曦璞科技有限公司
 
   文件名file：  pages/nopage/nopage.wxml
-  描述description：提示用户当前功能页尚在开发中
+  描述description：学车微信小程序学员端-提示用户当前功能页尚在开发中
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
+
 <view class='container'>
-  <block wx:for="{{iconType}}">
-    <icon type='{{item}}' size="120"></icon>
-  </block>
+  <icon type='warn' size="120"></icon>
   <text class="information">功能开发中，暂未开放</text>
   <text class="information">敬请期待</text>
 </view>
-

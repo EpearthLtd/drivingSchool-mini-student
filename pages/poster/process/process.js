@@ -1,11 +1,12 @@
-/* 
-  版权所有(C)2018 成都曦璞科技有限公司
+/**
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ * 
+ * 文件名file：pages/poster/process/process.js
+ * 描述description：学车微信小程序学员端-学车流程详情页js
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+ */
 
-  文件名file：pages/poster/process/process.js
-  描述description：学车流程详情页js
-  作者author：郑维一
-  公司网站site：www.epearth.com
-*/
 Page({
 
   /**

@@ -1,0 +1,45 @@
+<!-- 
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  文件名file：pages/me/me.wxml
+  描述description：学车微信小程序学员端-海报宣传页
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<!--个人信息-->
+<view class='userinfo wrapper bg-white'>
+  <view class='cell pd-20 flex-out'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='button-80'> 微信登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar flex-in" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class='userNickName'>{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+
+<!--客服-->
+<view class='col-100'>
+  <view class='contacButtonView' wx:for='{{connectButton}}' wx:key='key'>
+    <button open-type="contact" class='contacButton'>
+      <text class='floatL {{item.className}}'>{{item.text}}</text>
+      <text class='icon-right {{item.className}}'>〉</text>
+    </button>
+  </view>
+</view>
+
+<!--关联小程序-->
+<view class='col-100'>
+  <view class='button-setting' wx:for='{{miniProgram}}' wx:key='key' bindtap='{{item.bindtap}}'>
+    <text class='{{item.className}}'>{{item.text}}</text>
+    <text class='icon-right {{item.className}}'>〉</text>
+  </view>
+</view>
+
+<!--联系官方-->
+<view class='col-100'>
+  <view class='button-setting' wx:for='{{other}}' wx:key='key' bindtap='{{item.bindtap}}'>
+    <text class='{{item.className}}'>{{item.text}}</text>
+    <text class='icon-right {{item.className}}'>〉</text>
+  </view>
+</view>

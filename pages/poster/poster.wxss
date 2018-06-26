@@ -1,11 +1,11 @@
-/* 
-  版权所有(C)2018 成都曦璞科技有限公司
-
-  文件名file：  pages/poster/poster.wxss
-  描述description：海报页面样式
-  作者author：郑维一
-  公司网站site：www.epearth.com
-*/
+/**
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ * 
+ * 文件名file：pages/poster/poster.wxss
+ * 描述description：学车微信小程序学员端-海报页面样式
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+ */
 
 .container {
   flex-direction:column;
@@ -15,8 +15,8 @@
 }
 
 .carousels {
-  height: 300rpx;
-  width: 100%;
+  height: 48.1vw;
+  width: 100vw;
 }
 
 .carousels image {
@@ -25,7 +25,7 @@
 }
 
 .view-button-bg {
-  margin: 25rpx 0;
+  margin: 20rpx 0;
   padding: 30rpx 15rpx;
   background-color: white;
   align-items: center;
@@ -52,14 +52,14 @@
 }
 
 .text-icon-right {
-  margin-right: 10rpx;
+  margin-right: 10rpx 10rpx 10rpx 0;
   color: #CCC;
 }
 
 .image-title {
   width: 132rpx;
   height: 132rpx;
-  margin: 0 20rpx;
+  margin: 0 30rpx 0 40rpx;
   float: left;
 }
 
@@ -75,7 +75,7 @@
   background-color: #FF9326;
   border-radius: 10rpx;
   padding: 5rpx 10rpx;
-  margin-left: 180rpx;
+  margin-left: 140rpx;
 }
 
 .text-title {
@@ -99,5 +99,5 @@ text-button {
 }
 
 .button-primary {
-  margin: 25rpx 40rpx;
+  margin: 15rpx 40rpx;
 }
