@@ -20,9 +20,7 @@ Page({
     complaintPhone: '02867873121',
     //用户信息
     userInfo: {},
-    userRealName: '姓名 读取中',
-    userVerifyText:'状态 读取中',
-    userVerifyClass:'color-bg-gray',
+    userStatus: ["primary", "已报名"],
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
@@ -31,16 +29,20 @@ Page({
       { "className": "", "text": "我的评价", bindtap: "" },
       //{ "className": "", "text": "消息", bindtap: "" }
     ],
+    //反馈按钮
     connectButton: [
       { className: "", text: "在线客服", openType: "contact" }, //最低版本1.1.0 未兼容处理
       { className: "", text: "BUG反馈", openType: "feedback" } //最低版本2.1.0 未兼容处理
     ],
+    //用户信息
     userPhone:[
       { className: "", text: "手机号 读取中", bindtap: "" }
     ],
+    //小程序
     miniProgram: [
       { className: "", text: "阿甘校园购", bindtap: "clickSchoolStore" }
     ],
+    //其它按钮
     other: [
       { className: "", text: "投诉电话", bindtap: "complaint" },
       { className: "", text: "学车协议", bindtap: "clickCompact" },

@@ -8,17 +8,18 @@
 -->
 
 <!--个人信息-->
-<view class='userinfo wrapper bg-white'>
-  <view class='cell pd-20 flex-out'>
+<view class='userinfo-bg wrapper bg-white'>
+  <view class='cell userinfo flex-out'>
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='button-80'> 微信登录 </button>
     <block wx:else>
       <image class="userinfo-avatar flex-in" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class='userNickName'>{{userInfo.nickName}}</text>
+      <text class='userNickName'>{{userInfo.nickName}} </text>
+      <text class='userStatus icon-{{userStatus[0]}}'>{{userStatus[1]}}</text>
     </block>
   </view>
 </view>
 
-<!--联系官方-->
+<!--学车信息-->
 <view class='col-100 mg-top-20'>
   <view class='button-setting' wx:for='{{userBooking}}' wx:key='key' bindtap='{{item.bindtap}}'>
     <text class='{{item.className}}'>{{item.text}}</text>
@@ -43,7 +44,7 @@
 </view>
 
 <!--客服-->
-<view class='col-100 mg-top-20'>
+<view class='col-100 mg-top-20 mg-bottom-20'>
   <view class='contacButtonView' wx:for='{{connectButton}}' wx:key='key'>
     <button open-type="{{item.openType}}" class='contacButton'>
       <text class='fl-left button-text {{item.className}}'>{{item.text}}</text>

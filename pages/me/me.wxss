@@ -7,42 +7,48 @@
  * 公司网站site：www.epearth.com
  */
  
-.userinfo{
+.userinfo-bg {
   width: 100vw;
   height: 400rpx;
-  padding: 20rpx 0;
   overflow: hidden;
+}
+
+.userinfo {
+  padding: 20rpx 60rpx;
 }
 
 .userinfo-avatar {
   width: 150rpx;
   height: 150rpx;
-  margin: 0 60rpx;
   border-radius: 50%;
   float: right;
 }
 
 .userNickName {
   line-height: 150rpx;
-  font-size: 50rpx;
-  margin-left: 60rpx;
+  font-size: xx-large;
 }
 
 .userRealName {
-  margin: 5rpx 10rpx;
-  height: 45rpx;
-  color: #F2F2F2;
+  display: inline-block;
+  color: #999;
   font-size: small;
-  float: left;
 }
 
-.userVerify {
-  border-radius: 5rpx;
+.userStatus {
+  display: inline-block;
+  border-radius: 10rpx;
   padding: 5rpx 10rpx;
-  font-size: xx-small;
-  margin-top: 10rpx;
-  margin-right: 200rpx;
-  float: left;
+  font-size: x-small;
+  margin-right: 20rpx;
+}
+
+.userTrainStatus {
+  display: inline-block;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  font-size: x-small;
+  margin-right: 20rpx;
 }
 
 .contacButton {
@@ -64,4 +70,19 @@
 
 .button-text {
   color: #333;
+}
+
+.icon-primary {
+  background-color: #FF9326;
+  color: #FFF;
+}
+
+.icon-gray {
+  background-color: #999;
+  color: #FFF;
+}
+
+.icon-pass {
+  background-color: rgb(9, 187, 7);
+  color: #FFF;
 }
