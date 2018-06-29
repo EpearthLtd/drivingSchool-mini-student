@@ -26,8 +26,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
     "userBooking": [
-      { "className": "", "text": "学车记录", bindtap: "clickBill" },
-      { "className": "", "text": "账户设置", bindtap: "" },
+      { "className": "", "text": "学车记录", "url": "../me/bill/bill", "openType": "navigate", "bindtap": "clickBill" },
+      { "className": "", "text": "账户设置", "url": "../nopage/nopage", "openType": "navigate", "bindtap": "" },
       //{ "className": "", "text": "消息", bindtap: "" }
     ],
     //反馈按钮
@@ -41,7 +41,7 @@ Page({
     ],
     //小程序
     miniProgram: [
-      { className: "", text: "阿甘校园购", bindtap: "clickSchoolStore" }
+      { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "clickSchoolStore" }
     ],
     //其它按钮
     other: [
