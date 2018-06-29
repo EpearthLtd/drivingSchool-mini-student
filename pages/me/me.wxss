@@ -8,31 +8,55 @@
  */
  
 .userinfo-bg {
-  width: 100vw;
   height: 400rpx;
+  padding: 20rpx 60rpx;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userinfo-out {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .userinfo {
-  padding: 20rpx 60rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.userinfo-info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .userinfo-avatar {
+  flex-shrink: 0;
+}
+
+.user-profile-photo {
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
-  float: right;
 }
 
 .userNickName {
-  line-height: 150rpx;
   font-size: xx-large;
+  margin-right: 20rpx;
 }
 
-.userRealName {
+.user-realname {
   display: inline-block;
   color: #999;
   font-size: small;
+  margin-right: 20rpx;
 }
 
 .userStatus {
