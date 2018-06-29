@@ -31,15 +31,15 @@
 
   <!--选择教练-->
   <view class="mg-bottom-10">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{coachArray}}">
       <view class="picker">
-        选择教练：{{array[index]}}
+        选择教练：{{coachArray[index]}}
       </view>
     </picker>
   </view>
 </view>
 
-<view class='mg-top-40'>
+<view wx:if="{{date!=null && coach!=null}}" class='mg-top-40'>
   <text class='card-top'>请选择预约时段</text>
   <radio-group bindchange="">
     <view class='card includeFloat {{item.cardClass}}' wx:for='{{timeTable}}' wx:key='timeTable'>
@@ -55,4 +55,8 @@
       </label>
     </view>
   </radio-group>
+</view>
+
+<view wx:else class='center mg-top-40'>
+  <text class='text-hint'>请选择日期和教练</text>
 </view>

@@ -226,6 +226,13 @@ page {
   overflow: hidden;
 }
 
+.text-hint {
+  font-size: xx-large;
+  margin: 0 auto;
+  text-align: center;
+  color: #CCC;
+}
+
 .wrapper {
   display: table;
 }

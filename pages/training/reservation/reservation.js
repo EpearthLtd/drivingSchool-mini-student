@@ -16,9 +16,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date: '',
+    date: null,
     dateEnd: '',
-    array: ['教练甲', '教练乙', '教练丙', '教练丁'],
+    coach: null,
+    coachArray: ['教练甲', '教练乙', '教练丙', '教练丁'],
     timeTable: [
       { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
       { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
@@ -114,8 +115,10 @@ Page({
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      index: e.detail.value
+      index: e.detail.value,
+      coach: this.data.coachArray[e.detail.value]
     })
+    console.log('选择的教练为',this.data.coach)
   },
 
   /**
