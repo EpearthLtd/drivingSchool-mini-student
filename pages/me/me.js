@@ -20,13 +20,14 @@ Page({
     complaintPhone: '02867873121',
     //用户信息
     userInfo: {},
-    userStatus: ["primary", "已报名"],
+    userRealname:"郑维一",
+    userStatus: [],
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
     "userBooking": [
       { "className": "", "text": "学车记录", bindtap: "clickBill" },
-      { "className": "", "text": "我的评价", bindtap: "" },
+      { "className": "", "text": "账户设置", bindtap: "" },
       //{ "className": "", "text": "消息", bindtap: "" }
     ],
     //反馈按钮
@@ -79,6 +80,13 @@ Page({
           })
         }
       })
+    }
+    switch (3) {
+      case 0: this.setData({ userStatus: ["gray", "未报名"]});break;
+      case 1: this.setData({ userStatus: ["primary", "已报名"] }); break;
+      case 2: this.setData({ userStatus: ["pass", "已预约"] }); break;
+      case 3: this.setData({ userStatus: ["primary", "已毕业"] }); break;
+      default: this.setData({ userStatus: ["gray", "未报名"] }); break;
     }
   },
 
