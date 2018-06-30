@@ -14,9 +14,9 @@ Page({
    */
   data: {
     carousels:[
-      { url: 'https://aganxueche.com/testimg/ad1.jpg', bindtap: 'clickAd1' },
-      { url: 'https://aganxueche.com/testimg/ad2.jpg', bindtap: 'clickAd2' },
-      { url: 'https://aganxueche.com/testimg/ad3.jpg', bindtap: '' }
+      { url: 'https://aganxueche.com/images/ad1.jpg', bindtap: 'clickAd1' },
+      { url: 'https://aganxueche.com/images/ad2.jpg', bindtap: 'clickAd2' },
+      { url: 'https://aganxueche.com/images/ad3.jpg', bindtap: '' }
     ],
     priceView:[
       { image: '../../images/car.png', name: '手动档', price: '3000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickManual' },
