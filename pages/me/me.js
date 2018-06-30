@@ -26,7 +26,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
     "userBooking": [
-      { "className": "", "text": "学车记录", "url": "../me/bill/bill", "openType": "navigate", "bindtap": "clickBill" },
+      { "className": "", "text": "学车记录", "url": "../me/bill/bill", "openType": "navigate", "bindtap": "" },
       { "className": "", "text": "账户设置", "url": "../nopage/nopage", "openType": "navigate", "bindtap": "" },
       //{ "className": "", "text": "消息", bindtap: "" }
     ],
@@ -41,7 +41,7 @@ Page({
     ],
     //小程序
     miniProgram: [
-      { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "clickSchoolStore" }
+      { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "" }
     ],
     //其它按钮
     other: [
@@ -152,8 +152,8 @@ Page({
   },
 
   /**
-   * 用户点学车记录
-   */
+   * 用户点学车记录 废弃该函数换用navigator组件
+   *
   clickBill: function () {
     console.log('用户点击“学车记录”按钮')
     wx.navigateTo({
@@ -161,12 +161,15 @@ Page({
       success: console.log('打开“学车记录”页面成功'),
       fail: console.log('打开“学车记录”页面失败'),
     })
-  },
+  },*/
 
   /**
    * 打开阿甘校园购
    */
   clickSchoolStore: function () {
+    /**
+     * 废弃该函数换用navigator组件
+     *
     if (wx.navigateToMiniProgram) {
       wx.navigateToMiniProgram({
         appId: 'wx6f53b2295b1349d9',
@@ -190,6 +193,7 @@ Page({
         }
       })
     }
+    */
   },
 
   /**

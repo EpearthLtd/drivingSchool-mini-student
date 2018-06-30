@@ -88,8 +88,8 @@ Page({
     console.log('用户点击“练车预约”按钮')
     wx.navigateTo({
       url: 'reservation/reservation',
-      success: console.log('打开“练车预约”页面成功'),
-      fail: console.log('打开“练车预约”页面失败'),
+      success: function () { console.log('打开“练车预约”页面成功') },
+      fail: function () { console.log('打开“练车预约”页面失败') },
     })
   },
 
@@ -100,8 +100,8 @@ Page({
     console.log('用户点击“时间表”按钮')
     wx.navigateTo({
       url: 'timeTable/timetable',
-      success: console.log('打开“时间表”页面成功'),
-      fail: console.log('打开“时间表”页面失败'),
+      success: function () { console.log('打开“时间表”页面成功') },
+      fail: function () { console.log('打开“时间表”页面失败') }, 
     })
   },
 
@@ -128,8 +128,8 @@ Page({
     console.log('用户点击“学车记录”按钮')
     wx.navigateTo({
       url: '../me/bill/bill',
-      success: console.log('打开“学车记录”页面成功'),
-      fail: console.log('打开“学车记录”页面失败'),
+      success: function () { console.log('打开“学车记录”页面成功') },
+      fail: function () { console.log('打开“学车记录”页面失败') },
     })
   },
 
