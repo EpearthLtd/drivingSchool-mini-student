@@ -75,18 +75,6 @@
   margin-right: 20rpx;
 }
 
-.contacButton::after {
-  border: #FFF solid;
-}
-
-.contacButton {
-  border-bottom: #F2F2F2 1px solid;
-  font-size: inherit;
-  color: #333;
-  background-color: #FFF;
-  padding: 8rpx 20rpx 8rpx 60rpx;
-}
-
 .button-text {
   color: #333;
 }

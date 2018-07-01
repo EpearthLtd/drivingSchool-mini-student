@@ -1,5 +1,7 @@
 /**
+ * 阿甘学车 (https://github.com/EpearthLtd/aganWeixing)
  * 版权所有(C)2018 成都曦璞科技有限公司
+ * Licensed under the MIT license
  * 
  * 文件名file：app.wxss
  * 描述description：学车微信小程序学员端-小程序全局样式
@@ -8,7 +10,8 @@
  */
 
 page {
-  background-color: #F2F2F2;
+  background-color: #F8F8F8;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
 
 .container {
@@ -43,12 +46,6 @@ page {
 
 .button-80 {
   width: 80%;
-}
-
-.button-setting {
-  border-bottom: #F2F2F2 1px solid;
-  padding: 30rpx 20rpx 30rpx 60rpx;
-  color: #333;
 }
 
 .bd-left {
@@ -224,6 +221,24 @@ page {
 
 .pa-20 {
   padding: 20rpx;
+}
+
+.setting-button::after {
+  border: #FFF solid;
+}
+
+.setting-button {
+  border-bottom: #F8F8F8 1px solid;
+  font-size: inherit;
+  color: #333;
+  background-color: #FFF;
+  padding: 10rpx 20rpx 8rpx 60rpx;
+}
+
+.setting-navigator {
+  border-bottom: #F8F8F8 1px solid;
+  padding: 30rpx 20rpx 30rpx 60rpx;
+  color: #333;
 }
 
 .view-white {
