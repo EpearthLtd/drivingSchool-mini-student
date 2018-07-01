@@ -17,7 +17,8 @@
     "pages/training/timeTable/timetable",
     "pages/me/bill/bill",
     "pages/training/details/details",
-    "pages/training/reservation/reservation"
+    "pages/training/reservation/reservation",
+    "pages/me/personal/personal"
   ],
   "window": {
     "backgroundTextStyle": "black",
