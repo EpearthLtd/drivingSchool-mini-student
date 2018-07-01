@@ -26,30 +26,29 @@
 </view>
 
 <!--学车信息-->
-<view class='col-100 mg-top-20'>
-  <navigator class='setting-navigator' wx:for='{{userBooking}}' wx:key='key' 
-    target="{{item.target}}" url="{{item.url}}" open-type="{{item.openType}}" app-id="{{item.appId}}" path="{{item.path}}" 
-    hover-class="" bindtap='{{item.bindtap}}'>
-      <text class='{{item.className}}'>{{item.text}}</text>
-      <text class='icon-right {{item.className}}'>〉</text>
-    </navigator>
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access" wx:for='{{userBooking}}' wx:key='key' hover-class="weui-cell_active"
+    target="{{item.target}}" open-type="{{item.openType}}" url="{{item.url}}">
+    <view class="weui-cell__bd {{item.className}}">{{item.text}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
 </view>
 
 <!--关联小程序-->
-<view class='col-100 mg-top-20'>
-    <navigator class='setting-navigator' wx:for='{{miniProgram}}' wx:key='miniProgram' 
-    target="{{item.target}}" url="{{item.url}}" open-type="{{item.openType}}" app-id="{{item.appId}}" path="{{item.path}}" 
-    hover-class="" bindtap='{{item.bindtap}}'>
-      <text class='{{item.className}}'>{{item.text}}</text>
-      <text class='icon-right {{item.className}}'>〉</text>
-    </navigator>
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access" wx:for='{{miniProgram}}' wx:key='miniProgram' hover-class="weui-cell_active"
+    target="{{item.target}}" open-type="{{item.openType}}" app-id="{{item.appId}}" path="{{item.path}}">
+    <view class="weui-cell__bd {{item.className}}">{{item.text}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
 </view>
 
 <!--联系官方-->
-<view class='col-100 mg-top-20'>
-  <view class='setting-navigator' wx:for='{{other}}' wx:key='other' bindtap='{{item.bindtap}}'>
-    <text class='{{item.className}}'>{{item.text}}</text>
-    <text class='icon-right {{item.className}}'>〉</text>
+<view class="weui-cells">
+  <view class="weui-cell weui-cell_access" wx:for='{{other}}' wx:key='other' hover-class="weui-cell_active"
+    target="{{item.target}}" open-type="{{item.openType}}" url="{{item.url}}" bindtap='{{item.bindtap}}'>
+    <view class="weui-cell__bd {{item.className}}">{{item.text}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </view>
 </view>
 
@@ -58,6 +57,14 @@
     <button class='setting-button' wx:for='{{connectButton}}' wx:key='key' 
       open-type="{{item.openType}}">
       <text class='fl-left button-text {{item.className}}'>{{item.text}}</text>
-      <text class='icon-right {{item.className}}'>〉</text>
+      <text class='icon-right {{item.className}}'>></text>
     </button>
+</view>
+
+<view class="weui-cells">
+  <button class="weui-cell weui-cell_access setting-button" wx:for='{{connectButton}}' wx:key='connectButton' hover-class="weui-cell_active"
+    open-type="{{item.openType}}" bindtap='{{item.bindtap}}'>
+    <view class="weui-cell__bd fl-left {{item.className}}">{{item.text}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </button>
 </view>

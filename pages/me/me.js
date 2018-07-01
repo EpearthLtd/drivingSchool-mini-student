@@ -26,8 +26,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
     "userBooking": [
-      { "className": "", "text": "学车记录", "url": "../me/bill/bill", "openType": "navigate", "bindtap": "" },
-      { "className": "", "text": "账户设置", "url": "../nopage/nopage", "openType": "navigate", "bindtap": "" },
+      { "className": "", "text": "学车记录", "url": "bill/bill", "openType": "navigate", "bindtap": "" },
+      { "className": "", "text": "个人信息", "url": "personal/personal", "openType": "navigate", "bindtap": "" },
       //{ "className": "", "text": "消息", bindtap: "" }
     ],
     //反馈按钮

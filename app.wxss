@@ -9,6 +9,9 @@
  * 公司网站site：www.epearth.com
  */
 
+@import 'style/weui.wxss';
+@import 'style/agan.wxss';
+
 page {
   background-color: #F8F8F8;
   font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
@@ -91,43 +94,13 @@ page {
   padding: 40rpx;
   background-color: white;
   border-radius: 5rpx;
-  box-shadow: 0 0 5rpx #CCC;
+  box-shadow: 0 0 5rpx #DDD;
 }
 
 .card-top {
   margin: 60rpx 20rpx 20rpx 20rpx;
   font-size: small;
   color: #999;
-}
-
-
-.color-bg {
-  background-color: #FAFAFA;
-}
-
-.color-gray {
-  color: #999;
-}
-
-.color-bg-gray {
-  background-color: #CCC;
-}
-
-.color-bg-white {
-  background-color: #FFF;
-}
-
-.color-primary {
-  background-color: #FF9326;
-  color: #FFF;
-}
-
-.color-worry {
-  color: red;
-}
-
-.color-pass {
-  color: rgb(9,187,7);
 }
 
 .fl-left {
@@ -229,7 +202,6 @@ page {
 
 .setting-button {
   border-bottom: #F8F8F8 1px solid;
-  font-size: inherit;
   color: #333;
   background-color: #FFF;
   padding: 10rpx 20rpx 8rpx 60rpx;
