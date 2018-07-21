@@ -9,9 +9,10 @@
 
 <view class='card'>
   <view>
-    <text class='block center font-medium'>驾校名称</text>
+    <text class='block center font-medium'>{{trainInfo[0]}}</text>
     <text class='block center font-larger mg-20-vertical'>C1 科目二训练</text>
-    <text class='block center mg-20-vertical font-small color-gray'>训练完成</text>
+    <text class='block center mg-20-vertical font-small color-gray' wx:if="">训练完成</text>
+    <text class='block center mg-20-vertical font-small color-gray' wx:if="">训练完成</text>
   </view>
   <view class='bd-bottom'>
     <view class='mg-20-vertical font-small'>
