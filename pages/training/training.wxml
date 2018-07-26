@@ -13,7 +13,7 @@
 
 <view class='col-100 wrapper'>
 <view class='cell'>
-  <view class='buttonMain wrapper' bindtap='clickReservation'>
+  <view class='buttonMain wrapper color-bg-primary' bindtap='clickReservation'>
     <text class='center cell'>预约练车</text>
   </view>
 </view>

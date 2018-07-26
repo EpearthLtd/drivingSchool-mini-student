@@ -19,8 +19,8 @@ Page({
       { url: 'https://aganxueche.com/testimg/ad3.jpg', bindtap: '' }
     ],
     priceView:[
-      { image: '../../images/car.png', name: '手动档', price: '3000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickManual' },
-      { image: '../../images/car.png', name: '自动档', price: '4000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickAutomatic' },
+      { image: '../../images/car.svg', name: '手动档', price: '3000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickManual' },
+      { image: '../../images/car.svg', name: '自动档', price: '4000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickAutomatic' },
     ]
   },
 

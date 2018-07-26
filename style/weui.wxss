@@ -815,7 +815,7 @@ icon {
 	padding: .15em .4em;
 	min-width: 8px;
 	border-radius: 18px;
-	background-color: #FF9326;
+	background-color: #E93737;
 	color: #fff;
 	line-height: 1.2;
 	text-align: center;
@@ -1076,7 +1076,7 @@ icon {
 }
 
 .weui-navbar__item.weui-bar__item_on {
-	color: #FF9326
+	color: #E93737
 }
 
 .weui-navbar__slider {
@@ -1086,7 +1086,7 @@ icon {
 	bottom: 0;
 	width: 6em;
 	height: 3px;
-	background-color: #FF9326;
+	background-color: #E93737;
 	-webkit-transition: -webkit-transform .3s;
 	transition: -webkit-transform .3s;
 	transition: transform .3s;
@@ -1196,6 +1196,6 @@ icon {
 .weui-search-bar__cancel-btn {
 	margin-left: 10px;
 	line-height: 28px;
-	color: #FF9326;
+	color: #E93737;
 	white-space: nowrap
 }

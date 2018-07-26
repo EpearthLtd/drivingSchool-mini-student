@@ -17,12 +17,12 @@
 </swiper>
 
 <!--客服按钮-->
-<button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#FF9326' class='button-primary'>立  即  咨  询</button>
+<button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#e93737' class='button-primary'>立  即  咨  询</button>
 
 <!--报名价格-->
 <view class='view-price-bg' wx:for="{{priceView}}" wx:key="key" bindtap='{{item.bindtap}}'>
   <image class='image-title' src='{{item.image}}'>C1</image>
-  <text class='text-price'>{{item.price}}元</text>
+  <text class='text-price color-bg-primary'>{{item.price}}元</text>
   <text class='text-title'>{{item.name}}</text>
   <view class='view-text-content'>
     <rich-text class='text-content'>{{item.descriptionL1}}</rich-text>

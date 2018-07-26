@@ -28,9 +28,7 @@
  .buttonMain {
    height: 240rpx;
    width: 240rpx;
-   color: #FFF;
-   background-color: #FF9326;
-   border: 10rpx solid #FFAA40;
+   border: 10rpx solid rgba(255, 255, 255, .4);
    border-radius: 50%;
    overflow: auto;
    margin: -130rpx auto 0 auto;

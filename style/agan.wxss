@@ -1,18 +1,51 @@
-/**
- * 阿甘学车 (https://github.com/EpearthLtd/aganWeixing)
+/*!
+ * 学车微信小程序教练端 (https://github.com/EpearthLtd/aganjiaolian)
  * 版权所有(C)2018 成都曦璞科技有限公司
- * Licensed under the GPL license
- * 
- * 文件名file：app.wxss
- * 描述description：学车微信小程序学员端-小程序全局样式
+ *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
- */
+*/
+
+.xipu-flex__center {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.xipu-flex__column {
+  flex-direction: column
+}
+
+.xipu-icon__gender {
+  margin-left: 20rpx;
+  font-size: small;
+  font-weight: 900
+}
+
+.xipu-flex__center__align {
+  align-items: center
+}
+
+.xipu-list__icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.xipu-list__mg__bottom {
+  margin-bottom: 10rpx
+}
+
+.xipu-margin-top__25 {
+  margin-top: 25rpx;
+}
+
+.xipu-margin-content__20 {
+  margin: 20rpx 30rpx;
+}
 
 /**
  * Color style
  */
- .color-bg {
+.color-bg {
   background-color: #F8F8F8;
 }
 
@@ -28,9 +61,13 @@
   background-color: #FFF;
 }
 
-.color-primary {
-  background-color: #FF9326;
+.color-bg-primary {
+  background-color: #e93737;
   color: #FFF;
+}
+
+.color-primary {
+  color: #e93737;
 }
 
 .color-worry {

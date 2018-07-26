@@ -80,7 +80,7 @@
 }
 
 .icon-primary {
-  background-color: #FF9326;
+  background-color: #e93737;
   color: #FFF;
 }
 

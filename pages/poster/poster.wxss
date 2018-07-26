@@ -71,8 +71,6 @@
 }
 
 .text-price {
-  color: #FFF;
-  background-color: #FF9326;
   border-radius: 10rpx;
   padding: 5rpx 10rpx;
   margin-left: 140rpx;
