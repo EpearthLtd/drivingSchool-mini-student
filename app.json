@@ -18,13 +18,14 @@
     "pages/me/bill/bill",
     "pages/training/details/details",
     "pages/training/reservation/reservation",
-    "pages/me/personal/personal"
+    "pages/me/personal/personal",
+    "pages/web/web"
   ],
   "window": {
-    "backgroundTextStyle": "black",
-    "navigationBarBackgroundColor": "#FFF",
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#E93737",
     "navigationBarTitleText": "阿甘学车",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999999",

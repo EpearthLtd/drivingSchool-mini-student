@@ -51,20 +51,3 @@
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </view>
 </view>
-
-<!--客服-->
-<view class='col-100 mg-top-20 mg-bottom-20'>
-    <button class='setting-button' wx:for='{{connectButton}}' wx:key='key' 
-      open-type="{{item.openType}}">
-      <text class='fl-left button-text {{item.className}}'>{{item.text}}</text>
-      <text class='icon-right {{item.className}}'>></text>
-    </button>
-</view>
-
-<view class="weui-cells">
-  <button class="weui-cell weui-cell_access setting-button" wx:for='{{connectButton}}' wx:key='connectButton' hover-class="weui-cell_active"
-    open-type="{{item.openType}}" bindtap='{{item.bindtap}}'>
-    <view class="weui-cell__bd fl-left {{item.className}}">{{item.text}}</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-  </button>
-</view>

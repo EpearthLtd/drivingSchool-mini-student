@@ -30,11 +30,6 @@ Page({
       { "className": "", "text": "个人信息", "url": "personal/personal", "openType": "navigate", "bindtap": "" },
       //{ "className": "", "text": "消息", bindtap: "" }
     ],
-    //反馈按钮
-    connectButton: [
-      { className: "", text: "在线客服", openType: "contact" }, //最低版本1.1.0 未兼容处理
-      { className: "", text: "BUG反馈", openType: "feedback" } //最低版本2.1.0 未兼容处理
-    ],
     //用户信息
     userPhone:[
       { className: "", text: "手机号 读取中", bindtap: "" }
@@ -46,7 +41,6 @@ Page({
     //其它按钮
     other: [
       { className: "", text: "投诉电话", bindtap: "complaint" },
-      { className: "", text: "学车协议", bindtap: "clickCompact" },
       { className: "", text: "关于阿甘学车", bindtap: "clickAbout" }
     ]
   },
@@ -149,51 +143,6 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
-
-  /**
-   * 用户点学车记录 废弃该函数换用navigator组件
-   *
-  clickBill: function () {
-    console.log('用户点击“学车记录”按钮')
-    wx.navigateTo({
-      url: '../me/bill/bill',
-      success: console.log('打开“学车记录”页面成功'),
-      fail: console.log('打开“学车记录”页面失败'),
-    })
-  },*/
-
-  /**
-   * 打开阿甘校园购
-   */
-  clickSchoolStore: function () {
-    /**
-     * 废弃该函数换用navigator组件
-     *
-    if (wx.navigateToMiniProgram) {
-      wx.navigateToMiniProgram({
-        appId: 'wx6f53b2295b1349d9',
-        success(res) {
-          // 打开成功
-          console.log('成功打开小程序“阿甘校园购”')
-        }
-      })
-    } else {
-      //微信版本过低不支持wx.navigateToMiniProgram
-      console.log('微信版本过低不支持wx.navigateToMiniProgram')
-      wx.showModal({
-        title: '打开阿甘校园购失败',
-        content: '您的微信版本过低，请升级到最新版本',
-        showCancel: false,
-        success(res) {
-          console.log('提示阿甘校园购打开失败')
-          if (res.confirm) {
-            console.log('用户点击确定')
-          }
-        }
-      })
-    }
-    */
   },
 
   /**

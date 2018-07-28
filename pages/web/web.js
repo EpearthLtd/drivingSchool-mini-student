@@ -1,26 +1,31 @@
-/**
+/*!
+ * 学车微信小程序教练端 (https://github.com/EpearthLtd/aganWeixing)
  * 版权所有(C)2018 成都曦璞科技有限公司
- * 
- * 文件名file：pages/supportInfo/aboutAgan/aboutAgan.js
- * 描述description：学车微信小程序学员端-关于阿甘学车页处理逻辑
+ *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
- */
+*/
 
+// pages/web/web.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    logo: 'https://aganxueche.com/images/agan.png',
+    url: "https://aganxueche.com"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if (options.url) {
+      this.setData({
+        url: options.url
+      })
+    }
+    console.log('打开web页面，网址为', options.url)
   },
 
   /**

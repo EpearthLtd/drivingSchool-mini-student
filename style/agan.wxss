@@ -6,6 +6,26 @@
  * 公司网站site：www.epearth.com
 */
 
+.xipu-button-list::before, .xipu-button-list::after {
+  border: #FFF solid;
+  border-top: 1rpx solid #F8F8F8
+}
+
+.xipu-button-list {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10rpx 32rpx 8rpx 40rpx;
+  text-align: left;
+}
+
+.xipu-button_active {
+	background-color: #F0F0F0;
+}
+
+.xipu-button_active::after, .xipu-button_active::before {
+  border: #F0F0F0;
+}
+
 .xipu-flex__center {
   justify-content: space-around;
   align-items: center;
