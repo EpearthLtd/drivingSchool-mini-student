@@ -7,56 +7,79 @@
   公司网站site：www.epearth.com
 -->
 
-<view class='section'>
-  <!--学员基本信息-->
-  <view class='mg-bottom-20 font-small color-gray'>
-    <view class='block'>
-      <text>姓名：学员姓名</text>
-      <text class='fl-right'>驾校名称</text>
-    </view>
-    <view class='block'>
-      <text>科目：科目二</text>
-      <text class='fl-right'>C1</text>
-    </view>
-  </view>
-
-  <!--预约日期-->
-  <view class="mg-bottom-20">
-    <picker mode="date" value="{{date}}" start="{{date}}" end="{{dateEnd}}" bindchange="bindDateChange">
-      <view class="picker">
-        预约日期:  {{date}}
-      </view>
-    </picker>
-  </view>
-
-  <!--选择教练-->
-  <view class="mg-bottom-10">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{coachArray}}">
-      <view class="picker">
-        选择教练：{{coachArray[index]}}
-      </view>
-    </picker>
-  </view>
+<view class="swiper-tab">
+    <text class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">{{dateList[0].dates}}\n今天
+    </text>
+    <text class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">{{dateList[1].dates}}\n{{dateList[1].week}}
+    </text>
+    <text class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">{{dateList[2].dates}}\n{{dateList[2].week}}
+    </text>
+    <text class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">{{dateList[3].dates}}\n{{dateList[3].week}}
+    </text>
 </view>
 
-<view wx:if="{{date!=null && coach!=null}}" class='mg-top-40'>
-  <text class='card-top'>请选择预约时段</text>
-  <radio-group bindchange="">
-    <view class='card includeFloat {{item.cardClass}}' wx:for='{{timeTable}}' wx:key='timeTable'>
-      <label>
-      <view class='radio'>
-        <radio disabled='{{item.disabled}}'></radio>
+<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+    <swiper-item>
+      <view>
+        <text>今天的课程已经不能预约啦\n请至少提前一天预约哦！</text>
       </view>
-      <view class='time-item'>
-        <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
-        <text class='block mg-bottom-20'>{{item.startTime}} - {{item.endTime}}</text>
-        <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
-      </view>
-      </label>
-    </view>
-  </radio-group>
-</view>
-
-<view wx:else class='center mg-top-40'>
-  <text class='text-hint'>请选择日期和教练</text>
-</view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y class='scrollers'>
+        <radio-group bindchange="">
+          <view class='card includeFloat {{item.cardClass}}' wx:for='{{timeTable}}' wx:key='timeTable'>
+            <label>
+            <view class='radio'>
+              <radio disabled='{{item.disabled}}'></radio>
+            </view>
+            <view class='time-item'>
+              <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
+              <text>{{item.startTime}} - {{item.endTime}} \n</text>
+              <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
+              <text wx:if="{{item.disabled}}"></text>
+              <text wx:else class='block'>{{item.students}}人已预约</text>
+            </view>
+            </label>
+          </view>
+        </radio-group>
+      </scroll-view>
+    </swiper-item>
+    <!--页面2-->
+    <swiper-item>
+      <scroll-view scroll-y class='scrollers'>
+        <radio-group bindchange="">
+          <view class='card includeFloat {{item.cardClass}}' wx:for='{{timeTable}}' wx:key='timeTable'>
+            <label>
+            <view class='radio'>
+              <radio disabled='{{item.disabled}}'></radio>
+            </view>
+            <view class='time-item'>
+              <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
+              <text class='block mg-bottom-20'>{{item.startTime}} - {{item.endTime}}</text>
+              <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
+            </view>
+            </label>
+          </view>
+        </radio-group>
+      </scroll-view>
+    </swiper-item>
+    <!--页面3-->
+    <swiper-item>
+      <scroll-view scroll-y class='scrollers'>
+        <radio-group bindchange="">
+          <view class='card includeFloat {{item.cardClass}}' wx:for='{{timeTable}}' wx:key='timeTable'>
+            <label>
+            <view class='radio'>
+              <radio disabled='{{item.disabled}}'></radio>
+            </view>
+            <view class='time-item'>
+              <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
+              <text class='block mg-bottom-20'>{{item.startTime}} - {{item.endTime}}</text>
+              <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
+            </view>
+            </label>
+          </view>
+        </radio-group>
+      </scroll-view>
+    </swiper-item>
+</swiper>

@@ -13,7 +13,7 @@
 @import 'style/agan.wxss';
 
 page {
-  background-color: #F8F8F8;
+  background-color: #F5F6F7;
   font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
 
@@ -93,8 +93,8 @@ page {
   margin: 20rpx;
   padding: 40rpx;
   background-color: white;
-  border-radius: 5rpx;
-  box-shadow: 0 0 5rpx #DDD;
+  border-radius: 10rpx;
+  box-shadow: 0 7rpx 10rpx 5rpx #F0F1F2;
 }
 
 .card-top {

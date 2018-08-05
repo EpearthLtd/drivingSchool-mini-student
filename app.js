@@ -16,6 +16,16 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    // 获取当前
+    var date = new Date();
+    var dateArray = [];
+    for (var i = 0; i < 4; i++) {
+      var mDate = (date.getMonth() + 1) + '月' + (date.getDate() + i) + '日';
+      dateArray.push(mDate);
+    }
+    this.globalData.dateList = dateArray
+    console.log('循环数组dateArray为：' + dateArray);
+    console.log('全局数组dateArray为：' + this.globalData.dateList);
     // 登录
     wx.login({
       success: function(res) {
@@ -50,8 +60,10 @@ App({
         }
       }
     })
+
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    dateList: []
   }
 })

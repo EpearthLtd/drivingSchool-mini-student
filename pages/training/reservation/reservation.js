@@ -7,27 +7,23 @@
  * 公司网站site：www.epearth.com
  */
 
+var app = getApp()
+
 // 导入js  
 var util = require('../../../utils/util.js'); 
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    date: null,
-    dateEnd: '',
-    coach: null,
-    coachArray: ['教练甲', '教练乙', '教练丙', '教练丁'],
+    currentTab: 1,
+    dateList: [],
     timeTable: [
-      { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
-      { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
-      { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray', disabled: true, cardClass: '' },
-      { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
-      { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' },
-      { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', situation: '已被预约', situationClass: 'color-gray', disabled: true, cardClass: '' },
-      { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', disabled: false, cardClass: '' }
+      { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '0', disabled: false, cardClass: '' },
+      { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '1', disabled: false, cardClass: '' },
+      { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', situation: '已约满', situationClass: 'color-gray', students: '3', disabled: true, cardClass: '' },
+      { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '2', disabled: false, cardClass: '' },
+      { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '1', disabled: false, cardClass: '' },
+      { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', situation: '已约满', situationClass: 'color-gray', students: '3', disabled: true, cardClass: '' },
+      { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '0', disabled: false, cardClass: '' }
     ]
   },
 
@@ -35,99 +31,54 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 调用函数时，传入new Date()参数，返回值是日期和时间
+    // 页面初始化 options为页面跳转所带来的参数
+    // 加载近4天日期
+    let dateArray = this.getDates(4);
+    this.setData({
+      dateList: this.getDates(4)
+    })
+    console.log(this.getDates(4))
+  },
+
+  //滑动切换
+  swiperTab: function (e) {
     var that = this;
-    var date = util.formatDate(new Date());
-    var dateEnd = util.formatEndDate(new Date());
-    /* 设置
-    var timeTable = this.data.timeTable.lenth;
-    for(var i=0; i++; i<=timeTable) {
-      var tomeTable = "timeTable[" + i + "]";
-      var disabled = timeTable + ".disabled";
-      var situation = timeTable + ".situation";
-      var disabledValue = that.data.timeTable[i].disabled;
-      if (disabledValue == true) {
-        this.setData({
-          situation: "测试已被预约"
-        })}
-    };
-    */
-    // 再通过setData更改Page()里面的data，动态更新页面的数据
-    this.setData({
-      date: date,
-      dateEnd: dateEnd
+    that.setData({
+      currentTab: e.detail.current
     });
-    
+  },
+
+  //点击切换
+  clickTab: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      console.log('点击标签' + e.target.dataset.current)
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 获取d当前时间多少天后的日期和对应星期
+   * //todate默认参数是当前日期，可以传入对应时间
    */
-  onReady: function () {
-  
+  getDates: function (days, todate = this.getCurrentMonthFirst()) {
+    var dateArry = [];
+    for (var i = 0; i < days; i++) {
+      var dateObj = util.dateLater(todate, i);
+      dateArry.push(dateObj)
+    }
+    return dateArry;
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+  //获取当前时间
+  getCurrentMonthFirst: function () {
+    var date = new Date();
+    var todate = date.getFullYear() + "-" + ((date.getMonth() + 1) < 10 ? ("0" + (date.getMonth() + 1)) : date.getMonth() + 1) + "-" + (date.getDate() < 10 ? ("0" + date.getDate()) : date.getDate());
+    return todate;
+  }
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
-
-  /**
-   * 教练选择
-   */
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value,
-      coach: this.data.coachArray[e.detail.value]
-    })
-    console.log('选择的教练为',this.data.coach)
-  },
-
-  /**
-   * 日期变化事件
-   */
-  bindDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      date: e.detail.value
-    })
-  },
 })
