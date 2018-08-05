@@ -9,13 +9,15 @@
  * 公司网站site：www.epearth.com
  */
 
+var app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    personalInfo:[ , "学校名称", 13000000000]
+    personalInfo:{} // 用户个人信息
   
   },
 
@@ -23,7 +25,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 传入全局用户信息
+    this.getUserPersonalInfo()
   },
 
   /**
@@ -73,5 +76,18 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 加载全局用户个人信息
+   */
+  getUserPersonalInfo: function() {
+    let userPersonal = app.globalData.userPersonalIndo
+    var that = this
+    console.log(userPersonal)
+    that.setData({
+      personalInfo: userPersonal
+    });
+    console.log(that.personalInfo)
   }
 })

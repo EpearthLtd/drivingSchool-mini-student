@@ -18,10 +18,10 @@ Page({
     message: '消息内容',
     instructorPhone: null,
     "button": [
-      { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "时间表", "bindTap": "clickTimeTable" },
+      { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "课程表", "bindTap": "clickTimeTable" },
       { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "clickContactInstructor" },
       { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "clickBill" },
-      { "classWrapper": "color-gray", "image": "../../images/caocao-d.png", "text": "曹操专车", "bindTap": "clickCaocao" }
+      { "classWrapper": "color-gray", "image": "../../images/caocao-d.png", "text": "理论联系", "bindTap": "clickCaocao" }
     ]
   },
 
@@ -137,8 +137,8 @@ Page({
    * 用户点击曹操专车
    */
   clickCaocao: function () {
-    console.log('用户点击“曹操专车”按钮，弹出未开放提示'),
-      this.setData({ messageTitle: "曹操打仗去了", message: "功能开发中，请耐心等待" }),
+    console.log('用户点击“理论联系”按钮，弹出未开放提示'),
+      this.setData({ messageTitle: "程序员已被祭天", message: "功能开发中，请耐心等待" }),
     this.showMessage()
   },
 

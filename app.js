@@ -63,7 +63,13 @@ App({
 
   },
   globalData: {
-    userInfo: null,
+    userInfo: null, // 微信返回的用户信息
+    userPersonalIndo: {
+      "name": "郑维一",
+      "school": "四川大学锦城学院",
+      "phone": "13568810905",
+      "progress": "0"
+    },
     dateList: []
   }
 })

@@ -9,20 +9,20 @@
   公司网站site：www.epearth.com
  -->
 <view class="weui-cells">
-  <view class="weui-cell" wx:if="{{personalInfo[0]!=null}}">
+  <view class="weui-cell">
     <view class="weui-cell__bd">姓名</view>
-    <view class="weui-cell__ft">{{personalInfo[0]}}</view>
+    <view class="weui-cell__ft">{{personalInfo.name!=null?personalInfo.name:'未报名'}}</view>
   </view>
-  <view class="weui-cell" wx:else>
-    <view class="weui-cell__bd">姓名</view>
-    <view class="weui-cell__ft">未报名</view>
-  </view>
-  <view class="weui-cell" wx:if="{{personalInfo[1]!=null}}">
+  <view class="weui-cell" wx:if="{{personalInfo.school!=null}}">
     <view class="weui-cell__bd">学校</view>
-    <view class="weui-cell__ft">{{personalInfo[1]}}</view>
+    <view class="weui-cell__ft">{{personalInfo.school}}</view>
   </view>
   <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-    <view class="weui-cell__bd">手机号</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access">{{personalInfo[2]}}</view>
+    <view class="weui-cell__bd">手机</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{personalInfo.phone}}</view>
+  </view>
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.progress!=null}}">
+    <view class="weui-cell__bd">进度</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{personalInfo.progress}}</view>
   </view>
 </view>
