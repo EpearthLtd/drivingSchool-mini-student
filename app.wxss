@@ -71,6 +71,10 @@ page {
   display: block;
 }
 
+.block-inline {
+  display: inline-block
+}
+
 .bottom-text {
   width: 100%;
   color: #DDD;

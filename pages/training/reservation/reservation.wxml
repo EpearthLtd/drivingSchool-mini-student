@@ -35,9 +35,9 @@
             <view class='time-item'>
               <text class='fl-right {{item.situationClass}}'>{{item.situation}}</text>
               <text>{{item.startTime}} - {{item.endTime}} \n</text>
-              <text class='font-small color-gray'>训练时间：{{item.duration}}分钟　弹性时间：{{item.flex}}分钟</text>
+              <text class='font-small color-gray'>训练{{item.duration}}分钟　弹性{{item.flex}}分钟　</text>
               <text wx:if="{{item.disabled}}"></text>
-              <text wx:else class='block'>{{item.students}}人已预约</text>
+              <text wx:else class='font-small color-gray block-inline'>{{item.students}}人已预约</text>
             </view>
             </label>
           </view>

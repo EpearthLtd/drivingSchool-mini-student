@@ -56,3 +56,8 @@ swiper{
     height: 100%;
     overflow-x: hidden;
 }
+
+/* 覆盖全局card边距 */
+.card {
+  padding: 20rpx 40rpx;
+}
