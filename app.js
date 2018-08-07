@@ -23,8 +23,7 @@ App({
       var mDate = (date.getMonth() + 1) + '月' + (date.getDate() + i) + '日';
       dateArray.push(mDate);
     }
-    this.globalData.dateList = dateArray
-    console.log('循环数组dateArray为：' + dateArray);
+    this.globalData.dateList = dateArray;
     console.log('全局数组dateArray为：' + this.globalData.dateList);
     // 登录
     wx.login({
@@ -64,10 +63,12 @@ App({
   },
   globalData: {
     userInfo: null, // 微信返回的用户信息
-    userPersonalIndo: {
+    userPersonalInfo: {
       "name": "郑维一",
+      "idNumber":"510111111111111111",
       "school": "四川大学锦城学院",
       "phone": "13568810905",
+      "userStatus": 3,
       "progress": "0"
     },
     dateList: []

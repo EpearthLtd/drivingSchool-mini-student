@@ -17,11 +17,11 @@ Page({
     messageTitle: '提示',
     message: '消息内容',
     instructorPhone: null,
-    "button": [
+    button: [
       { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "课程表", "bindTap": "clickTimeTable" },
       { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "clickContactInstructor" },
       { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "clickBill" },
-      { "classWrapper": "color-gray", "image": "../../images/caocao-d.png", "text": "理论联系", "bindTap": "clickCaocao" }
+      { "classWrapper": "", "image": "../../images/caocao-d.png", "text": "理论练习", "bindTap": "clickCaocao" }
     ]
   },
 
@@ -97,11 +97,11 @@ Page({
    * 用户点击时间表
    */
   clickTimeTable: function() {
-    console.log('用户点击“时间表”按钮')
+    console.log('用户点击' + this.data.button[0].text + '按钮')
     wx.navigateTo({
       url: 'timeTable/timetable',
-      success: function () { console.log('打开“时间表”页面成功') },
-      fail: function () { console.log('打开“时间表”页面失败') }, 
+      success: function () {  },
+      fail: function () {  }, 
     })
   },
 
@@ -109,7 +109,7 @@ Page({
    * 用户点击联系教练
    */
   clickContactInstructor: function() {
-    console.log('用户点击“联系教练”按钮')
+    console.log('用户点击“' + this.data.button[1].text + '”按钮')
     if (true) {
       console.log('用户未预约练车，弹出提示信息'),
         this.setData({ messageTitle: "请预约练车后再联系", message: "不然我不知道该找谁啊" }),
@@ -125,11 +125,11 @@ Page({
    * 用户点学车记录
    */
   clickBill: function () {
-    console.log('用户点击“学车记录”按钮')
+    console.log('用户点击“' + this.data.button[2].text + '”按钮')
     wx.navigateTo({
       url: '../me/bill/bill',
-      success: function () { console.log('打开“学车记录”页面成功') },
-      fail: function () { console.log('打开“学车记录”页面失败') },
+      success: function () {  },
+      fail: function () {  },
     })
   },
 
@@ -137,7 +137,7 @@ Page({
    * 用户点击曹操专车
    */
   clickCaocao: function () {
-    console.log('用户点击“理论联系”按钮，弹出未开放提示'),
+    console.log('用户点击“' + this.data.button[3].text + '”按钮，弹出未开放提示'),
       this.setData({ messageTitle: "程序员已被祭天", message: "功能开发中，请耐心等待" }),
     this.showMessage()
   },

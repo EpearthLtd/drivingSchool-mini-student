@@ -13,6 +13,10 @@
     <view class="weui-cell__bd">姓名</view>
     <view class="weui-cell__ft">{{personalInfo.name!=null?personalInfo.name:'未报名'}}</view>
   </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">身份证号</view>
+    <view class="weui-cell__ft">{{personalInfo.idNumber!=null?personalInfo.idNumber:'未绑定身份信息'}}</view>
+  </view>
   <view class="weui-cell" wx:if="{{personalInfo.school!=null}}">
     <view class="weui-cell__bd">学校</view>
     <view class="weui-cell__ft">{{personalInfo.school}}</view>

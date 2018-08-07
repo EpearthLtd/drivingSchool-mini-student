@@ -75,7 +75,7 @@ Page({
         }
       })
     }
-    switch (3) {
+    switch (app.globalData.userPersonalInfo.userStatus) {
       case 0: this.setData({ userStatus: ["gray", "未报名"]});break;
       case 1: this.setData({ userStatus: ["primary", "已报名"] }); break;
       case 2: this.setData({ userStatus: ["pass", "已预约"] }); break;

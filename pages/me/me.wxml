@@ -12,7 +12,7 @@
   <view class='userinfo-out'>
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='button-80'> 微信登录 </button>
     <block wx:else>
-    <view class='userinfo'>
+    <navigator class='userinfo' url='personal/personal' hover-class="userinfo-hover">
       <view class='userinfo-info'>
         <text class='userNickName'>{{userInfo.nickName}} </text>
         <text class='userStatus icon-{{userStatus[0]}}'>{{userStatus[1]}}</text>
@@ -20,7 +20,7 @@
       <view class='userinfo-avatar'>
         <image class="user-profile-photo" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       </view>
-    </view>
+    </navigator>
     </block>
   </view>
 </view>

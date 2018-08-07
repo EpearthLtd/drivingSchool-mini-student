@@ -82,12 +82,12 @@ Page({
    * 加载全局用户个人信息
    */
   getUserPersonalInfo: function() {
-    let userPersonal = app.globalData.userPersonalIndo
+    let userPersonal = app.globalData.userPersonalInfo
     var that = this
-    console.log(userPersonal)
     that.setData({
       personalInfo: userPersonal
     });
-    console.log(that.personalInfo)
+    console.log('加载全局用户信息：')
+    console.log(that.data.personalInfo)
   }
 })
