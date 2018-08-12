@@ -6,20 +6,26 @@
  * 公司网站site：www.epearth.com
 */
 
+const app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    tel: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if (app.globalData.userPersonalInfo!=null) {
+      this.setData({
+        tel: app.globalData.userPersonalInfo.tel
+      })
+    }
   },
 
   /**
@@ -33,7 +39,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    //返回当前页面后重新加载
+    this.onLoad()
   },
 
   /**

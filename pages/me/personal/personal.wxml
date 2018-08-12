@@ -20,7 +20,7 @@
   </view>
   <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url='phone/phone'>
     <view class="weui-cell__bd">手机</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access">{{personalInfo.phone}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{personalInfo.tel!=null?personalInfo.tel:'请绑定手机'}}</view>
   </navigator>
   <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.progress!=null}}">
     <view class="weui-cell__bd">进度</view>

@@ -8,16 +8,17 @@
 
 <view class='center'>
   <view class="icon-box">
-    <icon type="success" size="150"></icon>
+    <icon type="{{tel!=null?'success':'warn'}}" size="150"></icon>
   </view>
 
   <view class='text-box'>
-    <text>绑定的手机号：</text>
-    <text>13500000000</text>
+    
+    <text>{{tel==null?"请点击下方按钮绑定手机":'绑定的手机：'}}</text>
+    <text wx:if="{{tel!=null}}">{{tel}}</text>
   </view>
 
   <view class='button-box'>
-    <button class="weui-btn" type="primary" url='../phoneVerify/phoneVerify' bindtap='phoneVerify'>绑定手机号</button>
-    <button class="weui-btn" type="default">解绑手机号</button>
+    <button class="weui-btn" type="primary" url='../phoneVerify/phoneVerify' bindtap='phoneVerify'>{{tel!=null?'更换手机号':'绑定手机号'}}</button>
+    <button class="weui-btn" type="default" wx:if="{{tel!=null}}">解绑手机号</button>
   </view>
 </view>

@@ -37,7 +37,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    //返回当前页面后重新加载
+    this.onLoad()
   },
 
   /**
