@@ -1,11 +1,10 @@
-/**
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
  * 版权所有(C)2018 成都曦璞科技有限公司
- * 
- * 文件名file：  pages/me/me.js
- * 描述description：学车微信小程序学员端-个人信息页处理逻辑
+ *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
- */
+*/
 
 //获取应用实例
 const app = getApp()
@@ -181,7 +180,7 @@ Page({
    */
   clickAbout: function() {
     wx.navigateTo({
-      url: '../supportInfo/aboutAgan/aboutAgan',
+      url: '../supportInfo/about/about',
       success(res) {
         console.log('打开“关于阿甘学车”页面成功')
       },
