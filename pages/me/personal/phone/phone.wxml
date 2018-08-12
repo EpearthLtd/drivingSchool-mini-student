@@ -1,0 +1,23 @@
+<!--
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<view class='center'>
+  <view class="icon-box">
+    <icon type="success" size="150"></icon>
+  </view>
+
+  <view class='text-box'>
+    <text>绑定的手机号：</text>
+    <text>13500000000</text>
+  </view>
+
+  <view class='button-box'>
+    <button class="weui-btn" type="primary" url='../phoneVerify/phoneVerify' bindtap='phoneVerify'>绑定手机号</button>
+    <button class="weui-btn" type="default">解绑手机号</button>
+  </view>
+</view>

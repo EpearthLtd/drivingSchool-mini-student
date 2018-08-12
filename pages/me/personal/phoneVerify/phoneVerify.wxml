@@ -1,0 +1,33 @@
+<!--
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<view class="weui-cells__title">请验证您的新手机号</view>
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+<view class="weui-cell weui-cell_input weui-cell_vcode">
+  <view class="weui-cell__hd">
+    <view class="weui-label">手机号</view>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" placeholder="请输入新手机号" />
+  </view>
+  <view class="weui-cell__ft">
+    <view class="weui-vcode-btn">获取验证码</view>
+  </view>
+</view>
+<view class="weui-cell weui-cell_input weui-cell_vcode">
+  <view class="weui-cell__hd">
+    <view class="weui-label">验证码</view>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" placeholder="请输入验证码" />
+  </view>
+</view>
+
+<view class='button-box'>
+  <button class="weui-btn" type="primary" url='../phoneVerify/phoneVerify' bindtap='phoneVerify'>下一步</button>
+</view>

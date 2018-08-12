@@ -1,19 +1,11 @@
-/**
- * 版权所有(C)2018 成都曦璞科技有限公司
- * 
- * 文件名file：pages/supportInfo/aboutAgan/aboutAgan.js
- * 描述description：学车微信小程序学员端-关于阿甘学车页处理逻辑
- * 作者author：郑维一
- * 公司网站site：www.epearth.com
- */
-
+// pages/me/personal/phone/phone.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    logo: 'https://aganxueche.com/images/agan.png',
+  
   },
 
   /**
@@ -70,5 +62,19 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 绑定、更换验证手机号
+   */
+  phoneVerify: function () {
+    wx.navigateTo({
+      url: '../phoneVerify/phoneVerify',
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
   }
 })

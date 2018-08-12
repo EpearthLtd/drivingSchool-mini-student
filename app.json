@@ -19,7 +19,9 @@
     "pages/training/details/details",
     "pages/training/reservation/reservation",
     "pages/me/personal/personal",
-    "pages/web/web"
+    "pages/web/web",
+    "pages/me/personal/phone/phone",
+    "pages/me/personal/phoneVerify/phoneVerify"
   ],
   "window": {
     "backgroundTextStyle": "white",
