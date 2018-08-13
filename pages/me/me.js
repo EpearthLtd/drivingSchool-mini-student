@@ -138,10 +138,13 @@ Page({
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+    console.log(app.globalData.userInfo)
+    if (app.globalData.userInfo != null) {
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      })
+    }
   },
 
   /**
