@@ -9,7 +9,6 @@ This is a mini program project of WeChat
 
 ## 技术参数
 * 调试基础库：2.1.1
-* 业务域名：aganxueche.com | www.aganxueche.com
 
 ## 版本说明
 * V1 静态海报广告：只包含广告展示和客服模块，没有约车功能
