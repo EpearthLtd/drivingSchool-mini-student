@@ -14,17 +14,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    logo: 'https://aganxueche.com/images/agan.png',
+    logo: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 设置全局根域名
+    var globalRootDomain = app.globalData.rootDomain;
     this.setData({
-      rootDomain: app.globalData.rootDomain
+      rootDomain: globalRootDomain
     })
-    console.log('加载全局根域名：' + this.data.rootDomain)
+    // 设置logo完整src
+    var logoSrc = globalRootDomain + '/images/agan.png';
+    this.setData({
+      logo: logoSrc
+    })
   },
 
   /**

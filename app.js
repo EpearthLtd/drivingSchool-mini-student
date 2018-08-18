@@ -59,7 +59,7 @@ App({
 
   },
   globalData: {
-    rootDomain: 'https://aganxueche.com',
+    rootDomain: 'http://test.epearth.com',
     userInfo: null, // 微信返回的用户信息
     userPersonalInfo: {
       "name": "郑维一",

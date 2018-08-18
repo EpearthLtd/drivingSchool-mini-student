@@ -15,14 +15,34 @@ Page({
   data: {
     currentTab: 1,
     dateList: [],
-    timeTable: [
-      { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '0', disabled: false, cardClass: '' },
-      { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '1', disabled: false, cardClass: '' },
-      { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', situation: '已约满', situationClass: 'color-gray', students: '3', disabled: true, cardClass: '' },
-      { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '2', disabled: false, cardClass: '' },
-      { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '1', disabled: false, cardClass: '' },
-      { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', situation: '已约满', situationClass: 'color-gray', students: '3', disabled: true, cardClass: '' },
-      { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', situation: '可预约', situationClass: 'color-pass', students: '0', disabled: false, cardClass: '' }
+    classList: [
+      [
+        { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', students: '2', cardClass: '' },
+        { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', students: '3', cardClass: '' },
+        { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', students: '2', cardClass: '' },
+        { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', students: '0', cardClass: '' },
+        { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', students: '3', cardClass: '' },
+        { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', students: '3', cardClass: '' },
+        { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', students: '1', cardClass: '' }
+      ],
+      [
+        { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', students: '0', cardClass: '' },
+        { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', students: '1', cardClass: '' },
+        { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', students: '3', cardClass: '' },
+        { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', students: '2', cardClass: '' },
+        { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', students: '1', cardClass: '' },
+        { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', students: '3', cardClass: '' },
+        { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', students: '0', cardClass: '' }
+      ],
+      [
+        { startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', students: '0', cardClass: '' },
+        { startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', students: '1', cardClass: '' },
+        { startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', students: '0', cardClass: '' },
+        { startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', students: '0', cardClass: '' },
+        { startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', students: '1', cardClass: '' },
+        { startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', students: '1', cardClass: '' },
+        { startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', students: '0', cardClass: '' }
+      ]
     ]
   },
 
@@ -32,11 +52,12 @@ Page({
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     // 加载近4天日期
-    let dateArray = this.getDates(4);
     this.setData({
       dateList: this.getDates(4)
     })
     console.log(this.getDates(4))
+    // 加载未来3天的课程
+    console.log(this.data.classList)
   },
 
   //滑动切换

@@ -6,13 +6,15 @@
  * 公司网站site：www.epearth.com
 */
 
+const app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    adImage: 'https://aganxueche.com/images/agan.png',
+    adImage: '',
     messageTitle: '提示',
     message: '消息内容',
     instructorPhone: null,
@@ -28,7 +30,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 设置全局根域名
+    var globalRootDomain = app.globalData.rootDomain;
+    this.setData({
+      rootDomain: globalRootDomain
+    })
+    // 设置logo完整src
+    var adImageSrc = globalRootDomain + '/images/agan.png';
+    this.setData({
+      adImage: adImageSrc
+    })
   },
 
   /**

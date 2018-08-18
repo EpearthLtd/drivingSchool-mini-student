@@ -8,10 +8,12 @@
 
 <!--轮播图-->
 <swiper class='carousels' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
-  <block wx:for="{{carousels}}" wx:for-index="index" wx:key="ad" >
-    <swiper-item  bindtap='{{item.bindtap}}'>
-      <image src='{{item.url}}' class='slide-image' mode='aspectFill'/>
-    </swiper-item>
+  <block wx:for="{{carousels}}" wx:for-index="index" wx:key="index" >
+    <navigator url='../web/web?url={{rootDomain}}{{item.url}}'>
+      <swiper-item>
+        <image src='{{item.src}}' class='slide-image' mode='aspectFill'/>
+      </swiper-item>
+    </navigator>
   </block>
 </swiper>
 
@@ -20,7 +22,7 @@
 
 <!--报名价格-->
 <view class='view-price-bg' wx:for="{{priceView}}" wx:key="key" bindtap='{{item.bindtap}}'>
-  <image class='image-title' src='{{item.image}}'>C1</image>
+  <image class='image-title' src='{{item.src}}'>C1</image>
   <text class='text-price color-bg-primary'>{{item.price}}元</text>
   <text class='text-title'>{{item.name}}</text>
   <view class='view-text-content'>

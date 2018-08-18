@@ -6,6 +6,8 @@
  * 公司网站site：www.epearth.com
 */
 
+const app = getApp();
+
 Page({
 
   /**
@@ -13,13 +15,13 @@ Page({
    */
   data: {
     carousels:[
-      { url: 'https://aganxueche.com/testimg/ad1.jpg', bindtap: 'clickAd1' },
-      { url: 'https://aganxueche.com/testimg/ad2.jpg', bindtap: 'clickAd2' },
-      { url: 'https://aganxueche.com/testimg/ad3.jpg', bindtap: '' }
+      { src: '/images/ad1.jpg', url: '/miniprogram/ad1.html' },
+      { src: '/images/ad2.jpg', url: '/miniprogram/ad2.html' },
+      { src: '/images/ad3.jpg', url: '' }
     ],
     priceView:[
-      { image: '../../images/car.svg', name: '手动档', price: '3000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickManual' },
-      { image: '../../images/car.svg', name: '自动档', price: '4000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickAutomatic' },
+      { src: '../../images/car.svg', name: '手动档', price: '3000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickManual' },
+      { src: '../../images/car.svg', name: '自动档', price: '4000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickAutomatic' },
     ]
   },
 
@@ -27,7 +29,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 设置全局根域名
+    var globalRootDomain = app.globalData.rootDomain;
+    this.setData({
+      rootDomain: globalRootDomain
+    })
+    // 修改图片完整src
+    var imgLength = this.data.carousels.length;
+    console.log('共有' + imgLength + '张图片')
+    for (var i = 0; i < imgLength; i++ ) {
+      var src = globalRootDomain + this.data.carousels[i].src;
+      console.log('完整图片src为：' + src)
+      var srcName = 'carousels[' + i + '].src';
+      this.setData({
+        [srcName]: src
+      })
+    }
   },
 
   /**
@@ -79,26 +96,6 @@ Page({
   
   },
 
-  /**
-   * 用户点击广告页1
-   */
-  clickAd1: function () {
-    console.log('用户点击广告图片1')
-    wx.navigateTo({
-      url: '../ad/ad1/ad1',
-    })
-  },
-
-  /**
-   * 用户点击广告页2
-   */
-  clickAd2: function () {
-    console.log('用户点击广告图片2')
-    wx.navigateTo({
-      url: '../ad/ad2/ad2',
-    })
-  },
-
 /**
  * 用户点击手动档、自动档
  */
@@ -112,12 +109,6 @@ Page({
     console.log('用户点击自动档')
     wx.navigateTo({
       url: 'automatic/automatic',
-    })
-  },
-
-  clickC: function () {
-    wx.navigateTo({
-      url: '../nopage/nopage',
     })
   },
 

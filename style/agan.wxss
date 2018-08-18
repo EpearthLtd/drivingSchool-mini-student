@@ -6,6 +6,11 @@
  * 公司网站site：www.epearth.com
 */
 
+.xipu-background-placeholder__text {
+  font-size: xx-large;
+  color: #999;
+}
+
 .xipu-button-list::before, .xipu-button-list::after {
   border: #FFF solid;
   border-top: 1rpx solid #F8F8F8
