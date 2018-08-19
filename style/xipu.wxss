@@ -1,0 +1,235 @@
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ *
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+*/
+
+.xipu-background-placeholder__text {
+  font-size: xx-large;
+  color: #999;
+}
+
+.xipu-button-list::before, .xipu-button-list::after {
+  border: #FFF solid;
+  border-top: 1rpx solid #F8F8F8
+}
+
+.xipu-button-list {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10rpx 32rpx 8rpx 40rpx;
+  text-align: left;
+}
+
+.xipu-button_active {
+	background-color: #F0F0F0;
+}
+
+.xipu-button_active::after, .xipu-button_active::before {
+  border: #F0F0F0;
+}
+
+.xipu-card__page {
+  padding: 15rpx;
+}
+
+.xipu-card__default {
+  background: -webkit-linear-gradient(left, #fff , #f2f2f2); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #fff , #f2f2f2); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #fff , #f2f2f2); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #fff , #f2f2f2); /* 标准的语法 */
+  border-radius: 15rpx;
+  padding: 20rpx;
+  box-shadow: 0 8rpx 20rpx 4rpx rgba(242, 242, 242, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.xipu-card__primary {
+  background: -webkit-linear-gradient(left, #e93737 , #b93737); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #e93737 , #b93737); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #e93737 , #b93737); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #e93737 , #b93737); /* 标准的语法 */
+  border-radius: 15rpx;
+  padding: 20rpx;
+  color: white;
+  box-shadow: 0 8rpx 20rpx 4rpx rgba(233, 55, 55, .3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.xipu-card__clean {
+  background: #FFF;
+  border-radius: 15rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.xipu-card__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center
+}
+
+.xipu-flex__center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.xipu-flex__column {
+  display: flex;
+  flex-direction: column
+}
+
+.xipu-flex__center__align {
+  align-items: center
+}
+
+.xipu-icon__gender {
+  height: 35rpx;
+  width: 35rpx;
+  margin-top: 5rpx;
+  margin-left: 15rpx;
+}
+
+.xipu-inline__text {
+  margin-left: 20rpx
+}
+
+.xipu-list__icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.xipu-list__mg__bottom {
+  margin-bottom: 10rpx
+}
+
+.xipu-margin-top__25 {
+  margin-top: 25rpx;
+}
+
+.xipu-margin-content__20 {
+  margin: 20rpx 30rpx;
+}
+
+.xipu-user__avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.xipu-user__avatar__ico {
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 10
+}
+
+.xipu-user__avatar__ico-view {
+  position:absolute;
+  right:0rpx;
+  bottom:0rpx;
+  z-index: 1;
+}
+
+.xipu-user__avatar__view {
+  display: flex;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.xipu-user__avatar__view__out {
+  overflow: hidden
+}
+
+/**
+ * font size
+ */
+
+.xipu-text__h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.xipu-text__h2 {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.xipu-text__h3 {
+  font-size: large;
+  font-weight: bold;
+}
+
+.xipu-text__h4 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+/**
+ * Color style
+ */
+.xipu-button__primary {
+  background-color: #e93737!important;
+  color: #FFF!important;
+  border: 1rpx #c93737 solid!important;
+}
+
+.xipu-button__primary-plain {
+  background-color: #fff!important;
+  color: #e93737!important;
+  border: 1rpx #e93737 solid!important;
+}
+
+.xipu-color-gender__male {
+  color: rgb(0,160,230)
+}
+
+.xipu-color-gender__female {
+  color: rgb(230,0,160)
+}
+
+.color-bg {
+  background-color: #F8F8F8;
+}
+
+.color-gray {
+  color: #999;
+}
+
+.xipu-color__gray {
+  color: #999;
+}
+
+.color-bg-gray {
+  background-color: #CCC;
+}
+
+.color-bg-white {
+  background-color: #FFF;
+}
+
+.color-bg-primary {
+  background-color: #e93737;
+  color: #FFF;
+}
+
+.color-primary {
+  color: #e93737;
+}
+
+.color-worry {
+  color: red;
+}
+
+.color-pass {
+  color: rgb(9,187,7);
+}

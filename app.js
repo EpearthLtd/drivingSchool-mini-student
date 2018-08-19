@@ -56,19 +56,36 @@ App({
         }
       }
     })
-
+    if (this.globalData.userPersonalInfo.coachId!=null) {
+      // 获取教练信息
+      var id = this.globalData.userPersonalInfo.coachId;
+      /*wx.request({
+        url: '',
+      })*/
+      var coachInfo = {
+        "id": "00280021002",
+        "name": "王教练",
+        //"tel": "02867875667",
+        "licencePlate": "川AS110学"
+      }
+      this.globalData.coachInfo = coachInfo
+    }
+    console.log(this.globalData.coachInfo)
   },
+
   globalData: {
     rootDomain: 'http://test.epearth.com',
     userInfo: null, // 微信返回的用户信息
     userPersonalInfo: {
       "name": "郑维一",
       "idNumber":"510111111111111111",
+      //"tel": "13500000000",
       "school": "四川大学锦城学院",
-      //"tel": "13568810905",
-      "userStatus": 3,
-      "progress": "0"
+      "userStatus": 1,
+      "progress": "0",
+      //"coachId": "00280021002"
     },
+    coachInfo: null,
     dateList: []
-  }
+  },
 })

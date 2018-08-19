@@ -7,7 +7,7 @@
 */
 
 @import 'style/weui.wxss';
-@import 'style/agan.wxss';
+@import 'style/xipu.wxss';
 
 page {
   background-color: #F5F6F7;

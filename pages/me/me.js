@@ -35,7 +35,7 @@ Page({
     ],
     //小程序
     miniProgram: [
-      { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "" }
+    //  { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "" }
     ],
     //其它按钮
     other: [
@@ -48,6 +48,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    // 获取用户微信信息
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -74,7 +75,15 @@ Page({
         }
       })
     }
-    switch (app.globalData.userPersonalInfo.userStatus) {
+    // 传入全局用户信息
+    this.getUserPersonalInfo()
+    // 传入教练信息
+    if (this.data.personalInfo.coachId != null) {
+      this.getCoachInfo()
+    }
+    
+    // 设置用户状态图标
+    switch (this.data.personalInfo.userStatus) {
       case 0: this.setData({ userStatus: ["gray", "未报名"]});break;
       case 1: this.setData({ userStatus: ["primary", "已报名"] }); break;
       case 2: this.setData({ userStatus: ["pass", "已预约"] }); break;
@@ -133,7 +142,7 @@ Page({
   },
 
   /**
-   * 获取用户信息
+   * 获取微信用户信息
    */
   getUserInfo: function (e) {
     console.log(e)
@@ -145,6 +154,28 @@ Page({
         hasUserInfo: true
       })
     }
+  },
+
+  /**
+   * 加载全局用户个人信息
+   */
+  getUserPersonalInfo: function () {
+    let userPersonal = app.globalData.userPersonalInfo
+    var that = this
+    that.setData({
+      personalInfo: userPersonal
+    });
+  },
+
+  /**
+   * 加载全局教练信息
+   */
+  getCoachInfo: function () {
+    let coachInfo = app.globalData.coachInfo
+    var that = this
+    that.setData({
+      coachInfo: coachInfo
+    })
   },
 
   /**
@@ -164,31 +195,16 @@ Page({
   },
 
   /**
-   * 学车协议
-   */
-  clickCompact: function() {
-    wx.navigateTo({
-      url: '../supportInfo/compact/compact',
-      success(res) {
-        console.log('用户打开了“学车协议”页面')
-      },
-      fail(res) {
-        console.log('打开“学车协议”页面失败')
-      },
-    })
-  },
-
-  /**
-   * 关于阿甘学车
+   * 关于
    */
   clickAbout: function() {
     wx.navigateTo({
       url: '../supportInfo/about/about',
       success(res) {
-        console.log('打开“关于阿甘学车”页面成功')
+        console.log('打开“关于”页面成功')
       },
       fail(res) {
-        console.log('打开“关于阿甘学车”页面失败')
+        console.log('打开“关于”页面失败')
       },
     })
   }

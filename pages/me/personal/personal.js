@@ -37,6 +37,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    console.log('页面显示')
     //返回当前页面后重新加载
     this.onLoad()
   },
@@ -85,7 +86,5 @@ Page({
     that.setData({
       personalInfo: userPersonal
     });
-    console.log('加载全局用户信息：')
-    console.log(that.data.personalInfo)
-  }
+  },
 })

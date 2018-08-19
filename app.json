@@ -20,7 +20,8 @@
     "pages/me/personal/personal",
     "pages/web/web",
     "pages/me/personal/phone/phone",
-    "pages/me/personal/phoneVerify/phoneVerify"
+    "pages/me/personal/phoneVerify/phoneVerify",
+    "pages/me/coach/coach"
   ],
   "window": {
     "backgroundTextStyle": "white",

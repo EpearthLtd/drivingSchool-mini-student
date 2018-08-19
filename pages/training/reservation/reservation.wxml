@@ -20,7 +20,7 @@
 <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
     <swiper-item>
       <view class='center'>
-        <text class='xipu-background-placeholder__text'>今天的课程已经不能预约啦\n请至少提前一天预约哦！</text>
+        <text class='xipu-background-placeholder__text'>不能预约今天的课程\n请至少提前一天预约</text>
       </view>
     </swiper-item>
     <block wx:for="{{classList}}" wx:key="{{index}}">
