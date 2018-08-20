@@ -10,7 +10,7 @@
   <image class='weui-flex__item xipu-flex__center logo' mode='aspectFit' src='{{logo}}'></image>
 </view>
 <view class='weui-flex'>
-  <text class='weui-flex__item app-name'>阿甘学车</text>
+  <text class='weui-flex__item app-name'>{{appName}}</text>
 </view>
 <view class='weui-flex'>
   <text class='weui-flex__item app-version'>V 2.0.0.144-Alpha</text>
@@ -18,13 +18,13 @@
 
 <view class="weui-cells">
   <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../../web/web?url={{rootDomain}}">
-    <view class="weui-cell__bd">阿甘学车官网</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access">网站还在开发</view>
+    <view class="weui-cell__bd">{{appName}}官网</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
   <button class="weui-cell weui-cell_access xipu-button-list" hover-class="xipu-button_active" open-type="contact">
     <!--最低版本1.1.0 未兼容处理-->
     <view class="weui-cell__bd">在线客服</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access">客服可能不在线</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </button>
   <button class="weui-cell weui-cell_access xipu-button-list" hover-class="xipu-button_active" open-type="feedback">
     <!--最低版本2.1.0 未兼容处理-->

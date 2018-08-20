@@ -74,7 +74,9 @@ App({
   },
 
   globalData: {
-    rootDomain: 'http://test.epearth.com',
+    rootDomain: 'https://develop.epearth.com',
+    sourceDomain: 'https://develop.epearth.com',
+    appName: 'APP名称',
     userInfo: null, // 微信返回的用户信息
     userPersonalInfo: {
       "name": "郑维一",

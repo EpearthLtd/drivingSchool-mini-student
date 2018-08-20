@@ -31,6 +31,14 @@ Page({
     this.setData({
       logo: logoSrc
     })
+    // 传入全局小程序名称并设置页面标题
+    var globalAppName = app.globalData.appName;
+    this.setData({
+      appName: globalAppName,
+    })
+    wx.setNavigationBarTitle({
+      title: '关于' + globalAppName,
+    })
   },
 
   /**

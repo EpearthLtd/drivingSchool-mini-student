@@ -37,11 +37,6 @@ Page({
     miniProgram: [
     //  { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "" }
     ],
-    //其它按钮
-    other: [
-      { className: "", text: "投诉电话", bindtap: "complaint" },
-      { className: "", text: "关于阿甘学车", bindtap: "clickAbout" }
-    ]
   },
 
   /**
@@ -75,6 +70,11 @@ Page({
         }
       })
     }
+    // 传入全局小程序名称
+    var globalAppName = app.globalData.appName;
+    this.setData({
+      appName: globalAppName,
+    })
     // 传入全局用户信息
     this.getUserPersonalInfo()
     // 传入教练信息

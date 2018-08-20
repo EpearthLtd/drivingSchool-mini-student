@@ -31,14 +31,21 @@ Page({
   onLoad: function (options) {
     // 设置全局根域名
     var globalRootDomain = app.globalData.rootDomain;
+    var globalSourceDomain = app.globalData.sourceDomain;
     this.setData({
-      rootDomain: globalRootDomain
+      rootDomain: globalRootDomain,
+      sourceDomain: globalSourceDomain,
+    })
+    // 设置页面标题
+    var globalAppName = app.globalData.appName;
+    wx.setNavigationBarTitle({
+      title: globalAppName,
     })
     // 修改图片完整src
     var imgLength = this.data.carousels.length;
     console.log('共有' + imgLength + '张图片')
     for (var i = 0; i < imgLength; i++ ) {
-      var src = globalRootDomain + this.data.carousels[i].src;
+      var src = globalSourceDomain + this.data.carousels[i].src;
       console.log('完整图片src为：' + src)
       var srcName = 'carousels[' + i + '].src';
       this.setData({

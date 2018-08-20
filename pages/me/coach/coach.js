@@ -20,7 +20,7 @@ Page({
       gender: 0,
       tel: "02867875667",
       licencePlate: "川AS110学",
-      avatarSrc: "http://test.epearth.com/images/avatar.jpg",
+      avatarSrc: "http://develop.epearth.com/images/avatar.jpg",
       students: 0,
     },
     currentCoach: false,
@@ -30,13 +30,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+
+    // 设置全局根域名
+    var globalRootDomain = app.globalData.rootDomain;
+    var globalSourceDomain = app.globalData.sourceDomain;
+    this.setData({
+      rootDomain: globalRootDomain,
+      sourceDomain: globalSourceDomain,
+    })
+    
     // TODO 通过编号加载教练信息
     var thatCoachId
     if (options.coachId) {
       thatCoachId = options.coachId
     }
     wx.request({
-      url: 'http://test.epearth.com',
+      url: globalRootDomain,
       data: { coachId: thatCoachId },
       header: {},
       method: 'GET',
@@ -46,12 +56,14 @@ Page({
       fail: function(res) {},
       complete: function (res) { 
         console.log(res)
-        console.log(res.data)
-        if (res.data!=null) {
-          this.setData({
+        /**
+         * TODO 实现接口调用
+         
+        if (res.statusCode<400) {
+          that.setData({
             coachInfo: res.data
           })
-        }
+        }*/
        },
     })
 

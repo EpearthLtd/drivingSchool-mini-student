@@ -31,13 +31,20 @@ Page({
   onLoad: function (options) {
     // 设置全局根域名
     var globalRootDomain = app.globalData.rootDomain;
+    var globalSourceDomain = app.globalData.sourceDomain;
     this.setData({
-      rootDomain: globalRootDomain
+      rootDomain: globalRootDomain,
+      sourceDomain: globalSourceDomain,
     })
     // 设置logo完整src
-    var adImageSrc = globalRootDomain + '/images/agan.png';
+    var adImageSrc = globalSourceDomain + '/images/agan.png';
     this.setData({
       adImage: adImageSrc
+    })
+    // 设置页面标题
+    var globalAppName = app.globalData.appName;
+    wx.setNavigationBarTitle({
+      title: globalAppName,
     })
   },
 
