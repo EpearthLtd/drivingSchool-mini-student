@@ -56,6 +56,10 @@ App({
         }
       }
     })
+
+    /**
+     * 获取教练信息
+     */
     if (this.globalData.userPersonalInfo.coachId!=null) {
       // 获取教练信息
       var id = this.globalData.userPersonalInfo.coachId;
@@ -83,9 +87,10 @@ App({
       "idNumber":"510111111111111111",
       //"tel": "13500000000",
       "school": "四川大学锦城学院",
-      "userStatus": 1,
-      "progress": "0",
-      //"coachId": "00280021002"
+      "userStatus": 1,            //默认为0
+      "licenceType": 5,           //userStatus大于0时返回该属性
+      "progress": 0,              //userStatus大于0时返回该属性
+      //"coachId": "00280021002", //userStatus大于0时返回该属性
     },
     coachInfo: null,
     dateList: []
