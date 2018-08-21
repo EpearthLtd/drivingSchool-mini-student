@@ -18,9 +18,13 @@
     <view class="weui-cell__bd">学校</view>
     <view class="weui-cell__ft">{{personalInfo.school}}</view>
   </view>
+  <view class="weui-cell" wx:if="{{personalInfo.siteId!=null}}">
+    <view class="weui-cell__bd">训练场</view>
+    <view class="weui-cell__ft">{{personalInfo.siteName}}</view>
+  </view>
   <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.progress!=null}}">
     <view class="weui-cell__bd">进度</view>
-    <view class="weui-cell__ft">{{personalInfo.progress}}</view>
+    <view class="weui-cell__ft">{{personalInfo.progressName}}</view>
   </view>
 </view>
 

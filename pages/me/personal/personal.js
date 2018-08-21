@@ -22,8 +22,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
     // 传入全局用户信息
     this.getUserPersonalInfo()
+
+    // 设置训练进度名称
+    var progressName = 'personalInfo.progressName'
+    switch (that.data.personalInfo.progress) {
+      case 0: that.setData({ [progressName]: '科目一' }); break;
+      case 1: that.setData({ [progressName]: '科目二' }); break;
+      case 2: that.setData({ [progressName]: '科目三' }); break;
+      case 3: that.setData({ [progressName]: '科目四' }); break;
+      default: that.setData({ [progressName]: '训练进度异常' }); break;
+    }
   },
 
   /**

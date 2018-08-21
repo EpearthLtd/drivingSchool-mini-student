@@ -13,8 +13,8 @@ Page({
    */
   data: {
     trainingBill: [
-      { className: "", licenseType: "C1", subject: "科目三", situation: "已完成", datetime: "2018年06月16日 14:03", instructor: "李师傅" },
-      { className: "", licenseType: "C1", subject: "科目二", situation: "已完成", datetime: "2018年06月14日 15:01", instructor: "张师傅" }
+      { id: "0", className: "", licenseType: "C1", subject: "科目三", situation: "已完成", datetime: "2018年06月16日 14:03", instructor: "李师傅" },
+      { id: "1", className: "", licenseType: "C1", subject: "科目二", situation: "已完成", datetime: "2018年06月14日 15:01", instructor: "张师傅" }
     ],
   },
 
@@ -77,9 +77,10 @@ Page({
   /**
    * 用户点击训练记录
    */
-  clickBill: function () {
+  clickBill: function (e) {
     wx.navigateTo({
-      url: '../../training/details/details',
+      url: '../../training/details/details?id=' + e.currentTarget.dataset.id,
     })
+    console.log('打开id为 ' + e.currentTarget.dataset.id + ' 的训练详情')
   }
 })

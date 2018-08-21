@@ -8,33 +8,32 @@
 
 <view class='card'>
   <view>
-    <text class='block center font-medium'>{{trainInfo[0]}}</text>
-    <text class='block center font-larger mg-20-vertical'>C1 科目二训练</text>
-    <text class='block center mg-20-vertical font-small color-gray' wx:if="">训练完成</text>
-    <text class='block center mg-20-vertical font-small color-gray' wx:if="">训练完成</text>
+    <text class='block center font-medium'>{{trainingInfo.siteName}}</text>
+    <text class='block center font-larger mg-20-vertical'>{{trainingInfo.licenceTypeName}} {{trainingInfo.subjectName}}训练</text>
+    <text class='block center mg-20-vertical font-small color-{{trainingInfo.trainingStatusColor}}'>{{trainingInfo.trainingStatusName}}</text>
   </view>
   <view class='bd-bottom'>
     <view class='mg-20-vertical font-small'>
       <text class='color-gray'>教练</text>
-      <text class='fl-right'>教练甲</text>
+      <text class='fl-right'>{{trainingInfo.coachName}}</text>
     </view>
     <view class='mg-20-vertical font-small'>
       <text class='color-gray'>车牌</text>
-      <text class='fl-right'>川AS048学</text>
+      <text class='fl-right'>{{trainingInfo.licencePlate}}</text>
     </view>
     <view class='mg-20-vertical font-small'>
       <text class='color-gray'>电话</text>
-      <text class='fl-right'>13500000000</text>
+      <text class='fl-right'>{{trainingInfo.coachTel}}</text>
     </view>
   </view>
   <view>
     <view class='mg-20-vertical font-small'>
       <text class='color-gray'>训练时间</text>
-      <text class='fl-right'>开始时间 - 结束时间</text>
+      <text class='fl-right'>{{trainingInfo.date}} {{trainingInfo.startTime}} - {{trainingInfo.endTime}}</text>
     </view>
     <view class='font-small'>
       <text class='color-gray'>训练编号</text>
-      <text class='fl-right'>01000000000000</text>
+      <text class='fl-right'>{{trainingInfo.id}}</text>
     </view>
   </view>
 </view>
