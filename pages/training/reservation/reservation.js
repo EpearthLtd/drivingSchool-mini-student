@@ -7,6 +7,8 @@
 */
 
 var app = getApp()
+var globalRootDomain = app.globalData.rootDomain
+var appointmentId = [null]
 
 // 导入js  
 var util = require('../../../utils/util.js'); 
@@ -20,7 +22,7 @@ Page({
         { id: '1', licenceType: 5, subject: 1, startTime: '08:00', endTime: '09:00', duration: '45', flex: '15', students: '2', cardClass: '', checked: '' },
         { id: '2', licenceType: 5, subject: 1, startTime: '09:00', endTime: '10:00', duration: '45', flex: '15', students: '3', cardClass: '', checked: '' },
         { id: '3', licenceType: 5, subject: 1, startTime: '10:00', endTime: '11:00', duration: '45', flex: '15', students: '2', cardClass: '', checked: '' },
-        { id: '4', licenceType: 5, subject: 1, startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', students: '0', cardClass: '', checked: 'true' },
+        { id: '4', licenceType: 5, subject: 1, startTime: '11:00', endTime: '12:00', duration: '45', flex: '15', students: '0', cardClass: '', checked: true },
         { id: '5', licenceType: 5, subject: 1, startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', students: '3', cardClass: '', checked: '' },
         { id: '6', licenceType: 5, subject: 1, startTime: '15:00', endTime: '16:00', duration: '45', flex: '15', students: '3', cardClass: '', checked: '' },
         { id: '7', licenceType: 5, subject: 1, startTime: '16:00', endTime: '17:00', duration: '45', flex: '15', students: '1', cardClass: '', checked: '' }
@@ -98,6 +100,24 @@ Page({
     console.log(this.data.classList)
   },
 
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    var that = this
+    // 当前显示日期中是否有已预约的
+    var day = that.data.classList.length;
+    for (var i = 0; i < day; i++){
+      var mClass = that.data.classList[i].length;
+      appointmentId[i] = null
+      for(var j = 0; j < mClass; j++) {
+        if (that.data.classList[i][j].checked == true) {
+          appointmentId[i] = j
+        }
+      }
+    }
+  },
+
   //滑动切换
   swiperTab: function (e) {
     var that = this;
@@ -143,11 +163,102 @@ Page({
    * 选择课程
    */
   radioChange: function (e) {
-    var nowTab = this.data.currentTab
-    var nowDate = this.data.dateList[nowTab]
+    var that = this
+    var nowTab = that.data.currentTab           // 选中训练的标签页
+    var nowDate = that.data.dateList[nowTab]    // 选中训练的日期
+    var itemIndex = e.detail.value              // 选中训练的序号
+    console.log('在Tab标签页' + nowTab + '(对应日期' + nowDate.year + '年' + nowDate.dates + '）选择序号为' + itemIndex + '的训练\n当前日期原有训练的序号为' + appointmentId[nowTab - 1])
 
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
-    console.log('当前日期为' + nowDate.year + '年' + nowDate.month + '月' + nowDate.day + '日')
+    if (appointmentId[nowTab - 1] != null) {
+      wx.showModal({
+        title: '变更训练时间',
+        content: '您在' + nowDate.year + nowDate.year + '年' + nowDate.dates + '已有训练预约，您确定要变更训练时间吗',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.showLoading({
+              // 访问网络等待提示
+              title: '请稍后',
+              mask: true,
+            })
+            wx.request({
+              url: globalRootDomain,
+              data: { id: that.data.classList[nowTab - 1][itemIndex].id},
+              header: {},
+              method: 'GET',
+              dataType: 'json',
+              responseType: 'text',
+              complete: function (res) {
+                console.log(res)
+                /**
+                 * TODO 实现接口调用
+                 */
+                if (res.statusCode < 400) {
+                  appointmentId[nowTab - 1] = itemIndex
+                  // 访问网络完成，隐藏提示
+                  wx.hideLoading();
+                  wx.showToast({
+                    // 提示手机绑定成功
+                    title: '预约成功',
+                    icon: 'success',
+                    duration: 1500,
+                  })
+                  that.setData({
+                    //coachInfo: res.data
+                  })
+                }
+              },
+            })
+          } else {
+            var old = 'classList[' + (nowTab - 1) + '][' + appointmentId[nowTab - 1] + '].checked'
+            that.setData({
+              [old]: true
+            })
+            console.log('用户点击取消，回复' + old + '值为true')
+          }
+        }
+      })
+    } else {
+      wx.showLoading({
+        // 访问网络等待提示
+        title: '请稍后',
+        mask: true,
+      })
+      wx.request({
+        url: globalRootDomain,
+        data: { id: that.data.classList[nowTab - 1][itemIndex].id},
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) {
+          console.log(res)
+          /**
+           * TODO 实现接口调用
+           */
+          if (res.statusCode<400) {
+            appointmentId[nowTab - 1] = itemIndex
+            // 访问网络完成，隐藏提示
+            wx.hideLoading();
+            wx.showToast({
+              // 提示手机绑定成功
+              title: '预约成功',
+              icon: 'success',
+              duration: 1500,
+              mask: true,
+              success: function (res) { },
+              fail: function (res) { },
+              complete: function (res) { },
+            })
+            that.setData({
+              //coachInfo: res.data
+            })
+          }
+        },
+      })
+    }
   }
 
 })

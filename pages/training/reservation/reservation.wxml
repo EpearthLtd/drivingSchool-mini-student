@@ -17,7 +17,7 @@
     </text>
 </view>
 
-<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+<swiper current="{{currentTab}}" duration="300" bindchange="swiperTab">
     <swiper-item>
       <view class='center'>
         <text class='xipu-background-placeholder__text'>不能预约今天的课程\n请至少提前一天预约</text>
@@ -30,7 +30,7 @@
             <view class='card includeFloat {{item.cardClass}}' wx:for='{{classList[index]}}' wx:key='timeTable'>
               <label>
               <view class='radio'>
-                <radio disabled='{{item.students>=3?true:false}}' value="{{item.id}}" checked='{{item.checked}}'></radio>
+                <radio disabled='{{item.students>=3?true:false}}' value="{{index}}" checked='{{item.checked}}'></radio>
               </view>
               <view class='time-item'>
                 <text class='fl-right color-{{item.students>=3?"gray":"pass"}}'>{{item.students>=3?'已约满':'可预约'}}</text>

@@ -13,7 +13,7 @@
   <text class='weui-flex__item app-name'>{{appName}}</text>
 </view>
 <view class='weui-flex'>
-  <text class='weui-flex__item app-version'>V 2.0.0.144-Alpha</text>
+  <text class='weui-flex__item app-version'>V 2.0.0.161-Alpha</text>
 </view>
 
 <view class="weui-cells">
