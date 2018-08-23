@@ -15,13 +15,13 @@ Page({
    */
   data: {
     coachInfo: {
-      id: "00280021003",
-      name: "教练姓名",
-      gender: 0,
-      tel: "02867875667",
-      licencePlate: "川AS110学",
-      avatarSrc: "http://develop.epearth.com/images/avatar.jpg",
-      students: 0,
+      "id": "00280021003",
+      "name": "王三",
+      "gender": 0,
+      "tel": "13500000000",
+      "licencePlate": "川AS110学",
+      "avatarSrc": "https://develop.epearth.com/images/avatar.jpg",
+      "students": 0
     },
     currentCoach: false,
   },

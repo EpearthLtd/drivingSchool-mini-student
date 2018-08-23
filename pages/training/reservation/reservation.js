@@ -93,6 +93,7 @@ Page({
           case 1: that.setData({ [subjectName]: '科目二' }); break;
           case 2: that.setData({ [subjectName]: '科目三' }); break;
           case 3: that.setData({ [subjectName]: '科目四' }); break;
+          case 4: that.setData({ [subjectName]: '用户已毕业' }); break;
           default: that.setData({ [subjectName]: '训练科目错误' }); break;
         }
       }

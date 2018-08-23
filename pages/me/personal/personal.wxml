@@ -14,9 +14,9 @@
     <view class="weui-cell__bd">身份证号</view>
     <view class="weui-cell__ft">{{personalInfo.idNumber!=null?personalInfo.idNumber:'未绑定身份信息'}}</view>
   </view>
-  <view class="weui-cell" wx:if="{{personalInfo.school!=null}}">
+  <view class="weui-cell" wx:if="{{personalInfo.schoolName!=null}}">
     <view class="weui-cell__bd">学校</view>
-    <view class="weui-cell__ft">{{personalInfo.school}}</view>
+    <view class="weui-cell__ft">{{personalInfo.schoolName}}</view>
   </view>
   <view class="weui-cell" wx:if="{{personalInfo.siteId!=null}}">
     <view class="weui-cell__bd">训练场</view>

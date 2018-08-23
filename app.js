@@ -67,10 +67,13 @@ App({
         url: '',
       })*/
       var coachInfo = {
-        "id": "00280021002",
-        "name": "{王教练}",
-        //"tel": "02867875667",
-        "licencePlate": "{川AS110学}"
+        "id": "00280021003",
+        "name": "王三",
+        "gender": 0,
+        "tel": "13500000000",
+        "licencePlate": "川AS110学",
+        "avatarSrc": "https://develop.epearth.com/images/avatar.jpg",
+        "students": 0
       }
       this.globalData.coachInfo = coachInfo
     }
@@ -83,13 +86,15 @@ App({
     appName: '{APP名称}',
     userInfo: null, // 微信返回的用户信息
     userPersonalInfo: {
+      "uid": "1",
+      "type": [0,0,0,1],
       "name": "{郑维一}",
       "idNumber":"{510111111111111111}",
       "tel": "13500000000",
-      "school": "{四川大学锦城学院}",
       "userStatus": 1,            //默认为0
       "siteId": "123",            //userStatus大于0时返回该属性
       "siteName": "{训练场名称}",  //userStatus大于0时返回该属性
+      "schoolName": "{四川大学锦城学院}",//userStatus大于0时返回该属性
       "licenceType": 5,           //userStatus大于0时返回该属性
       "progress": 0,              //userStatus大于0时返回该属性
       "coachId": "00280021002",   //userStatus大于0时返回该属性
