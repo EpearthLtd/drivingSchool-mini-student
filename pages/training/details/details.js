@@ -14,7 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    trainingInfo: { id: '19', siteName: 'CN训练场', licenceType: 5, subject: 1, date: '2018-08-21', startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', students: '1', trainingStatus: 3, add: 'XX街XX号', coachName: '王教练', licencePlate: '川AV110学', coachTel: '13000000000' }
+    trainingInfo: { id: '19', siteName: 'CN训练场', licenceType: 5, subject: 1, date: '2018-08-21', startTime: '14:00', endTime: '15:00', duration: '45', flex: '15', students: 1, trainingStatus: 3, add: 'XX街XX号', coachName: '王教练', licencePlate: '川AV110学', coachTel: '13000000000' }
   },
 
   /**
