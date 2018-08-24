@@ -18,9 +18,16 @@
     <view class="weui-cell__bd">学校</view>
     <view class="weui-cell__ft">{{personalInfo.schoolName}}</view>
   </view>
+</view>
+
+<view class="weui-cells">
   <view class="weui-cell" wx:if="{{personalInfo.siteId!=null}}">
     <view class="weui-cell__bd">训练场</view>
     <view class="weui-cell__ft">{{personalInfo.siteName}}</view>
+  </view>
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.licenceTypeName!=null}}">
+    <view class="weui-cell__bd">驾照</view>
+    <view class="weui-cell__ft">{{personalInfo.licenceTypeName}}</view>
   </view>
   <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.progress!=null}}">
     <view class="weui-cell__bd">进度</view>

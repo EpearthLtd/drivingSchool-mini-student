@@ -27,6 +27,28 @@ Page({
     this.getUserPersonalInfo()
 
     // 设置训练进度名称
+    var licenceTypeName = 'personalInfo.licenceTypeName'
+    switch (that.data.personalInfo.licenceType) {
+      case 0: that.setData({ [licenceTypeName]: 'A1' }); break;
+      case 1: that.setData({ [licenceTypeName]: 'A2' }); break;
+      case 2: that.setData({ [licenceTypeName]: 'A3' }); break;
+      case 3: that.setData({ [licenceTypeName]: 'B1' }); break;
+      case 4: that.setData({ [licenceTypeName]: 'B2' }); break;
+      case 5: that.setData({ [licenceTypeName]: 'C1' }); break;
+      case 6: that.setData({ [licenceTypeName]: 'C2' }); break;
+      case 7: that.setData({ [licenceTypeName]: 'C3' }); break;
+      case 8: that.setData({ [licenceTypeName]: 'C4' }); break;
+      case 9: that.setData({ [licenceTypeName]: 'C5' }); break;
+      case 10: that.setData({ [licenceTypeName]: 'D' }); break;
+      case 11: that.setData({ [licenceTypeName]: 'E' }); break;
+      case 12: that.setData({ [licenceTypeName]: 'F' }); break;
+      case 13: that.setData({ [licenceTypeName]: 'M' }); break;
+      case 14: that.setData({ [licenceTypeName]: 'N' }); break;
+      case 15: that.setData({ [licenceTypeName]: 'P' }); break;
+      default: that.setData({ [licenceTypeName]: '驾照类型错误' }); break;
+    }
+
+    // 设置训练进度名称
     var progressName = 'personalInfo.progressName'
     switch (that.data.personalInfo.progress) {
       case 0: that.setData({ [progressName]: '科目一' }); break;
