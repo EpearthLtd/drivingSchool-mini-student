@@ -2,9 +2,9 @@
 这是一款用于学车平台为学员提供学车报名、预约练车服务的微信小程序  
 This is a mini program project of WeChat
 
-![license](https://img.shields.io/github/license/EpearthLtd/aganWeixing.svg)
-![GitHub release](https://img.shields.io/github/release/EpearthLtd/aganWeixing.svg)
-![GitHub commits](https://img.shields.io/github/commits-since/EpearthLtd/aganWeixing/1.0.1.102Release.svg)
+![license](https://img.shields.io/github/license/EpearthLtd/drivingSchool-mini-student.svg)
+![GitHub release](https://img.shields.io/github/release/EpearthLtd/drivingSchool-mini-student.svg)
+![Github commits (since latest release)](https://img.shields.io/github/commits-since/EpearthLtd/drivingSchool-mini-student/latest.svg)
 
 ## 技术参数
 * 调试基础库：2.2.2

@@ -21,7 +21,7 @@ Page({
       { "classWrapper": "bd-bottom bd-right", "image": "../../images/time.png", "text": "课程表", "bindTap": "clickTimeTable" },
       { "classWrapper": "bd-bottom", "image": "../../images/phone.png", "text": "联系教练", "bindTap": "clickContactInstructor" },
       { "classWrapper": "bd-right", "image": "../../images/log.png", "text": "学车记录", "bindTap": "clickBill" },
-      { "classWrapper": "", "image": "../../images/caocao-d.png", "text": "理论练习", "bindTap": "clickCaocao" }
+      { "classWrapper": "", "image": "../../images/question-circle.svg", "text": "理论练习", "bindTap": "clickCaocao" }
     ]
   },
 
