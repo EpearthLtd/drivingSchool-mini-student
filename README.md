@@ -3,7 +3,7 @@
 This is a mini program project of WeChat
 
 ![license](https://img.shields.io/github/license/EpearthLtd/drivingSchool-mini-student.svg)
-![GitHub release](https://img.shields.io/github/release/EpearthLtd/drivingSchool-mini-student.svg)
+![GitHub release](https://img.shields.io/github/release/EpearthLtd/drivingSchool-mini-student/all.svg)
 ![Github commits (since latest release)](https://img.shields.io/github/commits-since/EpearthLtd/drivingSchool-mini-student/latest.svg)
 
 ## 技术参数
