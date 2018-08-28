@@ -12,7 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img: 'http://www.epearth.com/testimg/question.jpg'
+    img: 'https://aganxueche.com/images/question.jpg'
   },
 
   /**

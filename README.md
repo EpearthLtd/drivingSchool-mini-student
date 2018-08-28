@@ -8,7 +8,7 @@ This is a mini program project of WeChat
 
 ## 技术参数
 * 调试基础库：2.2.2
-* 业务域名：aganxueche.com | www.aganxueche.com
+* 业务域名：https://develop.epearth.com
 
 ## 设计特色
 * 全局变量设置根域名、资源域名、APP名称，简化变更小程序信息的步骤
@@ -16,11 +16,11 @@ This is a mini program project of WeChat
 ## 设计功能模块
 * 【已发布】轮播广告图
 * 【已发布】在线客服（原生功能）
-* 【开发中】预约练车
-* 【开发中】记录查询
-* 【开发中】手机绑定
-* 【开发完成】意见及BUG反馈（原生功能）
-* 【开发中】拨打电话
+* 【已发布】预约练车
+* 【已发布】记录查询
+* 【已发布】手机绑定
+* 【已发布】意见及BUG反馈（原生功能）
+* 【已发布】拨打电话
 
 ## 基础系统
 * 全局根域名
@@ -52,5 +52,4 @@ onShareAppMessage: function () {
 ## 关于我们
 * 官网：[成都曦璞科技有限公司官网](http://www.epearth.com)
 * 新浪微博：[@曦璞公司](https://weibo.com/xipugongsi)
-* LinkedIn：[成都曦璞科技有限公司](http://www.linkedin.com/company/%E6%88%90%E9%83%BD%E6%9B%A6%E7%92%9E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/)
-
+* 钉钉：[成都曦璞科技有限公司](https://h5.dingtalk.com/home/orgHome.html?corpId=dingaec3efd8fe21f19d35c2f4657eb6378f&token=7f52ac4cc9fc070c5c8457a4610c5006&from=share&_dt_no_comment=1)
