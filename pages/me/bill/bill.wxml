@@ -1,0 +1,21 @@
+<!-- 
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+ 
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<view class='mg-top-40'>
+  <text class='card-top'>已完成训练</text>
+  <view class='card' wx:for='{{trainingBill}}' wx:key='{{item.id}}' data-id='{{item.id}}' bindtap='clickBill'>
+    <view class='block mg-bottom-20'>
+      <text class='{{item.className}}'>{{item.licenseTypeName}} {{item.subjectName}}训练</text>
+      <text class='icon-right {{item.className}}'>{{item.status}} 〉</text>
+    </view>
+    <view class='block color-gray'>
+      <text class='block mg-bottom-10 font-small'>{{item.datetime}}</text>
+      <text class='block font-small'>{{item.coachName}}</text>
+    </view>
+  </view>
+</view>

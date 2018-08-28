@@ -1,0 +1,22 @@
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ *
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+*/
+
+.logo {
+  margin-top: 60rpx;
+  height: 200rpx;
+}
+
+.app-name {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.app-version {
+  text-align: center;
+  color: #999;
+}

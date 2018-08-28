@@ -1,45 +1,59 @@
 <!-- 
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
   版权所有(C)2018 成都曦璞科技有限公司
-
-  文件名file：pages/me/me.wxml
-  描述description：学车微信小程序学员端-海报宣传页
+ 
   作者author：郑维一
   公司网站site：www.epearth.com
 -->
 
 <!--个人信息-->
-<view class='userinfo wrapper bg-white'>
-  <view class='cell pd-20 flex-out'>
+<view class='userinfo-bg bg-white'>
+  <view class='userinfo-out'>
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='button-80'> 微信登录 </button>
     <block wx:else>
-      <image class="userinfo-avatar flex-in" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class='userNickName'>{{userInfo.nickName}}</text>
+    <navigator class='userinfo' url='personal/personal' hover-class="userinfo-hover">
+      <view class='userinfo-info'>
+        <text class='userNickName'>{{userInfo.nickName}} </text>
+        <text class='userStatus icon-{{userStatus[0]}}'>{{userStatus[1]}}</text>
+      </view>
+      <view class='userinfo-avatar'>
+        <image class="user-profile-photo" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </view>
+    </navigator>
     </block>
   </view>
 </view>
 
-<!--客服-->
-<view class='col-100'>
-  <view class='contacButtonView' wx:for='{{connectButton}}' wx:key='key'>
-    <button open-type="contact" class='contacButton'>
-      <text class='floatL {{item.className}}'>{{item.text}}</text>
-      <text class='icon-right {{item.className}}'>〉</text>
-    </button>
-  </view>
+<!--学车信息-->
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access" wx:for='{{userBooking}}' wx:key='key' hover-class="weui-cell_active"
+    target="{{item.target}}" open-type="{{item.openType}}" url="{{item.url}}">
+    <view class="weui-cell__bd {{item.className}}">{{item.text}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="coach/coach" wx:if="{{personalInfo.userStatus>0}}">
+    <view class="weui-cell__bd {{item.className}}">我的教练</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{personalInfo.coachId!=null?coachInfo.name:'未指定教练'}}</view>
+  </navigator>
 </view>
 
 <!--关联小程序-->
-<view class='col-100'>
-  <view class='button-setting' wx:for='{{miniProgram}}' wx:key='key' bindtap='{{item.bindtap}}'>
-    <text class='{{item.className}}'>{{item.text}}</text>
-    <text class='icon-right {{item.className}}'>〉</text>
-  </view>
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access" wx:for='{{miniProgram}}' wx:key='miniProgram' hover-class="weui-cell_active"
+    target="{{item.target}}" open-type="{{item.openType}}" app-id="{{item.appId}}" path="{{item.path}}">
+    <view class="weui-cell__bd {{item.className}}">{{item.text}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
 </view>
 
 <!--联系官方-->
-<view class='col-100'>
-  <view class='button-setting' wx:for='{{other}}' wx:key='key' bindtap='{{item.bindtap}}'>
-    <text class='{{item.className}}'>{{item.text}}</text>
-    <text class='icon-right {{item.className}}'>〉</text>
+<view class="weui-cells">
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='complaint'>
+    <view class="weui-cell__bd">投诉电话</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </view>
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='clickAbout'>
+    <view class="weui-cell__bd">关于{{appName}}</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </view>
 </view>

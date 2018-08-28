@@ -1,11 +1,10 @@
-/**
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
  * 版权所有(C)2018 成都曦璞科技有限公司
- * 
- * 文件名file：app.js
- * 描述description：学车微信小程序学员端-全局处理逻辑JS文件
+ *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
- */
+*/
 
 App({
   onLaunch: function () {
@@ -14,6 +13,15 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    // 获取当前
+    var date = new Date();
+    var dateArray = [];
+    for (var i = 0; i < 4; i++) {
+      var mDate = (date.getMonth() + 1) + '月' + (date.getDate() + i) + '日';
+      dateArray.push(mDate);
+    }
+    this.globalData.dateList = dateArray;
+    console.log('全局数组dateArray为：' + this.globalData.dateList);
     // 登录
     wx.login({
       success: function(res) {
@@ -48,8 +56,50 @@ App({
         }
       }
     })
+
+    /**
+     * 获取教练信息
+     */
+    if (this.globalData.userPersonalInfo.coachId!=null) {
+      // 获取教练信息
+      var id = this.globalData.userPersonalInfo.coachId;
+      /*wx.request({
+        url: '',
+      })*/
+      var coachInfo = {
+        "id": "00280021003",
+        "name": "王三",
+        "gender": 0,
+        "tel": "13500000000",
+        "licencePlate": "川AS110学",
+        "avatarSrc": "https://develop.epearth.com/images/avatar.jpg",
+        "students": 0
+      }
+      this.globalData.coachInfo = coachInfo
+    }
+    console.log(this.globalData.coachInfo)
   },
+
   globalData: {
-    userInfo: null
-  }
+    rootDomain: 'https://develop.epearth.com',
+    sourceDomain: 'https://develop.epearth.com',
+    appName: '{APP名称}',
+    userInfo: null, // 微信返回的用户信息
+    userPersonalInfo: {
+      "uid": "1",
+      "type": [0,0,0,1],
+      "name": "{郑维一}",
+      "idNumber":"{510111111111111111}",
+      "tel": "13500000000",
+      "userStatus": 1,            //默认为0
+      "siteId": "123",            //userStatus大于0时返回该属性
+      "siteName": "{训练场名称}",  //userStatus大于0时返回该属性
+      "schoolName": "{四川大学锦城学院}",//userStatus大于0时返回该属性
+      "licenceType": 5,           //userStatus大于0时返回该属性
+      "progress": 0,              //userStatus大于0时返回该属性
+      "coachId": "00280021002",   //userStatus大于0时返回该属性
+    },
+    coachInfo: null,
+    dateList: []
+  },
 })

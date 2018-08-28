@@ -1,11 +1,10 @@
-/**
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
  * 版权所有(C)2018 成都曦璞科技有限公司
- * 
- * 文件名file：  pages/me/me.js
- * 描述description：学车微信小程序学员端-个人信息页处理逻辑
+ *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
- */
+*/
 
 //获取应用实例
 const app = getApp()
@@ -20,37 +19,31 @@ Page({
     complaintPhone: '02867873121',
     //用户信息
     userInfo: {},
-    userRealName: '姓名 读取中',
-    userVerifyText:'状态 读取中',
-    userVerifyClass:'color-bg-gray',
+    userRealname:"郑维一",
+    userStatus: [],
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
     "userBooking": [
-      { "className": "", "text": "训练历史" },
-      { "className": "", "text": "我的评价" },
-      { "className": "", "text": "消息" }
+      { "className": "", "text": "学车记录", "url": "bill/bill", "openType": "navigate", "bindtap": "" },
+      { "className": "", "text": "个人信息", "url": "personal/personal", "openType": "navigate", "bindtap": "" },
+      //{ "className": "", "text": "消息", bindtap: "" }
     ],
-    connectButton: [
-      { className: "", text: "在线客服", bindtap: "" }
-    ],
+    //用户信息
     userPhone:[
       { className: "", text: "手机号 读取中", bindtap: "" }
     ],
+    //小程序
     miniProgram: [
-      { className: "", text: "阿甘校园购", bindtap: "clickSchoolStore" }
+    //  { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "" }
     ],
-    other: [
-      { className: "", text: "投诉电话", bindtap: "complaint" },
-      { className: "", text: "学车协议", bindtap: "clickCompact" },
-      { className: "", text: "关于阿甘学车", bindtap: "clickAbout" }
-    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    // 获取用户微信信息
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -76,6 +69,26 @@ Page({
           })
         }
       })
+    }
+    // 传入全局小程序名称
+    var globalAppName = app.globalData.appName;
+    this.setData({
+      appName: globalAppName,
+    })
+    // 传入全局用户信息
+    this.getUserPersonalInfo()
+    // 传入教练信息
+    if (this.data.personalInfo.coachId != null) {
+      this.getCoachInfo()
+    }
+    
+    // 设置用户状态图标
+    switch (this.data.personalInfo.userStatus) {
+      case 0: this.setData({ userStatus: ["gray", "未报名"]});break;
+      case 1: this.setData({ userStatus: ["primary", "已报名"] }); break;
+      case 2: this.setData({ userStatus: ["pass", "已预约"] }); break;
+      case 3: this.setData({ userStatus: ["primary", "已毕业"] }); break;
+      default: this.setData({ userStatus: ["gray", "未报名"] }); break;
     }
   },
 
@@ -129,44 +142,40 @@ Page({
   },
 
   /**
-   * 获取用户信息
+   * 获取微信用户信息
    */
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+    console.log(app.globalData.userInfo)
+    if (app.globalData.userInfo != null) {
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      })
+    }
   },
 
   /**
-   * 打开阿甘校园购
+   * 加载全局用户个人信息
    */
-  clickSchoolStore: function () {
-    if (wx.navigateToMiniProgram) {
-      wx.navigateToMiniProgram({
-        appId: 'wx6f53b2295b1349d9',
-        success(res) {
-          // 打开成功
-          console.log('成功打开小程序“阿甘校园购”')
-        }
-      })
-    } else {
-      //微信版本过低不支持wx.navigateToMiniProgram
-      console.log('微信版本过低不支持wx.navigateToMiniProgram')
-      wx.showModal({
-        title: '打开阿甘校园购失败',
-        content: '您的微信版本过低，请升级到最新版本',
-        showCancel: false,
-        success(res) {
-          console.log('提示阿甘校园购打开失败')
-          if (res.confirm) {
-            console.log('用户点击确定')
-          }
-        }
-      })
-    }
+  getUserPersonalInfo: function () {
+    let userPersonal = app.globalData.userPersonalInfo
+    var that = this
+    that.setData({
+      personalInfo: userPersonal
+    });
+  },
+
+  /**
+   * 加载全局教练信息
+   */
+  getCoachInfo: function () {
+    let coachInfo = app.globalData.coachInfo
+    var that = this
+    that.setData({
+      coachInfo: coachInfo
+    })
   },
 
   /**
@@ -186,31 +195,16 @@ Page({
   },
 
   /**
-   * 学车协议
-   */
-  clickCompact: function() {
-    wx.navigateTo({
-      url: '../supportInfo/compact/compact',
-      success(res) {
-        console.log('用户打开了“学车协议”页面')
-      },
-      fail(res) {
-        console.log('打开“学车协议”页面失败')
-      },
-    })
-  },
-
-  /**
-   * 关于阿甘学车
+   * 关于
    */
   clickAbout: function() {
     wx.navigateTo({
-      url: '../supportInfo/aboutAgan/aboutAgan',
+      url: '../supportInfo/about/about',
       success(res) {
-        console.log('打开“关于阿甘学车”页面成功')
+        console.log('打开“关于”页面成功')
       },
       fail(res) {
-        console.log('打开“关于阿甘学车”页面失败')
+        console.log('打开“关于”页面失败')
       },
     })
   }

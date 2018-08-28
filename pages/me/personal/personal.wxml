@@ -1,0 +1,43 @@
+<!--
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+
+  作者author：郑维一
+  公司网站site：www.epearth.com
+ -->
+<view class="weui-cells">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">姓名</view>
+    <view class="weui-cell__ft">{{personalInfo.name!=null?personalInfo.name:'未报名'}}</view>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">身份证号</view>
+    <view class="weui-cell__ft">{{personalInfo.idNumber!=null?personalInfo.idNumber:'未绑定身份信息'}}</view>
+  </view>
+  <view class="weui-cell" wx:if="{{personalInfo.schoolName!=null}}">
+    <view class="weui-cell__bd">学校</view>
+    <view class="weui-cell__ft">{{personalInfo.schoolName}}</view>
+  </view>
+</view>
+
+<view class="weui-cells">
+  <view class="weui-cell" wx:if="{{personalInfo.siteId!=null}}">
+    <view class="weui-cell__bd">训练场</view>
+    <view class="weui-cell__ft">{{personalInfo.siteName}}</view>
+  </view>
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.licenceTypeName!=null}}">
+    <view class="weui-cell__bd">驾照</view>
+    <view class="weui-cell__ft">{{personalInfo.licenceTypeName}}</view>
+  </view>
+  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.progress!=null}}">
+    <view class="weui-cell__bd">进度</view>
+    <view class="weui-cell__ft">{{personalInfo.progressName}}</view>
+  </view>
+</view>
+
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url='phone/phone'>
+    <view class="weui-cell__bd">手机</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{personalInfo.tel!=null?personalInfo.tel:'请绑定手机'}}</view>
+  </navigator>
+</view>

@@ -1,11 +1,12 @@
-/**
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
  * 版权所有(C)2018 成都曦璞科技有限公司
- * 
- * 文件名file：pages/supportInfo/compact/compact.js
- * 描述description：学车微信小程序学员端-学车协议页处理逻辑
+ *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
- */
+*/
+
+const app = getApp()
 
 Page({
 
@@ -13,14 +14,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    logo: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 设置全局根域名
+    var globalRootDomain = app.globalData.rootDomain;
+    this.setData({
+      rootDomain: globalRootDomain
+    })
+    // 设置logo完整src
+    var logoSrc = globalRootDomain + '/images/agan.png';
+    this.setData({
+      logo: logoSrc
+    })
+    // 传入全局小程序名称并设置页面标题
+    var globalAppName = app.globalData.appName;
+    this.setData({
+      appName: globalAppName,
+    })
+    wx.setNavigationBarTitle({
+      title: '关于' + globalAppName,
+    })
   },
 
   /**

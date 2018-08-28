@@ -1,0 +1,40 @@
+<!-- 
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+ 
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<view class='card'>
+  <view>
+    <text class='block center font-medium'>{{trainingInfo.siteName}}</text>
+    <text class='block center font-larger mg-20-vertical'>{{trainingInfo.licenceTypeName}} {{trainingInfo.subjectName}}训练</text>
+    <text class='block center mg-20-vertical font-small color-{{trainingInfo.trainingStatusColor}}'>{{trainingInfo.trainingStatusName}}</text>
+  </view>
+  <view class='bd-bottom'>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>教练</text>
+      <text class='fl-right'>{{trainingInfo.coachName}}</text>
+    </view>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>车牌</text>
+      <text class='fl-right'>{{trainingInfo.licencePlate}}</text>
+    </view>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>电话</text>
+      <text class='fl-right'>{{trainingInfo.coachTel}}</text>
+    </view>
+  </view>
+  <view>
+    <view class='mg-20-vertical font-small'>
+      <text class='color-gray'>训练时间</text>
+      <text class='fl-right'>{{trainingInfo.date}} {{trainingInfo.startTime}} - {{trainingInfo.endTime}}</text>
+    </view>
+    <view class='font-small'>
+      <text class='color-gray'>训练编号</text>
+      <text class='fl-right'>{{trainingInfo.id}}</text>
+    </view>
+  </view>
+</view>
+

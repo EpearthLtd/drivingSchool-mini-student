@@ -1,0 +1,28 @@
+<!-- 
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+ 
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<view>
+  <image class='adImage' mode='aspectFit' src='{{adImage}}'></image>
+</view>
+
+<view class='col-100 wrapper'>
+<view class='cell'>
+  <view class='buttonMain wrapper color-bg-primary' bindtap='clickReservation'>
+    <text class='center cell'>预约练车</text>
+  </view>
+</view>
+  <view class='button-bg-gray includeFloat'>
+    <view class='button wrapper {{item.classWrapper}}' wx:for='{{button}}' wx:key='button' bindtap='{{item.bindTap}}'>
+      <view class='center cell'>
+        <image class='buttonImage center' src='{{item.image}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

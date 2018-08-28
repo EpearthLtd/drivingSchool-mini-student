@@ -1,11 +1,10 @@
-/**
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
  * 版权所有(C)2018 成都曦璞科技有限公司
- * 
- * 文件名file：pages/supportInfo/aboutAgan/aboutAgan.js
- * 描述description：学车微信小程序学员端-关于阿甘学车页处理逻辑
+ *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
- */
+*/
 
 Page({
 
@@ -13,7 +12,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    trainingBill: [
+      { id: "0", className: "", licenseTypeName: "C1", subject: "科目三", status: "已完成", datetime: "2018年06月16日 14:03", coachName: "李师傅" },
+      { id: "1", className: "", licenseTypeName: "C1", subject: "科目二", status: "已完成", datetime: "2018年06月14日 15:01", coachName: "张师傅" }
+    ],
   },
 
   /**
@@ -70,5 +72,15 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 用户点击训练记录
+   */
+  clickBill: function (e) {
+    wx.navigateTo({
+      url: '../../training/details/details?id=' + e.currentTarget.dataset.id,
+    })
+    console.log('打开id为 ' + e.currentTarget.dataset.id + ' 的训练详情')
   }
 })

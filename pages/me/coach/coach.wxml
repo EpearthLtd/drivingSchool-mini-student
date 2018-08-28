@@ -1,0 +1,70 @@
+<!-- 
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+ 
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+<view class='xipu-card__page'>
+  <!-- 顶部教练信息卡片 -->
+  <view class='xipu-card__primary'>
+    <view class='xipu-card__content'>
+      <!-- 头像 -->
+      <view class='xipu-user__avatar__view'>
+        <image class='xipu-user__avatar' src='{{coachInfo.avatarSrc}}'></image>
+      </view>
+      <!-- 基本信息-->
+      <view class='xipu-flex__column'>
+        <view>
+          <text class='xipu-inline__text'>{{coachInfo.name}}</text>
+          <image src='../../../images/{{coachInfo.gender==0?"male":"female"}}.svg' class='xipu-icon__gender'></image>
+        </view>
+        <view>
+          <text class='xipu-inline__text font-small'>{{coachInfo.licencePlate}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 教练编号 -->
+    <text class='font-small'>编号：{{coachInfo.id}}</text>
+  </view>
+
+  <!-- 教练资料 -->
+  <view class='xipu-card__clean mg-top-40 xipu-text__h2'>资料</view>
+  <view class='weui-flex'>
+    <view class='xipu-card__clean weui-flex__item'>
+      <view class='xipu-flex__column'>
+        <text class='font-small xipu-color__gray'>评分</text>
+        <view>
+          <text class='xipu-text__h3'></text>
+          <text class='xipu-color__gray'>暂未开放</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='xipu-card__clean weui-flex__item'>
+      <view class='xipu-flex__column'>
+        <text class='font-small xipu-color__gray'>毕业学员</text>
+        <view>
+          <text class='xipu-text__h3'>{{coachInfo.students}}</text>
+          <text class='font-small'>人</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 教练评价 -->
+  <view class='xipu-card__clean mg-top-40 xipu-text__h2'>评价</view>
+  <view class='weui-flex'>
+    <view class='xipu-card__clean weui-flex__item'>
+      <view class='xipu-flex__column'>
+        <text class='font-small xipu-color__gray'>评价系统暂未开放</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="button-sp-area">
+    <button class='weui-btn' type='primary' plain='true' bindtap='chooseCoach' disabled='{{currentCoach}}'>让{{coachInfo.gender==0?"他":"她"}}教我</button>
+    <button class='weui-btn' type="default" plain="true" bindtap='callCoach'>给教练打电话</button>
+  </view>
+
+</view>

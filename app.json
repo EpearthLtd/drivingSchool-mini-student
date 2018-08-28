@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/training/training",
     "pages/poster/poster",
     "pages/me/me",
     "pages/nopage/nopage",
@@ -7,24 +8,38 @@
     "pages/poster/process/process",
     "pages/poster/notice/notice",
     "pages/poster/question/question",
-    "pages/supportInfo/compact/compact",
-    "pages/supportInfo/aboutAgan/aboutAgan",
+    "pages/supportInfo/about/about",
     "pages/ad/ad1/ad1",
     "pages/ad/ad2/ad2",
     "pages/poster/automatic/automatic",
-    "pages/poster/manual/manual"
+    "pages/poster/manual/manual",
+    "pages/training/timeTable/timetable",
+    "pages/me/bill/bill",
+    "pages/training/details/details",
+    "pages/training/reservation/reservation",
+    "pages/me/personal/personal",
+    "pages/web/web",
+    "pages/me/personal/phone/phone",
+    "pages/me/personal/phoneVerify/phoneVerify",
+    "pages/me/coach/coach"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FF9326",
-    "navigationBarTitleText": "阿甘学车",
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#E93737",
+    "navigationBarTitleText": "曦璞科技学车小程序学员端",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999999",
-    "selectedColor": "#FF9326",
+    "selectedColor": "#E93737",
     "backgroundColor": "#FFFFFF",
     "list": [
+      {
+        "pagePath": "pages/training/training",
+        "text": "训练",
+        "iconPath": "images/wheel-d.png",
+        "selectedIconPath": "images/wheel-a.png"
+      },
       {
         "pagePath": "pages/poster/poster",
         "text": "报名",

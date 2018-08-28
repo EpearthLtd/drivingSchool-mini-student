@@ -1,0 +1,62 @@
+/*!
+ * 学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+ * 版权所有(C)2018 成都曦璞科技有限公司
+ *
+ * 作者author：郑维一
+ * 公司网站site：www.epearth.com
+*/
+
+.swiper-tab{
+    padding: 10rpx;
+    background-color: #FFF;
+    font-size: small;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    margin: 10rpx;
+    padding: 15rpx 0;
+    flex: 1;
+    color:#434343;
+    background-color: #EEE;
+    border-radius: 10rpx;
+}
+.active{
+    color: #EEE;
+    background-color:#e93737;
+    box-shadow: 0 4rpx 10rpx 5rpx rgba(233, 55, 55, .3);
+    transition: all .3s;
+    -moz-transition: all .3s; /* Firefox 4 */
+    -webkit-transition: all .3s; /* Safari 和 Chrome */
+    -o-transition: all .3s; /* Opera */
+}
+
+/* 展示滑动模块 */
+swiper{
+  width: 100%;
+  height: 87.5vh;
+  overflow-x: hidden;
+}
+ .radio {
+   margin-top: 30rpx;
+   float: left;
+ }
+
+ .time-item {
+   width: 550rpx;
+   float: right;
+ }
+
+ /* 滑动区域 */
+.scrollers, .scrollView {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* 覆盖全局card边距 */
+.card {
+  padding: 20rpx 40rpx;
+}
