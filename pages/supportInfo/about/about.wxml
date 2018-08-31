@@ -17,7 +17,7 @@
 </view>
 
 <view class="weui-cells">
-  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../../web/web?url={{rootDomain}}">
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../../web/web?url=https://aganxueche.com">
     <view class="weui-cell__bd">{{appName}}官网</view>
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
@@ -35,7 +35,7 @@
 
 <view class="weui-footer weui-footer_fixed-bottom">
   <view class="weui-footer__links">
-    <navigator class="weui-footer__link" url="../../web/web?url={{rootDomain}}/miniprogram/compact.html">学车协议</navigator>
+    <navigator class="weui-footer__link" url="../../web/web?url={{sourceDomain}}/miniprogram/compact.html">学车协议</navigator>
     <navigator url="../../web/web?url=https://epearth.com" class="weui-footer__link">曦璞科技</navigator>
   </view>
   <view class="weui-footer__text">Copyright © 2018 epearth.com</view>

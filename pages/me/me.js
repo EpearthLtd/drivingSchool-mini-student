@@ -35,7 +35,7 @@ Page({
     ],
     //小程序
     miniProgram: [
-    //  { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "" }
+      { className: "", text: "阿甘校园购", target: "miniProgram", openType: "navigate", appId: "wx6f53b2295b1349d9", path: "", bindtap: "" }
     ],
   },
 

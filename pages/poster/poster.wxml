@@ -9,7 +9,7 @@
 <!--轮播图-->
 <swiper class='carousels' indicator-dots='true' autoplay='true' interval='3000' duration='1000'>
   <block wx:for="{{carousels}}" wx:for-index="index" wx:key="index" >
-    <navigator url='../web/web?url={{rootDomain}}{{item.url}}'>
+    <navigator url='../web/web?url={{sourceDomain}}{{item.url}}'>
       <swiper-item>
         <image src='{{item.src}}' class='slide-image' mode='aspectFill'/>
       </swiper-item>

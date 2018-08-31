@@ -25,6 +25,7 @@ Page({
     var that = this
     // 传入全局用户信息
     this.getUserPersonalInfo()
+    console.log(that.data.personalInfo)
 
     // 设置训练进度名称
     var licenceTypeName = 'personalInfo.licenceTypeName'

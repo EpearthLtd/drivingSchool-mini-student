@@ -7,6 +7,8 @@
 */
 
 const app = getApp();
+var globalRootDomain = app.globalData.rootDomain;
+var globalSourceDomain = app.globalData.sourceDomain;
 
 Page({
 
@@ -109,13 +111,13 @@ Page({
   clickManual: function () {
     console.log('用户点击手动档')
     wx.navigateTo({
-      url: 'manual/manual',
+      url: '../web/web?url=' + globalSourceDomain + '/miniprogram/manual.html',
     })
   },
   clickAutomatic: function () {
     console.log('用户点击自动档')
     wx.navigateTo({
-      url: 'automatic/automatic',
+      url: '../web/web?url=' + globalSourceDomain + '/miniprogram/automatic.html',
     })
   },
 

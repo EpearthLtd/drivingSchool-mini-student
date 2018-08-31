@@ -8,6 +8,21 @@
 
 App({
   onLaunch: function () {
+    wx.showModal({
+      title: '体验须知',
+      content: '当前版本仅用于静态体验，预置了部分虚构的个人信息，如有雷同纯属巧合。\n\n千万不要真的拨打投诉电话以外的任何电话，不然程序员维一是真的真的会被拿去祭天的！',
+      confirmText: '同意',
+      showCancel: false,
+      cancelText: '不同意',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击同意')
+        } else if (res.cancel) {
+          console.log('用户点击不同意')
+        }
+      }
+    })
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -45,6 +60,12 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              console.log(this.globalData.userInfo)
+
+              /**
+               * 临时代码：设置学员姓名为微信昵称
+               */
+              this.globalData.userPersonalInfo.name = "{ " + res.userInfo.nickName + " 的真实姓名}"
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
@@ -68,27 +89,28 @@ App({
       })*/
       var coachInfo = {
         "id": "00280021003",
-        "name": "王三",
+        "name": "{王三}",
         "gender": 0,
         "tel": "13500000000",
         "licencePlate": "川AS110学",
-        "avatarSrc": "https://develop.epearth.com/images/avatar.jpg",
+        "avatarSrc": "https://agan.src.epearth.com/images/avatar.jpg",
         "students": 0
       }
       this.globalData.coachInfo = coachInfo
     }
     console.log(this.globalData.coachInfo)
+    console.log(this.globalData.userInfo)
   },
 
   globalData: {
-    rootDomain: 'https://develop.epearth.com',
-    sourceDomain: 'https://develop.epearth.com',
-    appName: '{APP名称}',
+    rootDomain: 'https://agan.request.epearth.com',
+    sourceDomain: 'https://agan.src.epearth.com',
+    appName: '阿甘学车',
     userInfo: null, // 微信返回的用户信息
     userPersonalInfo: {
       "uid": "1",
       "type": [0,0,0,1],
-      "name": "{郑维一}",
+      "name": "{姓名}",
       "idNumber":"{510111111111111111}",
       "tel": "13500000000",
       "userStatus": 1,            //默认为0

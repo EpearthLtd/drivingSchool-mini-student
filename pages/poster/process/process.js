@@ -6,20 +6,26 @@
  * 公司网站site：www.epearth.com
 */
 
+const app = getApp();
+var globalRootDomain = app.globalData.rootDomain;
+var globalSourceDomain = app.globalData.sourceDomain;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    img: 'https://aganxueche.com/images/process.jpg'
+    img: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      img: globalSourceDomain + '/images/process.jpg'
+    })
   },
 
   /**
