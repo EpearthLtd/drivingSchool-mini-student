@@ -7,6 +7,9 @@
 */
 
 const app = getApp();
+let globalRootDomain = app.globalData.rootDomain;
+let globalSourceDomain = app.globalData.sourceDomain;
+let globalRequestDomain = app.globalData.requestDomain
 
 Page({
 
@@ -14,11 +17,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    carousels:[
+    /*carousels:[
       { src: '/images/ad1.jpg', url: '/miniprogram/ad1.html' },
       { src: '/images/ad2.jpg', url: '/miniprogram/ad2.html' },
       { src: '/images/ad3.jpg', url: '' }
-    ],
+    ],*/
     priceView:[
       { src: '../../images/car.svg', name: '手动档', price: '3000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickManual' },
       { src: '../../images/car.svg', name: '自动档', price: '4000', descriptionL1: '杜绝吃拿卡要　不满极速退款', descriptionL2: '尊享全程售后　线下消费折扣', bindtap: 'clickAutomatic' },
@@ -30,28 +33,37 @@ Page({
    */
   onLoad: function (options) {
     // 设置全局根域名
-    var globalRootDomain = app.globalData.rootDomain;
-    var globalSourceDomain = app.globalData.sourceDomain;
     this.setData({
       rootDomain: globalRootDomain,
       sourceDomain: globalSourceDomain,
+      requestDomain: globalRequestDomain
     })
     // 设置页面标题
     var globalAppName = app.globalData.appName;
     wx.setNavigationBarTitle({
       title: globalAppName,
     })
+    // 图片本地地址及打开链接
+    var mCarousels = [
+      { src: '/images/ad1.jpg', url: '/miniprogram/ad1.html' },
+      { src: '/images/ad2.jpg', url: '/miniprogram/ad2.html' },
+      { src: '/images/ad3.jpg', url: '' }
+    ]
     // 修改图片完整src
-    var imgLength = this.data.carousels.length;
+    var imgLength = mCarousels.length;
     console.log('共有' + imgLength + '张图片')
     for (var i = 0; i < imgLength; i++ ) {
-      var src = globalSourceDomain + this.data.carousels[i].src;
-      console.log('完整图片src为：' + src)
+      var src = globalSourceDomain + mCarousels[i].src;
+      var url = globalSourceDomain + mCarousels[i].url;
+      console.log('完整图片src为：' + src + '\n完整打开链接地址为：' + url)
       var srcName = 'carousels[' + i + '].src';
+      var urlName = 'carousels[' + i + '].url';
       this.setData({
-        [srcName]: src
+        [srcName]: src,
+        [urlName]: url
       })
     }
+    console.log(this.data.carousels)
   },
 
   /**

@@ -8,11 +8,11 @@
 <view class="weui-cells">
   <view class="weui-cell">
     <view class="weui-cell__bd">姓名</view>
-    <view class="weui-cell__ft">{{personalInfo.name!=null?personalInfo.name:'未报名'}}</view>
+    <view class="weui-cell__ft">{{personalInfo.realname!=null?personalInfo.realname:'未报名'}}</view>
   </view>
   <view class="weui-cell">
     <view class="weui-cell__bd">身份证号</view>
-    <view class="weui-cell__ft">{{personalInfo.idNumber!=null?personalInfo.idNumber:'未绑定身份信息'}}</view>
+    <view class="weui-cell__ft">{{personalInfo.idcard!=null?personalInfo.idcard:'未绑定身份信息'}}</view>
   </view>
   <view class="weui-cell" wx:if="{{personalInfo.schoolName!=null}}">
     <view class="weui-cell__bd">学校</view>
@@ -22,12 +22,12 @@
 
 <view class="weui-cells">
   <view class="weui-cell" wx:if="{{personalInfo.siteId!=null}}">
-    <view class="weui-cell__bd">训练场</view>
+    <view class="weui-cell__bd">练车场</view>
     <view class="weui-cell__ft">{{personalInfo.siteName}}</view>
   </view>
   <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.licenceTypeName!=null}}">
     <view class="weui-cell__bd">驾照</view>
-    <view class="weui-cell__ft">{{personalInfo.licenceTypeName}}</view>
+    <view class="weui-cell__ft">{{car_type[personalInfo.vehicle_type]}}</view>
   </view>
   <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:if="{{personalInfo.progress!=null}}">
     <view class="weui-cell__bd">进度</view>

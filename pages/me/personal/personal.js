@@ -14,8 +14,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    personalInfo:{} // 用户个人信息
-  
+    personalInfo:{}, // 用户个人信息
+    car_status: ['未报名', '科目一', '科目二', '科目三', '科目四', '已毕业'],
+    car_type: ['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'c1', 'c2', 'c3', 'D', 'E', 'F', 'M', 'N', 'P'],
   },
 
   /**
@@ -24,7 +25,9 @@ Page({
   onLoad: function (options) {
     var that = this
     // 传入全局用户信息
-    this.getUserPersonalInfo()
+    if (app.globalData.userPersonalInfo != undefined && app.globalData.userPersonalInfo != null) {
+      this.getUserPersonalInfo()
+    }
 
     // 设置训练进度名称
     var licenceTypeName = 'personalInfo.licenceTypeName'
@@ -55,7 +58,7 @@ Page({
       case 1: that.setData({ [progressName]: '科目二' }); break;
       case 2: that.setData({ [progressName]: '科目三' }); break;
       case 3: that.setData({ [progressName]: '科目四' }); break;
-      default: that.setData({ [progressName]: '训练进度异常' }); break;
+      default: that.setData({ [progressName]: '练车进度异常' }); break;
     }
   },
 
@@ -69,11 +72,11 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    console.log('页面显示')
-    //返回当前页面后重新加载
-    this.onLoad()
-  },
+  // onShow: function () {
+  //   console.log('页面显示')
+  //   //返回当前页面后重新加载
+  //   this.onLoad()
+  // },
 
   /**
    * 生命周期函数--监听页面隐藏

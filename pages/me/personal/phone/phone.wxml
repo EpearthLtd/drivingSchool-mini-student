@@ -18,7 +18,10 @@
   </view>
 
   <view class='button-box'>
-    <button class="weui-btn" type="primary" url='../phoneVerify/phoneVerify' bindtap='phoneVerify'>{{tel!=null?'更换手机号':'绑定手机号'}}</button>
-    <button class="weui-btn" type="default" wx:if="{{tel!=null}}">解绑手机号</button>
+  
+    <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class='weui-btn'>立即绑定手机</button>
+
+    <button class="weui-btn" type="primary" url='../phoneVerify/phoneVerify' bindtap='phoneVerify' style='display:none;'>{{tel!=null?'更换手机号':'绑定手机号'}}</button>
+    <button class="weui-btn" type="default" wx:if="{{tel!=null}}"style='display:none;'>解绑手机号</button>
   </view>
 </view>

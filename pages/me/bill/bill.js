@@ -81,6 +81,6 @@ Page({
     wx.navigateTo({
       url: '../../training/details/details?id=' + e.currentTarget.dataset.id,
     })
-    console.log('打开id为 ' + e.currentTarget.dataset.id + ' 的训练详情')
+    console.log('打开id为 ' + e.currentTarget.dataset.id + ' 的练车详情')
   }
 })

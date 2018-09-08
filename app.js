@@ -4,10 +4,24 @@
  *
  * 作者author：郑维一
  * 公司网站site：www.epearth.com
-*/
+ */
+
+// 定义小程序全局根域名
+let rootDomain = 'https://www.aganxueche.com';
+let sourceDomain = 'https://agan.src.epearth.com';
+let requestDomain = 'https://api.eexueche.com';
+// 定义
+var get_data = [];
+var user_data = [];
 
 App({
   onLaunch: function () {
+    var that = this
+
+    // 设置全局根域名
+    this.globalData.rootDomain = rootDomain
+    this.globalData.sourceDomain = sourceDomain
+    this.globalData.requestDomain = requestDomain
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -24,18 +38,58 @@ App({
     console.log('全局数组dateArray为：' + this.globalData.dateList);
     // 登录
     wx.login({
-      success: function(res) {
+      success: function (res) {
+        // 打印获取到的微信用户数据
+        console.log(res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
+          get_data.code = res.code;
           // 发起网络请求
-          /*wx.request({
-            url: 'https://aganxueche.com/userinfo/wx/login',
+          wx.request({
+            url: requestDomain + '/api/GetUser/getopenid',
             method: 'POST',
-
-          })*/
+            data: get_data,
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
+            success: function (res) {
+              console.log("获取到的用户信息为：")
+              console.log(res)
+              // 把 openid, sessionKey 存入全局变量
+              that.globalData.wechatUserData.session = res.data.data.session_key
+              that.globalData.wechatUserData.openid = res.data.data.openid;
+              if (res.data.data.unionid) {
+                that.globalData.wechatUserData.unionid = res.data.data.unionid
+              }
+              // 设置要提交服务器的参数
+              user_data.openid = res.data.data.openid;
+              console.log(user_data)
+              // 提交openid到数据库获取用户信息
+              wx.request({
+                url: requestDomain + "/api/GetUser/get_one_user",
+                data: user_data,
+                method: 'POST',
+                header: { "Content-Type": "application/x-www-form-urlencoded" },
+                success: function (res) {
+                  console.log("使用openid获取到的用户信息")
+                  console.log(res);
+                  var userinfo = res.data.userinfo;
+                  if (userinfo) {
+                    this.globalData.personalInfo = userinfo
+                  }
+                  // console.log(res.data.userinfo)
+                },
+                fail: function (err) { }
+              })
+            },
+            fail: function (err) { }
+          })
+        } else {
+          console.error('获取用户登录态失败！' + res.errMsg)
         }
       }
-    })
+    });
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -45,7 +99,8 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-
+              console.log('获取微信账户信息：')
+              console.log(res.userInfo)
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
@@ -60,7 +115,7 @@ App({
     /**
      * 获取教练信息
      */
-    if (this.globalData.userPersonalInfo.coachId!=null) {
+    if (this.globalData.userPersonalInfo != undefined && this.globalData.userPersonalInfo.coachId != null) {
       // 获取教练信息
       var id = this.globalData.userPersonalInfo.coachId;
       /*wx.request({
@@ -77,27 +132,31 @@ App({
       }
       this.globalData.coachInfo = coachInfo
     }
-    console.log(this.globalData.coachInfo)
+    // console.log(this.globalData.coachInfo)
   },
 
   globalData: {
-    rootDomain: 'https://',
-    sourceDomain: 'https://',
+    /*rootDomain: 'https://www.eexueche.com',
+    sourceDomain: 'https://www.eexueche.com',
+    requestDomain: 'https://api.eexueche.com',*/
     appName: '{APP名称}',
+    car_status: ['未报名', '科目一', '科目二', '科目三', '科目四', '已毕业'],
+    car_type: ['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'c1', 'c2', 'c3', 'D', 'E', 'F', 'M', 'N', 'P'],
     userInfo: null, // 微信返回的用户信息
+    wechatUserData: {},
     userPersonalInfo: {
-      "uid": "1",
-      "type": [0,0,0,1],
+      /*"uid": "1",
+      "type": [0, 0, 0, 1],
       "name": "{郑维一}",
-      "idNumber":"{510111111111111111}",
+      "idNumber": "{510111111111111111}",
       "tel": "13500000000",
-      "userStatus": 1,            //默认为0
-      "siteId": "123",            //userStatus大于0时返回该属性
-      "siteName": "{训练场名称}",  //userStatus大于0时返回该属性
-      "schoolName": "{四川大学锦城学院}",//userStatus大于0时返回该属性
-      "licenceType": 5,           //userStatus大于0时返回该属性
-      "progress": 0,              //userStatus大于0时返回该属性
-      "coachId": "00280021002",   //userStatus大于0时返回该属性
+      "userStatus": 1, //默认为0
+      "siteId": "123", //userStatus大于0时返回该属性
+      "siteName": "{训练场名称}", //userStatus大于0时返回该属性
+      "schoolName": "{四川大学锦城学院}", //userStatus大于0时返回该属性
+      "licenceType": 5, //userStatus大于0时返回该属性
+      "progress": 0, //userStatus大于0时返回该属性
+      "coachId": "00280021002", //userStatus大于0时返回该属性*/
     },
     coachInfo: null,
     dateList: []

@@ -7,6 +7,9 @@
 */
 
 const app = getApp()
+let globalRootDomain = app.globalData.rootDomain;
+let globalSourceDomain = app.globalData.sourceDomain;
+let globalRequestDomain = app.globalData.requestDomain
 
 Page({
 
@@ -22,12 +25,13 @@ Page({
    */
   onLoad: function (options) {
     // 设置全局根域名
-    var globalRootDomain = app.globalData.rootDomain;
     this.setData({
-      rootDomain: globalRootDomain
+      rootDomain: globalRootDomain,
+      sourceDomain: globalSourceDomain,
+      requestDomain: globalRequestDomain
     })
     // 设置logo完整src
-    var logoSrc = globalRootDomain + '/images/agan.png';
+    var logoSrc = globalSourceDomain + '/images/agan.png';
     this.setData({
       logo: logoSrc
     })

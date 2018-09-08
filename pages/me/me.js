@@ -20,12 +20,12 @@ Page({
     //用户信息
     userInfo: {},
     userRealname:"郑维一",
-    userStatus: [],
+    userStatus: ["gray", "未报名"],
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     //功能按钮
     "userBooking": [
-      { "className": "", "text": "学车记录", "url": "bill/bill", "openType": "navigate", "bindtap": "" },
+      { "className": "", "text": "练车记录", "url": "bill/bill", "openType": "navigate", "bindtap": "" },
       { "className": "", "text": "个人信息", "url": "personal/personal", "openType": "navigate", "bindtap": "" },
       //{ "className": "", "text": "消息", bindtap: "" }
     ],
@@ -76,19 +76,21 @@ Page({
       appName: globalAppName,
     })
     // 传入全局用户信息
-    this.getUserPersonalInfo()
-    // 传入教练信息
-    if (this.data.personalInfo.coachId != null) {
-      this.getCoachInfo()
-    }
-    
-    // 设置用户状态图标
-    switch (this.data.personalInfo.userStatus) {
-      case 0: this.setData({ userStatus: ["gray", "未报名"]});break;
-      case 1: this.setData({ userStatus: ["primary", "已报名"] }); break;
-      case 2: this.setData({ userStatus: ["pass", "已预约"] }); break;
-      case 3: this.setData({ userStatus: ["primary", "已毕业"] }); break;
-      default: this.setData({ userStatus: ["gray", "未报名"] }); break;
+    if (app.globalData.userPersonalInfo != null && app.globalData.userPersonalInfo != undefined) {
+      // 获取用户个人信息
+      this.getUserPersonalInfo()
+      // 传入教练信息
+      if (this.data.personalInfo.coachId != undefined && this.data.personalInfo.coachId != null) {
+        this.getCoachInfo()
+      }
+      // 设置用户状态图标
+      switch (this.data.personalInfo.userStatus) {
+        case 0: this.setData({ userStatus: ["gray", "未报名"] }); break;
+        case 1: this.setData({ userStatus: ["primary", "已报名"] }); break;
+        case 2: this.setData({ userStatus: ["pass", "已预约"] }); break;
+        case 3: this.setData({ userStatus: ["primary", "已毕业"] }); break;
+        default: this.setData({ userStatus: ["gray", "未报名"] }); break;
+      }
     }
   },
 
