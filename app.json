@@ -21,7 +21,8 @@
     "pages/web/web",
     "pages/me/personal/phone/phone",
     "pages/me/personal/phoneVerify/phoneVerify",
-    "pages/me/coach/coach"
+    "pages/me/coach/coach",
+    "pages/poster/freeTrail/freeTrail"
   ],
   "window": {
     "backgroundTextStyle": "white",

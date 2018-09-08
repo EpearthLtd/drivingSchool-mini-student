@@ -104,6 +104,18 @@ Page({
   },
 
 /**
+ * 免费试学
+ */
+  freeTrail: function() {
+    wx.navigateTo({
+      url: 'freeTrail/freeTrail',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+
+/**
  * 用户点击手动档、自动档
  */
   clickManual: function () {

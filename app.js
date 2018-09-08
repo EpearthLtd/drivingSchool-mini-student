@@ -81,8 +81,8 @@ App({
   },
 
   globalData: {
-    rootDomain: 'https://develop.epearth.com',
-    sourceDomain: 'https://develop.epearth.com',
+    rootDomain: 'https://',
+    sourceDomain: 'https://',
     appName: '{APP名称}',
     userInfo: null, // 微信返回的用户信息
     userPersonalInfo: {

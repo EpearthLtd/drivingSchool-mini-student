@@ -95,5 +95,9 @@ text-button {
 }
 
 .button-primary {
-  margin: 15rpx 40rpx;
+  margin-left: 15rpx;
+}
+
+.button-area {
+  margin: 15rpx 20rpx
 }

@@ -1,0 +1,29 @@
+<!-- 
+  学车管理平台微信小程序学员端 (https://github.com/EpearthLtd/drivingSchool-mini-student)
+  版权所有(C)2018 成都曦璞科技有限公司
+ 
+  作者author：郑维一
+  公司网站site：www.epearth.com
+-->
+
+<view class='page__bd'>
+  <view class='xipu-card__default xipu-flex__column'>
+  <form>
+    <view class='xipu-bg__round input-bg__sp'>
+      <input class="weui-input" placeholder="请输入姓名"></input>
+    </view>
+    <view class='xipu-bg__round input-bg__sp'>
+      <input class="weui-input" placeholder="请输入您的年龄"></input>
+    </view>
+    <view class='xipu-bg__round input-bg__sp'>
+      <input class="weui-input" placeholder="请输入您的手机"></input>
+    </view>
+    <view class='xipu-bg__round input-bg__sp'>
+      <input class="weui-input" placeholder="请输入您的地址"></input>
+    </view>
+    <view class='xipu-bg__round input-bg__sp color-bg-primary'>
+      <button form-type="submit" class='xipu-button__primary'>立即申请</button>
+    </view>
+  </form>
+  </view>
+</view>

@@ -18,7 +18,14 @@
 </swiper>
 
 <!--客服按钮-->
-<button type='primary' open-type='contact' session-from="小程序立即咨询" style='color:white;background-color:#e93737' class='button-primary'>立  即  咨  询</button>
+<view class="weui-flex button-area">
+  <view class="weui-flex__item">
+    <button open-type='contact' session-from="小程序立即咨询" class='xipu-button__primary'>立  即  咨  询</button>
+  </view>
+  <view class="weui-flex__item">
+    <button class='xipu-button__primary button-primary' bindtap='freeTrail'>免  费  试  学</button>
+  </view>
+</view>
 
 <!--报名价格-->
 <view class='view-price-bg' wx:for="{{priceView}}" wx:key="key" bindtap='{{item.bindtap}}'>

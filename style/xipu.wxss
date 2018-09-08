@@ -36,10 +36,7 @@
 }
 
 .xipu-card__default {
-  background: -webkit-linear-gradient(left, #fff , #f2f2f2); /* Safari 5.1 - 6.0 */
-  background: -o-linear-gradient(right, #fff , #f2f2f2); /* Opera 11.1 - 12.0 */
-  background: -moz-linear-gradient(right, #fff , #f2f2f2); /* Firefox 3.6 - 15 */
-  background: linear-gradient(to right, #fff , #f2f2f2); /* 标准的语法 */
+  background:  #fff;
   border-radius: 15rpx;
   padding: 20rpx;
   box-shadow: 0 8rpx 20rpx 4rpx rgba(242, 242, 242, 1);
@@ -151,9 +148,16 @@
 }
 
 /**
+ * 基础元件
+ */
+.xipu-bg__round {
+  border-radius: 1000rpx;
+  background-color: rgba(128, 128, 128, .15)
+}
+
+/**
  * font size
  */
-
 .xipu-text__h1 {
   font-size: xx-large;
   font-weight: bolder;
