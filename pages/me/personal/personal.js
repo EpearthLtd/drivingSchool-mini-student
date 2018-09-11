@@ -72,11 +72,13 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  // onShow: function () {
+  onShow: function () {
   //   console.log('页面显示')
-  //   //返回当前页面后重新加载
-  //   this.onLoad()
-  // },
+  //返回当前页面后重新加载
+    if (app.globalData.userPersonalInfo != undefined && app.globalData.userPersonalInfo != null) {
+      this.getUserPersonalInfo()
+    }
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

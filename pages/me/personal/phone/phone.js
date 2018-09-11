@@ -26,55 +26,82 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userPersonalInfo!=null) {
-      this.setData({
-        tel: app.globalData.userPersonalInfo.tel
-      })
-    }
+    // 设置全局根域名
+    this.setData({
+      rootDomain: globalRootDomain,
+      sourceDomain: globalSourceDomain,
+      requestDomain: globalRequestDomain
+    })
+    var that = this;
+/*
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          get_data.code = res.code;
+          wx.request({
+            url: globalRequestDomain + "/api/GetUser/getopenid",
+            data: get_data,
+            method: 'POST',
+            header: { "Content-Type": "application/x-www-form-urlencoded" },
+            success: function (res) {
+              var _data = res.data;
+              get_data.session_key = _data.data.session_key;
+              get_data.openid = _data.data.openid;
+              user_data.openid = _data.data.openid;
+
+              wx.request({
+                url: "https://api.eexueche.com/api/GetUser/get_one_user",
+                data: get_data,
+                method: 'POST',
+                header: { "Content-Type": "application/x-www-form-urlencoded" },
+                success: function (res) {
+                  that.setData({
+                    tel: res.data.userinfo.tel
+                  })
+                },
+                fail: function (err) {
+                  // console.log(err)
+                }
+              })
+            },
+            fail: function (err) {
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+        }
+      }
+    });
+
+    wx.getUserInfo({
+      success: function (res) {
+        var userInfo = res.userInfo
+        user_data.nickName = userInfo.nickName
+        user_data.avatarUrl = userInfo.avatarUrl
+
+        get_data.iv = res.iv;
+        get_data.encryptedData = res.encryptedData;
+        wx.request({
+          url: "https://api.eexueche.com/api/GetUser/get_one_user",
+          data: get_data,
+          method: 'POST',
+          header: { "Content-Type": "application/x-www-form-urlencoded" },
+          success: function (res) {
+          },
+          fail: function (err) {
+            // console.log(err)
+          }
+        })
+        // console.log(user_data);
+        // var gender = userInfo.gender //性别 0：未知、1：男、2：女
+        // var province = userInfo.province
+        // var city = userInfo.city
+        // var country = userInfo.country
+      }
+    })
+    */
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    //返回当前页面后重新加载
-    this.onLoad()
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
 
   /**
    * 用户点击右上角分享
@@ -101,33 +128,38 @@ Page({
    * 解密手机号 
    */
   getPhoneNumber: function (e) {
+    console.log('打印传入数据')
     console.log(e)
     var _this = this;
     get_data.iv = e.detail.iv;
     get_data.encryptedData = e.detail.encryptedData;
-    // console.log(get_data);
+    get_data.session_key = app.globalData.wechatUserData.session
+    console.log(get_data);
     if (e.detail.iv) {
       wx.request({
-        url: globalRequestDomain + "/api/GetUser/get_phone",
+        url: globalRequestDomain + "/api/GetUser/get_phone",// get_phone get_unionid
         data: get_data,
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded" },
         success: function (res) {
+          console.log('调用成功打印返回数据')
+          console.log(res)
           var user_phone = 0;
           phone_array = res.data;
           user_phone = phone_array.phoneNumber;
           _this.setData({
             tel: user_phone
           })
-          // console.log(phone_array)
+          app.globalData.userPersonalInfo.tel = user_phone
+          console.log(phone_array)
           _this.from_data(user_phone);
         },
         fail: function (err) {
-          // console.log(err)
+        console.log(err)
         }
       })
 
-      // console.log("成功授权");
+      console.log("成功授权");
       //   }
       // })
     } else {

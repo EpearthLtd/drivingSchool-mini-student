@@ -36,6 +36,7 @@ App({
     }
     this.globalData.dateList = dateArray;
     console.log('全局数组dateArray为：' + this.globalData.dateList);
+
     // 登录
     wx.login({
       success: function (res) {
@@ -44,45 +45,52 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
           get_data.code = res.code;
-          // 发起网络请求
-          wx.request({
-            url: requestDomain + '/api/GetUser/getopenid',
-            method: 'POST',
-            data: get_data,
-            header: {
-              "Content-Type": "application/x-www-form-urlencoded"
-            },
-            success: function (res) {
-              console.log("获取到的用户信息为：")
-              console.log(res)
-              // 把 openid, sessionKey 存入全局变量
-              that.globalData.wechatUserData.session = res.data.data.session_key
-              that.globalData.wechatUserData.openid = res.data.data.openid;
-              if (res.data.data.unionid) {
-                that.globalData.wechatUserData.unionid = res.data.data.unionid
-              }
-              // 设置要提交服务器的参数
-              user_data.openid = res.data.data.openid;
-              console.log(user_data)
-              // 提交openid到数据库获取用户信息
-              wx.request({
-                url: requestDomain + "/api/GetUser/get_one_user",
-                data: user_data,
-                method: 'POST',
-                header: { "Content-Type": "application/x-www-form-urlencoded" },
-                success: function (res) {
-                  console.log("使用openid获取到的用户信息")
-                  console.log(res);
-                  var userinfo = res.data.userinfo;
-                  if (userinfo) {
-                    this.globalData.personalInfo = userinfo
+
+          // 获取用户信息
+          wx.getSetting({
+            success: res => {
+              if (res.authSetting['scope.userInfo']) {
+                // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+                wx.getUserInfo({
+                  success: res => {
+                    // 将 res 发送给后台解码出 unionId
+                    get_data.encryptedData = res.encryptedData
+                    get_data.iv = res.iv
+                    console.log('获取微信账户信息：')
+                    console.log(res)
+                    // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+                    // 所以此处加入 callback 以防止这种情况
+                    if (that.userInfoReadyCallback) {
+                      that.userInfoReadyCallback(res)
+                    }
+                    
+                    // 发起网络请求
+                    wx.request({
+                      url: requestDomain + '/api/GetUser/get_unionid',// getopenid get_unionid
+                      method: 'POST',
+                      data: get_data,
+                      header: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                      },
+                      success: function (res) {
+                        console.log("获取到的用户信息为：")
+                        console.log(res)
+                        // 把 openid, sessionKey 存入全局变量
+                        //that.globalData.wechatUserData.session = res.data.data.session_key
+                        //that.globalData.wechatUserData.openid = res.data.data.openid;
+                        if (res.data.data.unionid) {
+                          //that.globalData.wechatUserData.unionid = res.data.data.unionid
+                        }
+                        // 设置要提交服务器的参数
+                        //user_data.openid = res.data.data.openid;
+                        console.log(user_data)
+                      },
+                      fail: function (err) { }
+                    })
                   }
-                  // console.log(res.data.userinfo)
-                },
-                fail: function (err) { }
-              })
-            },
-            fail: function (err) { }
+                })
+              }
+            }
           })
         } else {
           console.error('获取用户登录态失败！' + res.errMsg)
@@ -90,7 +98,7 @@ App({
       }
     });
 
-    // 获取用户信息
+    /*// 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -98,19 +106,43 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
+              that.globalData.userInfo = res.userInfo
+              get_data.encryptedData = res.encryptedData
+              get_data.iv = res.iv
               console.log('获取微信账户信息：')
-              console.log(res.userInfo)
+              console.log(res)
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
+              if (that.userInfoReadyCallback) {
+                that.userInfoReadyCallback(res)
               }
             }
           })
         }
       }
+    })*/
+
+    
+
+    /*// 提交openid到数据库获取用户信息
+    getUserPersionalInfo: function() {
+    wx.request({
+      url: requestDomain + "/api/GetUser/get_one_user",
+      data: user_data,
+      method: 'POST',
+      header: { "Content-Type": "application/x-www-form-urlencoded" },
+      success: function (res) {
+        console.log("使用openid获取到的用户信息")
+        console.log(res);
+        var userinfo = res.data.userinfo;
+        if (userinfo) {
+          this.globalData.personalInfo = userinfo
+        }
+        // console.log(res.data.userinfo)
+      },
+      fail: function (err) { }
     })
+    }*/
 
     /**
      * 获取教练信息
