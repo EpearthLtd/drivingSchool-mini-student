@@ -53,6 +53,7 @@ App({
                 // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
                 wx.getUserInfo({
                   success: res => {
+                    that.globalData.userInfo = res.userInfo
                     // 将 res 发送给后台解码出 unionId
                     get_data.encryptedData = res.encryptedData
                     get_data.iv = res.iv
@@ -76,14 +77,35 @@ App({
                         console.log("获取到的用户信息为：")
                         console.log(res)
                         // 把 openid, sessionKey 存入全局变量
-                        //that.globalData.wechatUserData.session = res.data.data.session_key
-                        //that.globalData.wechatUserData.openid = res.data.data.openid;
-                        if (res.data.data.unionid) {
-                          //that.globalData.wechatUserData.unionid = res.data.data.unionid
+                        //that.globalData.wechatSystemData.session = res.data.data.session_key
+                        that.globalData.wechatSystemData.openid = res.data.openId;
+                        user_data.openid = res.data.openId;
+                        if (res.data.unionId) {
+                          that.globalData.wechatSystemData.unionid = res.data.unionId;
+                          user_data.unionid = res.data.unionId;
                         }
-                        // 设置要提交服务器的参数
-                        //user_data.openid = res.data.data.openid;
+                        // 要提交服务器的参数
                         console.log(user_data)
+
+                        // 提交openid到数据库获取用户信息
+                        wx.request({
+                          url: requestDomain + "/api/GetUser/get_one_user",
+                          data: user_data,
+                          method: 'POST',
+                          header: { "Content-Type": "application/x-www-form-urlencoded" },
+                          success: function (res) {
+                            console.log("使用openid获取到的用户信息")
+                            console.log(res);
+                            var userinfo = res.data.userinfo;
+                            if (userinfo) {
+                              this.globalData.personalInfo = userinfo
+                            }
+                            // console.log(res.data.userinfo)
+                          },
+                          fail: function (err) {
+                            console.log(err)
+                          }
+                        })
                       },
                       fail: function (err) { }
                     })
@@ -123,26 +145,7 @@ App({
     })*/
 
     
-
-    /*// 提交openid到数据库获取用户信息
-    getUserPersionalInfo: function() {
-    wx.request({
-      url: requestDomain + "/api/GetUser/get_one_user",
-      data: user_data,
-      method: 'POST',
-      header: { "Content-Type": "application/x-www-form-urlencoded" },
-      success: function (res) {
-        console.log("使用openid获取到的用户信息")
-        console.log(res);
-        var userinfo = res.data.userinfo;
-        if (userinfo) {
-          this.globalData.personalInfo = userinfo
-        }
-        // console.log(res.data.userinfo)
-      },
-      fail: function (err) { }
-    })
-    }*/
+    
 
     /**
      * 获取教练信息
@@ -175,7 +178,7 @@ App({
     car_status: ['未报名', '科目一', '科目二', '科目三', '科目四', '已毕业'],
     car_type: ['A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'c1', 'c2', 'c3', 'D', 'E', 'F', 'M', 'N', 'P'],
     userInfo: null, // 微信返回的用户信息
-    wechatUserData: {},
+    wechatSystemData: {},
     userPersonalInfo: {
       /*"uid": "1",
       "type": [0, 0, 0, 1],
