@@ -125,7 +125,7 @@ Page({
   },
 
   /**
-   * 解密手机号 
+   * 读取微信绑定手机号，解密手机号 
    */
   getPhoneNumber: function (e) {
     console.log('打印传入数据')
@@ -133,9 +133,10 @@ Page({
     var _this = this;
     get_data.iv = e.detail.iv;
     get_data.encryptedData = e.detail.encryptedData;
-    get_data.session_key = app.globalData.wechatUserData.session
+    // get_data.session_key = app.globalData.wechatUserData.session
     console.log(get_data);
     if (e.detail.iv) {
+      // 发起网络请求获取微信绑定手机号
       wx.request({
         url: globalRequestDomain + "/api/GetUser/get_phone",// get_phone get_unionid
         data: get_data,

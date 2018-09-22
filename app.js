@@ -53,6 +53,7 @@ App({
                 // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
                 wx.getUserInfo({
                   success: res => {
+                    // 将 userInfo 存入全局变量
                     that.globalData.userInfo = res.userInfo
                     // 将 res 发送给后台解码出 unionId
                     get_data.encryptedData = res.encryptedData
@@ -65,7 +66,9 @@ App({
                       that.userInfoReadyCallback(res)
                     }
                     
-                    // 发起网络请求
+                    // 发起网络请求获取 unionId、用户信息
+                    console.log('提交以下信息到服务器获取unionID等：')
+                    console.log(get_data)
                     wx.request({
                       url: requestDomain + '/api/GetUser/get_unionid',// getopenid get_unionid
                       method: 'POST',
@@ -85,16 +88,17 @@ App({
                           user_data.unionid = res.data.unionId;
                         }
                         // 要提交服务器的参数
+                        console.log("要提交服务器的参数：")
                         console.log(user_data)
 
-                        // 提交openid到数据库获取用户信息
+                        // 提交 openId,unionId 到数据库获取用户信息
                         wx.request({
                           url: requestDomain + "/api/GetUser/get_one_user",
                           data: user_data,
                           method: 'POST',
                           header: { "Content-Type": "application/x-www-form-urlencoded" },
                           success: function (res) {
-                            console.log("使用openid获取到的用户信息")
+                            console.log("使用 openid,unionid 获取到的用户信息")
                             console.log(res);
                             var userinfo = res.data.userinfo;
                             if (userinfo) {
@@ -105,7 +109,7 @@ App({
                           fail: function (err) {
                             console.log(err)
                           }
-                        })
+                        })  // 获取用户信息结束
                       },
                       fail: function (err) { }
                     })
