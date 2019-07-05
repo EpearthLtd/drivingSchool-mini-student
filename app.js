@@ -184,7 +184,7 @@ App({
     userInfo: null, // 微信返回的用户信息
     wechatSystemData: {},
     userPersonalInfo: {
-      /*"uid": "1",
+      "uid": "1",
       "type": [0, 0, 0, 1],
       "name": "{郑维一}",
       "idNumber": "{510111111111111111}",
