@@ -7,11 +7,8 @@ This is a mini program project of WeChat
 ![Github commits (since latest release)](https://img.shields.io/github/commits-since/EpearthLtd/drivingSchool-mini-student/latest.svg)  
 
 ## 部分界面截图
-<img src="/demoImg/training.jpg" alt="page training (home page)" width="33%"> 
-<img src="/demoImg/poster.jpg" alt="page poster" width="33%"> 
-<img src="/demoImg/me.jpg" alt="page me" width="33%"> 
-<img src="/demoImg/reservation.jpg" alt="page reservation" width="33%"> 
-<img src="/demoImg/coachinfo.jpg" alt="page coachinfo" width="33%"> 
+<img src="/demoImg/training.jpg" alt="page training (home page)" width="33%"> <img src="/demoImg/poster.jpg" alt="page poster" width="33%"> <img src="/demoImg/me.jpg" alt="page me" width="33%"> 
+<img src="/demoImg/reservation.jpg" alt="page reservation" width="33%"> <img src="/demoImg/coachinfo.jpg" alt="page coachinfo" width="33%"> 
 
 ## 技术参数
 * 调试基础库：2.2.2
