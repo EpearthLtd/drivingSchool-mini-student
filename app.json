@@ -54,5 +54,6 @@
         "selectedIconPath": "images/people-a.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
